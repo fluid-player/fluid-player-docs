@@ -23,3 +23,19 @@
 .article ul>li:before {
     content: '\b0';
 }
+
+.fluid_video_wrapper ul>li:before {
+    content: '';
+}
+
+.fluid_video_wrapper.fluid_player_layout_default .fluid_context_menu ul li {
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.fluid_video_wrapper.fluid_player_layout_default .fluid_context_menu ul li a,
+.palette-primary-light-blue .article a,
+.palette-primary-light-blue .article a:hover {
+    color: #FFFFFF;
+    border-bottom: none;
+}
