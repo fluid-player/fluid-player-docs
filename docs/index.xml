@@ -17,7 +17,7 @@
       <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
       
       <guid>http://docs.fluidplayer.com/changelog/</guid>
-      <description>1.2.2  Pull #88 Improve nonlinear ads  1.2.1  Pull #86 Pull #87 Mid roll current time fix  1.2.0  Pull #68 Controls remain fullscreen after escaping fullscreen Pull #66 Optional logoUrl for clickable logo Pull #74 Add ability to grab and slide the volume slider and timeline scrubber. Pull #75 Pull #77 Adding mid/post roll support and initial VAST nonLinear support. Pull #67 Adding key controls. Pull #69 Adding controls hiding functionality.</description>
+      <description>2.0  Pull #91  New default template Add play button Play pause animations Restructuring of optional parameters Remove templates General fixes   1.2.2  Pull #88 Improve nonlinear ads  1.2.1  Pull #86 Pull #87 Mid roll current time fix  1.2.0  Pull #68 Controls remain fullscreen after escaping fullscreen Pull #66 Optional logoUrl for clickable logo Pull #74 Add ability to grab and slide the volume slider and timeline scrubber.</description>
     </item>
     
     <item>

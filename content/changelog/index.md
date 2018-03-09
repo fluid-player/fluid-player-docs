@@ -4,6 +4,15 @@ title: "Changelog"
 weight: 0
 ---
 
+### 2.0
+* [Pull #91](https://github.com/fluid-player/fluid-player/pull/91)
+    * New default template
+    * Add play button
+    * Play pause animations
+    * Restructuring of optional parameters
+    * Remove templates
+    * General fixes
+ 
 ### 1.2.2
 * [Pull #88](https://github.com/fluid-player/fluid-player/pull/88) Improve nonlinear ads
 
