@@ -34,8 +34,10 @@
 }
 
 .fluid_video_wrapper.fluid_player_layout_default .fluid_context_menu ul li a,
-.palette-primary-light-blue .article a,
-.palette-primary-light-blue .article a:hover {
-    color: #FFFFFF;
-    border-bottom: none;
+.fluid_video_wrapper a,
+.fluid_video_wrapper a:hover,
+.fluid_video_wrapper .skip_button a,
+.fluid_video_wrapper .skip_button a:hover {
+    color: #FFFFFF !important;
+    border-bottom: none !important;
 }
