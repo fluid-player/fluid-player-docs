@@ -4,7 +4,7 @@ title: "Changelog"
 weight: 0
 ---
 
-### 2.0
+### 2.0.0
 * [Pull #91](https://github.com/fluid-player/fluid-player/pull/91)
     * New default template
     * Add play button

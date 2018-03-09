@@ -57,7 +57,7 @@ publishDir = "docs"
 	favicon = "favicon.ico"
 
     logo = "fluid_logo.png"
-    version = "2.0"
+    version = "2.0.0"
 
 [params.palette]
     primary = "light-blue"
