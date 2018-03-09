@@ -16,8 +16,8 @@ Fluid Player is a free HTML5 video player. It is lightweight, easy to integrate 
     <source src='http://cdn.fluidplayer.com/videos/1.3/fluidplayer_480.mp4' title="480p" type='video/mp4' />
 </video>
 
-<link rel="stylesheet" href="http://cdn.fluidplayer.com/v2/current/fluidplayer.css" type="text/css"/>
-<link rel="stylesheet" href="http://cdn.fluidplayer.com/v2/current/fluidplayer.js" type="text/css"/>
+<link rel="stylesheet" href="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
+<script src="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"/></script>
 <script src="fluidplayer/fp_generator.js"></script>
 
 ## What is VAST
