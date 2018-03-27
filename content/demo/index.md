@@ -47,6 +47,17 @@ type: homepage
     <source src='video360.mp4' type='video/mp4' title="360p" />
 </video>
 
+## Autoplay with Mute enabled
+
+* Video playing when user lands
+* Sound muted by default
+<br/><br/>
+
+<video id='autoplay-video' controls style="width:720px;height:405px;">
+    <source src='video.mp4' type='video/mp4' title="720p" />
+    <source src='video360.mp4' type='video/mp4' title="360p" />
+</video>
+
 <link rel="stylesheet" href="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
 <script src="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
 <script src="fp_generator.js"></script>

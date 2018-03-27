@@ -11,14 +11,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
-    <title>Demo - Fluid Player Documentation</title>
+    <title>API - Fluid Player Documentation</title>
     <meta name="generator" content="Hugo 0.30.2" />
 
     
-    <link rel="canonical" href="http://docs.fluidplayer.com/demo/">
+    <link rel="canonical" href="http://docs.fluidplayer.com/api/">
     
 
-    <meta property="og:url" content="http://docs.fluidplayer.com/demo/">
+    <meta property="og:url" content="http://docs.fluidplayer.com/api/">
     <meta property="og:title" content="Fluid Player Documentation">
     <meta property="og:image" content="http://docs.fluidplayer.com/fluidplayer-logo.png">
     <meta name="apple-mobile-web-app-title" content="Fluid Player Documentation">
@@ -248,11 +248,14 @@
 
 
 
-<a  title="API" href="/api/">
+<a class="current" title="API" href="/api/">
 	
 	API
 </a>
 
+
+<ul id="scrollspy">
+</ul>
 
 
   
@@ -284,14 +287,11 @@
 
 
 
-<a class="current" title="Demo" href="/demo/">
+<a  title="Demo" href="/demo/">
 	
 	Demo
 </a>
 
-
-<ul id="scrollspy">
-</ul>
 
 
   
@@ -347,80 +347,92 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>Demo </h1>
+			<h1>API </h1>
 
 			
 
-<h2 id="default-layout">Default Layout</h2>
+<h2 id="introduction">Introduction</h2>
 
-<ul>
-<li>Supports VAST (Video Ad Serving Template).</li>
-<li>Comes with its own design, which is easily customizable.</li>
-<li>Timeline Preview.</li>
-<li>Lightweight.</li>
-<li>Compatible with modern web browsers.
-<br/><br/></li>
-</ul>
+<p>This section hopes to outline the functions which can alter the behaviour of Fluid Player after initialisation.
+This can be done by calling functions after we have our Fluid Player object.
+For this example we will assume we&rsquo;ve used the below Fluid Player configs.</p>
 
-<video id='my-video' controls style="width:720px;height:405px;">
-    <source src='video.mp4' type='video/mp4' title="720p" />
-    <source src='video360.mp4' type='video/mp4' title="360p" />
-</video>
+<pre><code class="language-javascript">&lt;script type=&quot;text/javascript&quot;&gt;
+    var myFluidPlayer = fluidPlayer(
+        'my-video'
+    );
+&lt;/script&gt;
+</code></pre>
 
-<h2 id="custom-themed-layout">Custom Themed Layout</h2>
+<h2 id="play">Play</h2>
 
-<ul>
-<li>Easily customised with our <a href="../configuration#primaryColor">primaryColor</a> configuration.
-<br/><br/></li>
-</ul>
+<p>To play the Fluid Player use the <strong>play()</strong> function on our <em>myFluidPlayer</em> object</p>
 
-<video id='colour-video' controls style="width:720px;height:405px;">
-    <source src='video.mp4' type='video/mp4' title="720p" />
-    <source src='video360.mp4' type='video/mp4' title="360p" />
-</video>
+<pre><code class="language-javascript">myFluidPlayer.play();
+</code></pre>
 
-<h2 id="browser-based-layout">Browser-Based Layout</h2>
+<h2 id="pause">Pause</h2>
 
-<ul>
-<li>Ability to have more than 1 player per page.</li>
-<li>Ability to use the default video layout for the current browser.
-<br/><br/></li>
-</ul>
+<p>To play the Fluid Player use the <strong>pause()</strong> function on our <em>myFluidPlayer</em> object</p>
 
-<video id='default-video' controls style="width:720px;height:405px;">
-    <source src='video.mp4' type='video/mp4' title="720p" />
-    <source src='video360.mp4' type='video/mp4' title="360p" />
-</video>
+<pre><code class="language-javascript">myFluidPlayer.pause();
+</code></pre>
 
-<h2 id="multiple-vast-and-nonlinear-ad">Multiple VAST and NonLinear Ad</h2>
+<h2 id="skipto">SkipTo</h2>
 
-<ul>
-<li>Ability to have more than 1 VAST (example: pre-roll and mid-roll).</li>
-<li>Ability to show non Linear (Banner) ads.
-<br/><br/></li>
-</ul>
+<p>The <strong>skipTo(seconds)</strong> function takes in a parameter of the time (in seconds) to move the video to. In our below example we&rsquo;ll skip to 30 seconds into the video.</p>
 
-<video id='vast-video' controls style="width:720px;height:405px;">
-    <source src='video.mp4' type='video/mp4' title="720p" />
-    <source src='video360.mp4' type='video/mp4' title="360p" />
-</video>
+<pre><code class="language-javascript">myFluidPlayer.skipTo(30);
+</code></pre>
 
-<h2 id="autoplay-with-mute-enabled">Autoplay with Mute enabled</h2>
+<h2 id="setplaybackspeed">SetPlaybackSpeed</h2>
 
-<ul>
-<li>Video playing when user lands</li>
-<li>Sound muted by default
-<br/><br/></li>
-</ul>
+<p>The <strong>setPlaybackSpeed(speed)</strong> function takes in a speed parameter. The default speed is <strong>1</strong>, and the speeds are relative to this.
+If we wanted to double the speed we&rsquo;d use <strong>2</strong>, and half speed would be <strong>0.5</strong>. The below example will double the speed of the video.</p>
 
-<video id='autoplay-video' controls style="width:720px;height:405px;">
-    <source src='video.mp4' type='video/mp4' title="720p" />
-    <source src='video360.mp4' type='video/mp4' title="360p" />
-</video>
+<pre><code class="language-javascript">myFluidPlayer.setPlaybackSpeed(2);
+</code></pre>
 
-<p><link rel="stylesheet" href="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
-<script src="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
-<script src="fp_generator.js"></script></p>
+<h2 id="setvolume">SetVolume</h2>
+
+<p>The <strong>setVolume(volume)</strong> function takes in a volume parameter. The max volume is <strong>1</strong>, and the volumes to set are relative to this.
+To half the volume we would use <strong>setVolume(0.5)</strong>, and to mute the player we would use <strong>setVolume(0)</strong>.
+The below example will mute the video.</p>
+
+<pre><code class="language-javascript">myFluidPlayer.setVolume(0);
+</code></pre>
+
+<h2 id="sethtmlonpauseblock">setHtmlOnPauseBlock</h2>
+
+<p>The purpose of the htmlOnPauseBlock is <a href="http://localhost:1313/configuration/#htmlonpauseblock">outlined here</a>.
+If we wanted to to set or change the HTML that&rsquo;s set for this we can do it using the following.</p>
+
+<p><strong>html</strong>: This is HTML we want to show when the player in paused</p>
+
+<p><strong>width</strong>: The width (in pixels) of the container for this HTML</p>
+
+<p><strong>height</strong>: The height (in pixels) of the container for this HTML</p>
+
+<pre><code class="language-javascript">myFluidPlayer.setHtmlOnPauseBlock({html: &quot;&lt;i&gt;This video is paused&lt;/i&gt;&quot;, width: 100, height: 50});
+</code></pre>
+
+<h2 id="togglecontrolbar">toggleControlBar</h2>
+
+<p>We can show and hide the control bar when necessary. This function takes in a <strong>true</strong> or <strong>false</strong> value.</p>
+
+<p>If we pass <strong>true</strong> the control bar will show and remain showing at all times.</p>
+
+<p>if we pass <strong>false</strong> we hide the control bar and it returns to it&rsquo;s standard behaviour, showing on hover or pause.</p>
+
+<pre><code class="language-javascript">myFluidPlayer.toggleControlBar(true);
+</code></pre>
+
+<h2 id="togglefullscreen">toggleFullScreen</h2>
+
+<p>Using <strong>toggleFullScreen(boolean)</strong> we can set the video to fullscreen. <strong>true</strong> will set the player to fullscreen, and <strong>false</strong> will set the player back to normal.</p>
+
+<pre><code class="language-javascript">myFluidPlayer.toggleFullScreen(true);
+</code></pre>
 
 
 			<aside class="copyright" role="note" style="text-align: center;">

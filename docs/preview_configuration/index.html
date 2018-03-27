@@ -11,14 +11,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
-    <title>Demo - Fluid Player Documentation</title>
+    <title>Preview Configuration - Fluid Player Documentation</title>
     <meta name="generator" content="Hugo 0.30.2" />
 
     
-    <link rel="canonical" href="http://docs.fluidplayer.com/demo/">
+    <link rel="canonical" href="http://docs.fluidplayer.com/preview_configuration/">
     
 
-    <meta property="og:url" content="http://docs.fluidplayer.com/demo/">
+    <meta property="og:url" content="http://docs.fluidplayer.com/preview_configuration/">
     <meta property="og:title" content="Fluid Player Documentation">
     <meta property="og:image" content="http://docs.fluidplayer.com/fluidplayer-logo.png">
     <meta name="apple-mobile-web-app-title" content="Fluid Player Documentation">
@@ -230,11 +230,14 @@
 
 
 
-<a  title="Preview Configuration" href="/preview_configuration/">
+<a class="current" title="Preview Configuration" href="/preview_configuration/">
 	
 	Preview Configuration
 </a>
 
+
+<ul id="scrollspy">
+</ul>
 
 
   
@@ -284,14 +287,11 @@
 
 
 
-<a class="current" title="Demo" href="/demo/">
+<a  title="Demo" href="/demo/">
 	
 	Demo
 </a>
 
-
-<ul id="scrollspy">
-</ul>
 
 
   
@@ -347,80 +347,100 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>Demo </h1>
+			<h1>Preview Configuration </h1>
 
 			
 
-<h2 id="default-layout">Default Layout</h2>
+<h2 id="adding-preview-thumbnails">Adding Preview Thumbnails</h2>
 
-<ul>
-<li>Supports VAST (Video Ad Serving Template).</li>
-<li>Comes with its own design, which is easily customizable.</li>
-<li>Timeline Preview.</li>
-<li>Lightweight.</li>
-<li>Compatible with modern web browsers.
-<br/><br/></li>
-</ul>
+<p>Preview thumbnails can be added to the Fluid Player video, to show when the progress bar is hovered over.
+When these are added they will replace the time that normally shows.
+This is a common feature that allows users to easily navigate around through the video.
+Below is an example video showing the thumbnails.</p>
+
+<p><br/></p>
 
 <video id='my-video' controls style="width:720px;height:405px;">
-    <source src='video.mp4' type='video/mp4' title="720p" />
-    <source src='video360.mp4' type='video/mp4' title="360p" />
-</video>
-
-<h2 id="custom-themed-layout">Custom Themed Layout</h2>
-
-<ul>
-<li>Easily customised with our <a href="../configuration#primaryColor">primaryColor</a> configuration.
-<br/><br/></li>
-</ul>
-
-<video id='colour-video' controls style="width:720px;height:405px;">
-    <source src='video.mp4' type='video/mp4' title="720p" />
-    <source src='video360.mp4' type='video/mp4' title="360p" />
-</video>
-
-<h2 id="browser-based-layout">Browser-Based Layout</h2>
-
-<ul>
-<li>Ability to have more than 1 player per page.</li>
-<li>Ability to use the default video layout for the current browser.
-<br/><br/></li>
-</ul>
-
-<video id='default-video' controls style="width:720px;height:405px;">
-    <source src='video.mp4' type='video/mp4' title="720p" />
-    <source src='video360.mp4' type='video/mp4' title="360p" />
-</video>
-
-<h2 id="multiple-vast-and-nonlinear-ad">Multiple VAST and NonLinear Ad</h2>
-
-<ul>
-<li>Ability to have more than 1 VAST (example: pre-roll and mid-roll).</li>
-<li>Ability to show non Linear (Banner) ads.
-<br/><br/></li>
-</ul>
-
-<video id='vast-video' controls style="width:720px;height:405px;">
-    <source src='video.mp4' type='video/mp4' title="720p" />
-    <source src='video360.mp4' type='video/mp4' title="360p" />
-</video>
-
-<h2 id="autoplay-with-mute-enabled">Autoplay with Mute enabled</h2>
-
-<ul>
-<li>Video playing when user lands</li>
-<li>Sound muted by default
-<br/><br/></li>
-</ul>
-
-<video id='autoplay-video' controls style="width:720px;height:405px;">
-    <source src='video.mp4' type='video/mp4' title="720p" />
-    <source src='video360.mp4' type='video/mp4' title="360p" />
+    <source src='http://cdn.fluidplayer.com/current/docs/demo/video.mp4' title="1080p" type='video/mp4' />
 </video>
 
 <p><link rel="stylesheet" href="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
-<script src="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
-<script src="fp_generator.js"></script></p>
+<script src="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"/></script>
+<script src="thumbnail_player.js"></script></p>
+
+<h2 id="vtt-format">VTT Format</h2>
+
+<p>The format used is WebVTT, a HTML5 standard. Details in the WebVTT format can be found <a href="https://w3c.github.io/webvtt/">here</a>.
+When used for thumbnails, VTT files contain links to the thumbnail images or the position of a single sprite image.
+These images can be in JPG, PNG or GIF format.
+The image and times in which to point to that image are defined in the file, the contents of which should contain the following:</p>
+
+<ul>
+<li>The range the tooltip thumbnail represents. Note the range needs to be in (HH:)MM:SS.MMM format.</li>
+<li>The URL to the tooltip thumbnail for this range. The URL is relative to the VTT file (not to the page or player), much like images included in CSS sheets.</li>
+</ul>
+
+<h3 id="example-vtt-file-separate-images">Example VTT File - Separate Images</h3>
+
+<p>If the images are stored separately the .vtt file contents would look similar to what&rsquo;s shown below.
+Note that we see <em>thumbnail1.jpg</em>,<em>thumbnail2.jpg</em> and <em>thumbnail3.jpg</em></p>
+
+<pre><code class="language-text">WEBVTT
+
+00:00:00.000 --&gt; 00:00:05.000
+thumbnail1.jpg
+
+00:00:05.000 --&gt; 00:00:10.000
+thumbnail2.jpg
+
+00:00:10.000 --&gt; 00:00:15.000
+thumbnail3.jpg
+</code></pre>
+
+<h3 id="example-vtt-file-sprite-image">Example VTT File - Sprite Image</h3>
+
+<p>Storing the images in the one file can save on space and complexity.
+If the images are stored in the one image file, the contents of our .vtt would look similar to what&rsquo;s shown below.
+Note we only have a <em>thumbnails.jpg</em> file. These are taken from what is used to show the thumbnails in the above Fluid Player example.</p>
+
+<p><img src="thumbnails.jpg" style="width:100%;margin:auto;display:flex;"></p>
+
+<pre><code class="language-text">WEBVTT
+
+00:00:00.000 --&gt; 00:00:02.000
+thumbnails.jpg#xywh=0,0,120,68
+
+00:00:02.000 --&gt; 00:00:04.000
+thumbnails.jpg#xywh=120,0,120,68
+
+00:00:04.000 --&gt; 00:00:06.000
+thumbnails.jpg#xywh=240,0,120,68
+
+00:00:06.000 --&gt; 00:00:08.000
+thumbnails.jpg#xywh=360,0,120,68
+
+00:00:08.000 --&gt; 00:00:10.000
+thumbnails.jpg#xywh=480,0,120,68
+</code></pre>
+
+<h2 id="adding-to-fluid-player">Adding to Fluid Player</h2>
+
+<p>To configure Fluid Player to use your VTT file, you can set is as the optional parameter <strong>timelinePreview</strong> under <strong>layoutControls</strong>.
+This is also outlined <a href="http://localhost:1313/layout_configuration/#timelinepreview">here</a>.
+Provided the file is correct, the below code will set the thumbnail previews.</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            timelinePreview: {
+                file: 'thumbnails.vtt',
+                type: 'VTT'
+            }
+        }
+    }
+);
+</code></pre>
 
 
 			<aside class="copyright" role="note" style="text-align: center;">

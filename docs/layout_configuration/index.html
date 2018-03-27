@@ -11,14 +11,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
-    <title>Configuration - Fluid Player Documentation</title>
+    <title>Layout Configuration - Fluid Player Documentation</title>
     <meta name="generator" content="Hugo 0.30.2" />
 
     
-    <link rel="canonical" href="http://docs.fluidplayer.com/configuration/">
+    <link rel="canonical" href="http://docs.fluidplayer.com/layout_configuration/">
     
 
-    <meta property="og:url" content="http://docs.fluidplayer.com/configuration/">
+    <meta property="og:url" content="http://docs.fluidplayer.com/layout_configuration/">
     <meta property="og:title" content="Fluid Player Documentation">
     <meta property="og:image" content="http://docs.fluidplayer.com/fluidplayer-logo.png">
     <meta name="apple-mobile-web-app-title" content="Fluid Player Documentation">
@@ -194,11 +194,14 @@
 
 
 
-<a  title="Layout Configuration" href="/layout_configuration/">
+<a class="current" title="Layout Configuration" href="/layout_configuration/">
 	
 	Layout Configuration
 </a>
 
+
+<ul id="scrollspy">
+</ul>
 
 
   
@@ -344,20 +347,14 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>Configuration </h1>
+			<h1>Layout Configuration </h1>
 
 			
 
 <p>There are optional parameters that can be used to customise the Fluid Player.
-No parameters are required and will default if not passed through.
+None of the options are required but can be tailored to better suit your own design.
 Layout controls relate to the functionality and styling of the player itself.
-Vast options relate to the ads served and the how the player handles them</p>
-
-<p><br/><hr/></p>
-
-<h1 id="layout-controls">Layout Controls</h1>
-
-<p>The full list of <em>layoutControls</em> are below:</p>
+The full list of <em>layoutControls</em> are below:</p>
 
 <pre><code class="language-javascript">fluidPlayer(
    'my-video',
@@ -371,6 +368,9 @@ Vast options relate to the ads served and the how the player handles them</p>
             mute:                   false,
             keyboardControl:        true,
             layout:                 'default',
+            allowDownload:          false,
+            playbackRateEnabled:    false,
+            allowTheatre:           true,
             logo: {
                 imageUrl:           null,
                 position:           'top left',
@@ -393,8 +393,6 @@ Vast options relate to the ads served and the how the player handles them</p>
     }
 );
 </code></pre>
-
-<p>None of the options are required but can be tailored to better suit your own design.</p>
 
 <h2 id="primarycolor">primaryColor</h2>
 
@@ -578,6 +576,8 @@ There are three options for this parameter:</p>
 
 <h2 id="timelinepreview">timelinePreview</h2>
 
+<p>Thumbnail preview is discussed more <a href="../preview_configuration">here</a>.</p>
+
 <p>Sets the timeline preview, visible when hovering over the progress bar.
 The provided file contains the thumbnail images used for the preview.
 The type sets the format of the file. Currently only the VTT format is supported.
@@ -640,6 +640,50 @@ Another option is <strong>browser</strong>, meaning that the standard video play
 );
 </code></pre>
 
+<h2 id="allowdownload">allowDownload</h2>
+
+<p>False by default, this option will allow users to download the video shown in the Fluid Player.</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            allowDownload: true // Default false
+        }
+    }
+);
+</code></pre>
+
+<h2 id="playbackrateenabled">playbackRateEnabled</h2>
+
+<p>Fluid Player allows the users to change the playback rate / speed of the video. By default, this option is disabled.
+To enable this option use the following:</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            playbackRateEnabled: true // Default false
+        }
+    }
+);
+</code></pre>
+
+<h2 id="allowtheatre">allowTheatre</h2>
+
+<p>Theatre mode alters the size of the player, showing a full screen width and 75% screen height player instead.
+This overlays whatever is behind the player, but allows the users to scroll through the page as normal. This is enabled by default, but can</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            allowTheatre: false // Default true
+        }
+    }
+);
+</code></pre>
+
 <h2 id="playerinitcallback">playerInitCallback</h2>
 
 <p>This callback function can be used to execute custom code when the player in initialised.</p>
@@ -649,207 +693,6 @@ Another option is <strong>browser</strong>, meaning that the standard video play
     {
         layoutControls: {
             playerInitCallback: (function() { console.log('player loaded!') })
-        }
-    }
-);
-</code></pre>
-
-<p><br/><hr/></p>
-
-<h1 id="vast-options">Vast Options</h1>
-
-<p>These options are specifically for when ads are shown in the player.</p>
-
-<pre><code class="language-javascript">fluidPlayer(
-   'my-video',
-    {
-        vastOptions: {
-            adList:                     {},
-            skipButtonCaption:          'Skip ad in [seconds]',
-            skipButtonClickCaption:     'Skip ad &lt;span class=&quot;skip_button_icon&quot;&gt;&lt;/span&gt;',
-            adText:                      null,
-            vastTimeout:                 5000,
-
-            vastAdvanced: {
-                vastLoadedCallback:       (function() {}),
-                noVastVideoCallback:      (function() {}),
-                vastVideoSkippedCallback: (function() {}),
-                vastVideoEndedCallback:   (function() {})
-            }
-        }
-    }
-);
-</code></pre>
-
-<h2 id="adlist">adList</h2>
-
-<p>Setup one or multiple VAST tag. For each of the tags there are multiple options.</p>
-
-<ul>
-<li><strong>roll (mandatory):</strong> The available timeline positions: <em>preRoll</em>, <em>midRoll</em>, <em>postRoll</em>, <em>onPauseRoll</em>.</li>
-<li><strong>vastTag (mandatory):</strong> The url of the VAST XML (Please find the supported tags/attributes vastLinear.xml)</li>
-<li><strong>timer (only for mid-roll):</strong> the timer property schedules when the ad should show. There are two ways to define this:
-
-<ul>
-<li><strong>[seconds]:</strong> The number of seconds until the ad begins. Example: <em>timer: 10</em></li>
-<li><strong>[percentage]:</strong> The percentage of the video to show before the ad begins. Example: <em>timer: 50%</em></li>
-</ul></li>
-</ul>
-
-<p>We can set multiple <em>midRoll</em> VAST tags, however only one <em>preRoll</em> and <em>postRoll</em> can be set. See the example below:</p>
-
-<pre><code class="language-javascript">fluidPlayer(
-   'my-video',
-    {
-        vastOptions: {
-            adList: [
-                {
-                    roll: 'preRoll',
-                    vastTag: 'vastPreRoll.xml'
-                },
-                {
-                    roll: 'midRoll',
-                    vastTag: 'vastMidRoll.xml',
-                    timer: 8
-                },
-                {
-                    roll: 'midRoll',
-                    vastTag: 'vastMidRoll2.xml',
-                    timer: 10
-                },
-                {
-                    roll: 'postRoll',
-                    vastTag: 'vastPostRoll.xml'
-                }
-            ]
-        }
-    }
-);
-</code></pre>
-
-<ul>
-<li><strong>vAlign</strong> (only for nonLinear, optional): The available vertical positions for nonLinear Ads: top, middle, bottom. Default: bottom.</li>
-<li><strong>nonLinearDuration</strong> (only for nonLinear, optional): The number of seconds until the nonLinear Ad will be shown. If not set nor the minSuggestedDuration attribute of VAST XML than wont close until end of video.</li>
-<li><strong>size</strong> (only for nonLinear, optional): The dimension of the Ad. Supported sizes: 468x60, 300x250, 728x90</li>
-</ul>
-
-<pre><code class="language-javascript">fluidPlayer(
-   'my-video',
-    {
-        vastOptions: {
-            adList: [
-                {
-                    roll: 'onPauseRoll',
-                    vastTag: 'vastNonLinear.xml',
-                    vAlign: 'top',
-                    nonlinearDuration: 10,
-                    size: '300x250'
-                }
-            ]
-        }
-    }
-);
-</code></pre>
-
-<h2 id="skipbuttoncaption">skipButtonCaption</h2>
-
-<p>The text to display the countdown during an ad. The <strong>[seconds]</strong> placeholder is used for the second countdown.
-(<strong>Default:</strong> &ldquo;Skip ad in [seconds]&ldquo;)</p>
-
-<pre><code class="language-javascript">fluidPlayer(
-   'my-video',
-    {
-        vastOptions: {
-            skipButtonCaption: 'Wait [seconds] more second(s)'
-        }
-    }
-);
-</code></pre>
-
-<h2 id="skipbuttonclickcaption">skipButtonClickCaption</h2>
-
-<p>This defines the text to show when the countdown is finished and the user can skip to the main video.
-(<strong>Default:</strong> &lsquo;Skip ad <span class="skip_button_icon"></span>&rsquo;)</p>
-
-<pre><code class="language-javascript">fluidPlayer(
-   'my-video',
-    {
-        vastOptions: {
-            skipButtonClickCaption: 'Watch main video &lt;span class=&quot;skip_button_icon&quot;&gt;&lt;/span&gt;'
-        }
-    }
-);
-</code></pre>
-
-<h2 id="adtext">adText</h2>
-
-<p>Custom text can be shown when an in-stream ad plays. This text appears in the top left corner of the player and will be set to the primary colour.</p>
-
-<pre><code class="language-javascript">fluidPlayer(
-   'my-video',
-    {
-        vastOptions: {
-            adText: 'Advertising helps us keep the lights on' // Default null
-        }
-    }
-);
-</code></pre>
-
-<p><img src="screenshots/adText.png" style="width:600px;margin:auto;display:flex;"></p>
-
-<h2 id="adctatext">adCTAText</h2>
-
-<p>The landing page of the advertisement will show in the adCTAText area. You can add custom text above this URL, or you choose to disable this.
-The screenshot below shows how it will appear by default, and the code below shows how to alter or disable it.</p>
-
-<pre><code class="language-javascript">fluidPlayer(
-   'my-video',
-    {
-        vastOptions: {
-            // adCTAText: 'Subscribe!' // Default &quot;Visit now!&quot;
-            adCTAText: false // Disable adCTAText
-        }
-    }
-);
-</code></pre>
-
-<p><img src="screenshots/adText.png" style="width:600px;margin:auto;display:flex;"></p>
-
-<h2 id="vasttimeout">vastTimeout</h2>
-
-<p>This parameter lets you set the time, in milliseconds, to wait for the VAST to load. (<strong>Default:</strong> 5000)</p>
-
-<pre><code class="language-javascript">fluidPlayer(
-   'my-video',
-    {
-        vastOptions: {
-            vastTimeout: 1000 // Default 5000
-        }
-    }
-);
-</code></pre>
-
-<h2 id="vastadvanced">vastAdvanced</h2>
-
-<p>We can specify the callback functions on the different VAST events.</p>
-
-<ul>
-<li><strong>vastLoadedCallback:</strong> When the VAST has loaded.</li>
-<li><strong>noVastVideoCallback:</strong> When there is no VAST video.</li>
-<li><strong>vastVideoSkippedCallback:</strong> If the ad is skipped.</li>
-<li><strong>vastVideoEndedCallback:</strong> When the ad and ended.</li>
-</ul>
-
-<pre><code class="language-javascript">fluidPlayer(
-   'my-video',
-    {
-        vastOptions: {
-            vastAdvanced: {
-                vastLoadedCallback:       (function() { console.log(&quot;Here one event&quot;) }),
-                noVastVideoCallback:      (function() { console.log(&quot;Here another&quot;) }),
-                vastVideoSkippedCallback: (function() { console.log(&quot;Here one more&quot;) }),
-                vastVideoEndedCallback:   (function() { console.log(&quot;Here's the last&quot;) })
-            }
         }
     }
 );

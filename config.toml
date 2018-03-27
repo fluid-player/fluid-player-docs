@@ -23,34 +23,58 @@ publishDir = "docs"
     weight     = 2
 
     [[menu.main]]
-    identifier = "configuration"
-    name       = "Configuration"
-    url        = "configuration/"
+    identifier = "builder"
+    name       = "Builder"
+    url        = "builder/"
     weight     = 3
+
+    [[menu.main]]
+    identifier = "layout_configuration"
+    name       = "Layout Configuration"
+    url        = "layout_configuration/"
+    weight     = 4
+
+    [[menu.main]]
+    identifier = "ad_configuration"
+    name       = "Ad Configuration"
+    url        = "ad_configuration/"
+    weight     = 5
+
+    [[menu.main]]
+    identifier = "preview_configuration"
+    name       = "Preview Configuration"
+    url        = "preview_configuration/"
+    weight     = 6
+
+    [[menu.main]]
+    identifier = "api"
+    name       = "API"
+    url        = "api/"
+    weight     = 7
 
     [[menu.main]]
     identifier = "wordpress"
     name       = "Wordpress"
     url        = "wordpress/"
-    weight     = 3
+    weight     = 8
 
     [[menu.main]]
     identifier = "demo"
     name       = "Demo"
     url        = "demo/"
-    weight     = 4
+    weight     = 9
 
     [[menu.main]]
     identifier = "changelog"
     name       = "Changelog"
     url        = "changelog/"
-    weight     = 5
+    weight     = 10
 
     [[menu.main]]
     identifier = "help"
     name       = "Help"
     url        = "help/"
-    weight     = 6
+    weight     = 11
 
 [params]
 	highlightjs = "css/highlight.css"

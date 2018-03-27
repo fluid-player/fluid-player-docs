@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Builder</title>
+      <link>http://docs.fluidplayer.com/builder/</link>
+      <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
+      
+      <guid>http://docs.fluidplayer.com/builder/</guid>
+      <description>label { font-weight: normal !important; } a { color: black; text-decoration: none !important; } a.hover { color: #03a9f4; } .form-control { border-radius: 2px; }   Styling   Primary Color:   Fill Container Div:     Display Logo:    Top Left Top Right Bottom Left Bottom Right   Logo Opacity: %     Logo URL:   Logo Click URL:     Controls  Autoplay:    Keyboard Controls:     Mute On Load:    Play/Pause Animation:     On Load: Show Play Button  Show Control Bar    Autohide Controls:  After  second(s) Animate    Download:    Theatre Mode:     Playback Speed:     On-pause HTML On-pause HTML:</description>
+    </item>
+    
+    <item>
       <title>Changelog</title>
       <link>http://docs.fluidplayer.com/changelog/</link>
       <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
@@ -31,6 +40,27 @@
   
 What is VAST The IAB Digital Video Ad Serving Template (VAST) specification is a universal XML schema for serving ads to digital video players, and describes expected video player behavior when executing VAST-formatted ad responses.
 In short, VAST makes it possible for an ad provider to serve ads to various video players using a universal way of communication which all these players understand.</description>
+    </item>
+    
+    <item>
+      <title>API</title>
+      <link>http://docs.fluidplayer.com/api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.fluidplayer.com/api/</guid>
+      <description>Introduction This section hopes to outline the functions which can alter the behaviour of Fluid Player after initialisation. This can be done by calling functions after we have our Fluid Player object. For this example we will assume we&amp;rsquo;ve used the below Fluid Player configs.
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; var myFluidPlayer = fluidPlayer( &#39;my-video&#39; ); &amp;lt;/script&amp;gt;  Play To play the Fluid Player use the play() function on our myFluidPlayer object</description>
+    </item>
+    
+    <item>
+      <title>Ad Configuration</title>
+      <link>http://docs.fluidplayer.com/ad_configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.fluidplayer.com/ad_configuration/</guid>
+      <description>There are optional parameters that can be used to customise the Fluid Player ad serving. No parameters are required and will default if not passed through. Vast options relate to the ads served and the how the player handles them
+These options are specifically for when ads are shown in the player.
+fluidPlayer( &#39;my-video&#39;, { vastOptions: { adList: {}, skipButtonCaption: &#39;Skip ad in [seconds]&#39;, skipButtonClickCaption: &#39;Skip ad &amp;lt;span class=&amp;quot;skip_button_icon&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&#39;, adText: null, vastTimeout: 5000, vastAdvanced: { vastLoadedCallback: (function() {}), noVastVideoCallback: (function() {}), vastVideoSkippedCallback: (function() {}), vastVideoEndedCallback: (function() {}) } } } );  adList Setup one or multiple VAST tag.</description>
     </item>
     
     <item>
@@ -72,6 +102,28 @@ For any other query, please submit it through our contact form</description>
       <guid>http://docs.fluidplayer.com/integration/</guid>
       <description>Quick Integration In order to set Fluid Player, three things are required:
  The Javascript and CSS files of the player; An HTML5 &amp;lt;video&amp;gt; tag; A single Javascript line of code that attaches the player to the video tag.  &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;Fluid Player&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css&amp;quot; type=&amp;quot;text/css&amp;quot;/&amp;gt; &amp;lt;script src=&amp;quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;video id=&#39;my-video&#39;&amp;gt; &amp;lt;source src=&#39;vid.mp4&#39; type=&#39;video/mp4&#39; /&amp;gt; &amp;lt;/video&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; fluidPlayer(&#39;my-video&#39;); &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;  The fluidPlayer() function gets the video tag id as a first parameter, which is required.</description>
+    </item>
+    
+    <item>
+      <title>Layout Configuration</title>
+      <link>http://docs.fluidplayer.com/layout_configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.fluidplayer.com/layout_configuration/</guid>
+      <description>There are optional parameters that can be used to customise the Fluid Player. None of the options are required but can be tailored to better suit your own design. Layout controls relate to the functionality and styling of the player itself. The full list of layoutControls are below:
+fluidPlayer( &#39;my-video&#39;, { layoutControls: { primaryColor: false, playButtonShowing: true, playPauseAnimation: true, fillToContainer: false, autoPlay: false, mute: false, keyboardControl: true, layout: &#39;default&#39;, allowDownload: false, playbackRateEnabled: false, allowTheatre: true, logo: { imageUrl: null, position: &#39;top left&#39;, clickUrl: null, opacity: 1 }, controlBar: { autoHide: true, autoHideTimeout: 3, animated: true }, timelinePreview: {}, htmlOnPauseBlock: { html: null, height: null, width: null }, playerInitCallback: (function() {}) } } );  primaryColor Primary color affects the following areas of the Fluid Player:</description>
+    </item>
+    
+    <item>
+      <title>Preview Configuration</title>
+      <link>http://docs.fluidplayer.com/preview_configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://docs.fluidplayer.com/preview_configuration/</guid>
+      <description>Adding Preview Thumbnails Preview thumbnails can be added to the Fluid Player video, to show when the progress bar is hovered over. When these are added they will replace the time that normally shows. This is a common feature that allows users to easily navigate around through the video. Below is an example video showing the thumbnails.
+
+  
+VTT Format The format used is WebVTT, a HTML5 standard.</description>
     </item>
     
     <item>

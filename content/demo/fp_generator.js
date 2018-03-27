@@ -117,3 +117,14 @@ fluidPlayer(
         }
     }
 );
+
+fluidPlayer(
+    'autoplay-video',
+    {
+        layoutControls: {
+            fillToContainer: true,
+            mute: true,
+            autoPlay: true
+        }
+    }
+);

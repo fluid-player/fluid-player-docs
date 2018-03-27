@@ -11,14 +11,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
-    <title>Integration - Fluid Player Documentation</title>
+    <title>Ad Configuration - Fluid Player Documentation</title>
     <meta name="generator" content="Hugo 0.30.2" />
 
     
-    <link rel="canonical" href="http://docs.fluidplayer.com/integration/">
+    <link rel="canonical" href="http://docs.fluidplayer.com/ad_configuration/">
     
 
-    <meta property="og:url" content="http://docs.fluidplayer.com/integration/">
+    <meta property="og:url" content="http://docs.fluidplayer.com/ad_configuration/">
     <meta property="og:title" content="Fluid Player Documentation">
     <meta property="og:image" content="http://docs.fluidplayer.com/fluidplayer-logo.png">
     <meta name="apple-mobile-web-app-title" content="Fluid Player Documentation">
@@ -158,14 +158,11 @@
 
 
 
-<a class="current" title="Integration" href="/integration/">
+<a  title="Integration" href="/integration/">
 	
 	Integration
 </a>
 
-
-<ul id="scrollspy">
-</ul>
 
 
   
@@ -215,11 +212,14 @@
 
 
 
-<a  title="Ad Configuration" href="/ad_configuration/">
+<a class="current" title="Ad Configuration" href="/ad_configuration/">
 	
 	Ad Configuration
 </a>
 
+
+<ul id="scrollspy">
+</ul>
 
 
   
@@ -347,83 +347,209 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>Integration </h1>
+			<h1>Ad Configuration </h1>
 
 			
 
-<h2 id="quick-integration">Quick Integration</h2>
+<p>There are optional parameters that can be used to customise the Fluid Player ad serving.
+No parameters are required and will default if not passed through.
+Vast options relate to the ads served and the how the player handles them</p>
 
-<p>In order to set Fluid Player, three things are required:</p>
+<p>These options are specifically for when ads are shown in the player.</p>
 
-<ul>
-<li>The Javascript and CSS files of the player;</li>
-<li>An HTML5 <code>&lt;video&gt;</code> tag;</li>
-<li>A single Javascript line of code that attaches the player to the video tag.</li>
-</ul>
-
-<pre><code class="language-html">&lt;html&gt;
-   &lt;head&gt;
-      &lt;title&gt;Fluid Player&lt;/title&gt;
-      &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css&quot; type=&quot;text/css&quot;/&gt;
-      &lt;script src=&quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js&quot;&gt;&lt;/script&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-      &lt;video id='my-video'&gt;
-         &lt;source src='vid.mp4' type='video/mp4' /&gt;
-      &lt;/video&gt;
-      
-      &lt;script type=&quot;text/javascript&quot;&gt;
-         fluidPlayer('my-video');
-      &lt;/script&gt;
-   &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-<p>The <code>fluidPlayer()</code> function gets the video tag id as a first parameter, which is required.</p>
-
-<h3 id="syntax">Syntax</h3>
-
-<pre><code class="language-javascript">fluidPlayer(idVideoPlayer[, options]);
-</code></pre>
-
-<h2 id="quality-switching">Quality Switching</h2>
-
-<p>Multiple sources can be added as shown below. The title will be displayed to the user when switching sources</p>
-
-<pre><code class="language-html">&lt;video id='my-video' controls style=&quot;width: 640px; height: 360px;&quot;&gt;
-    &lt;source src='vid_1080p.mp4' title='1080p' type='video/mp4' /&gt;
-    &lt;source src='vid_720p.mp4' title='720p' type='video/mp4' /&gt;
-    &lt;source src='vid_480p.mp4' title='480p' type='video/mp4' /&gt;
-&lt;/video&gt;
-</code></pre>
-
-<p><img src="screenshots/qualitySwitch.png" style="width:600px;margin:auto;display:flex;"></p>
-
-<h2 id="integration-using-optional-parameters">Integration Using Optional Parameters</h2>
-
-<p>Fluid Player can be customized by setting some optional parameters.
-The full list of parameters can be found under <a href="../configuration">Configuration</a></p>
-
-<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css&quot; type=&quot;text/css&quot;/&gt;
-&lt;script src=&quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;video id='my-video' controls style=&quot;width: 640px; height: 360px;&quot;&gt;
-    &lt;source src='vid.mp4' type='video/mp4' /&gt;
-&lt;/video&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-fluidPlayer(
+<pre><code class="language-javascript">fluidPlayer(
    'my-video',
     {
-        layoutControls: {
-            // Parameters to customise the look and feel of the player
-        },
-        vastOption: {
-            // Parameters to customise how the ads are displayed &amp; behave
+        vastOptions: {
+            adList:                     {},
+            skipButtonCaption:          'Skip ad in [seconds]',
+            skipButtonClickCaption:     'Skip ad &lt;span class=&quot;skip_button_icon&quot;&gt;&lt;/span&gt;',
+            adText:                      null,
+            vastTimeout:                 5000,
+
+            vastAdvanced: {
+                vastLoadedCallback:       (function() {}),
+                noVastVideoCallback:      (function() {}),
+                vastVideoSkippedCallback: (function() {}),
+                vastVideoEndedCallback:   (function() {})
+            }
         }
     }
 );
-&lt;/script&gt;
+</code></pre>
+
+<h2 id="adlist">adList</h2>
+
+<p>Setup one or multiple VAST tag. For each of the tags there are multiple options.</p>
+
+<ul>
+<li><strong>roll (mandatory):</strong> The available timeline positions: <em>preRoll</em>, <em>midRoll</em>, <em>postRoll</em>, <em>onPauseRoll</em>.</li>
+<li><strong>vastTag (mandatory):</strong> The url of the VAST XML (Please find the supported tags/attributes vastLinear.xml)</li>
+<li><strong>timer (only for mid-roll):</strong> the timer property schedules when the ad should show. There are two ways to define this:
+
+<ul>
+<li><strong>[seconds]:</strong> The number of seconds until the ad begins. Example: <em>timer: 10</em></li>
+<li><strong>[percentage]:</strong> The percentage of the video to show before the ad begins. Example: <em>timer: 50%</em></li>
+</ul></li>
+</ul>
+
+<p>We can set multiple <em>midRoll</em> VAST tags, however only one <em>preRoll</em> and <em>postRoll</em> can be set. See the example below:</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            adList: [
+                {
+                    roll: 'preRoll',
+                    vastTag: 'vastPreRoll.xml'
+                },
+                {
+                    roll: 'midRoll',
+                    vastTag: 'vastMidRoll.xml',
+                    timer: 8
+                },
+                {
+                    roll: 'midRoll',
+                    vastTag: 'vastMidRoll2.xml',
+                    timer: 10
+                },
+                {
+                    roll: 'postRoll',
+                    vastTag: 'vastPostRoll.xml'
+                }
+            ]
+        }
+    }
+);
+</code></pre>
+
+<ul>
+<li><strong>vAlign</strong> (only for nonLinear, optional): The available vertical positions for nonLinear Ads: top, middle, bottom. Default: bottom.</li>
+<li><strong>nonLinearDuration</strong> (only for nonLinear, optional): The number of seconds until the nonLinear Ad will be shown. If not set nor the minSuggestedDuration attribute of VAST XML than wont close until end of video.</li>
+<li><strong>size</strong> (only for nonLinear, optional): The dimension of the Ad. Supported sizes: 468x60, 300x250, 728x90</li>
+</ul>
+
+<pre><code class="language-javascript">fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            adList: [
+                {
+                    roll: 'onPauseRoll',
+                    vastTag: 'vastNonLinear.xml',
+                    vAlign: 'top',
+                    nonlinearDuration: 10,
+                    size: '300x250'
+                }
+            ]
+        }
+    }
+);
+</code></pre>
+
+<h2 id="skipbuttoncaption">skipButtonCaption</h2>
+
+<p>The text to display the countdown during an ad. The <strong>[seconds]</strong> placeholder is used for the second countdown.
+(<strong>Default:</strong> &ldquo;Skip ad in [seconds]&ldquo;)</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            skipButtonCaption: 'Wait [seconds] more second(s)'
+        }
+    }
+);
+</code></pre>
+
+<h2 id="skipbuttonclickcaption">skipButtonClickCaption</h2>
+
+<p>This defines the text to show when the countdown is finished and the user can skip to the main video.
+(<strong>Default:</strong> &lsquo;Skip ad <span class="skip_button_icon"></span>&rsquo;)</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            skipButtonClickCaption: 'Watch main video &lt;span class=&quot;skip_button_icon&quot;&gt;&lt;/span&gt;'
+        }
+    }
+);
+</code></pre>
+
+<h2 id="adtext">adText</h2>
+
+<p>Custom text can be shown when an in-stream ad plays. This text appears in the top left corner of the player and will be set to the primary colour.</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            adText: 'Advertising helps us keep the lights on' // Default null
+        }
+    }
+);
+</code></pre>
+
+<p><img src="screenshots/adText.png" style="width:600px;margin:auto;display:flex;"></p>
+
+<h2 id="adctatext">adCTAText</h2>
+
+<p>The landing page of the advertisement will show in the adCTAText area. You can add custom text above this URL, or you choose to disable this.
+The screenshot below shows how it will appear by default, and the code below shows how to alter or disable it.</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            // adCTAText: 'Subscribe now!' // Default &quot;Visit now!&quot;
+            adCTAText: false // Disable adCTAText
+        }
+    }
+);
+</code></pre>
+
+<p><img src="screenshots/adctatext.png" style="width:600px;margin:auto;display:flex;"></p>
+
+<h2 id="vasttimeout">vastTimeout</h2>
+
+<p>This parameter lets you set the time, in milliseconds, to wait for the VAST to load. (<strong>Default:</strong> 5000)</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            vastTimeout: 1000 // Default 5000
+        }
+    }
+);
+</code></pre>
+
+<h2 id="vastadvanced">vastAdvanced</h2>
+
+<p>We can specify the callback functions on the different VAST events.</p>
+
+<ul>
+<li><strong>vastLoadedCallback:</strong> When the VAST has loaded.</li>
+<li><strong>noVastVideoCallback:</strong> When there is no VAST video.</li>
+<li><strong>vastVideoSkippedCallback:</strong> If the ad is skipped.</li>
+<li><strong>vastVideoEndedCallback:</strong> When the ad and ended.</li>
+</ul>
+
+<pre><code class="language-javascript">fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            vastAdvanced: {
+                vastLoadedCallback:       (function() { console.log(&quot;Here one event&quot;) }),
+                noVastVideoCallback:      (function() { console.log(&quot;Here another&quot;) }),
+                vastVideoSkippedCallback: (function() { console.log(&quot;Here one more&quot;) }),
+                vastVideoEndedCallback:   (function() { console.log(&quot;Here's the last&quot;) })
+            }
+        }
+    }
+);
 </code></pre>
 
 
