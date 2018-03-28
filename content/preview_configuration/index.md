@@ -12,11 +12,11 @@ Below is an example video showing the thumbnails.
 <br/>
 
 <video id='my-video' controls style="width:720px;height:405px;">
-    <source src='https://cdn.fluidplayer.com/current/docs/demo/video.mp4' title="1080p" type='video/mp4' />
+    <source src='http://cdn.fluidplayer.com/current/docs/demo/video.mp4' title="1080p" type='video/mp4' />
 </video>
 
-<link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
-<script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"/></script>
+<link rel="stylesheet" href="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
+<script src="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"/></script>
 <script src="thumbnail_player.js"></script>
 
 ## VTT Format

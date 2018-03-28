@@ -1,7 +1,7 @@
 $( document ).ready(function() {
     var counter = 0;
     $("#fp_builder").change(function() {
-        fillFluidText(counter);
+        htmlToUse = fillFluidText();
         redoFluidPlayer(counter, htmlToUse);
         counter++;
     });
@@ -20,7 +20,7 @@ $( document ).ready(function() {
     });
 });
 
-function fillFluidText(counter) {
+function fillFluidText() {
     var fillToContainer = evalFillToContainer();
     var primaryColor = evalPrimaryColor();
     var autoplay = evalAutoplay();
@@ -35,38 +35,43 @@ function fillFluidText(counter) {
     var playbackRate = evalPlaybackRate();
     var controlBar = evalControlBar();
 
-    var htmlToUse = "\n" +
-        "\<link rel=\"stylesheet\" href=\"https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css\" type=\"text/css\"/>\n" +
-        "\<script src=\"https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js\"></script> \n\n" +
-        "\<video id='video-id'>\n" +
-        "    \<source src='vid.mp4' type='video/mp4'/>\n" +
-        "\</video>\n\n" +
-        "\<script>\n" +
-        "    var myFP = fluidPlayer(\n" +
+    htmlToReturn = "" +
+        "        var myFP = fluidPlayer(\n" +
         "        'video-id',\n" +
         "        {\n" +
         "            layoutControls: {\n" +
-        fillToContainer +
-        primaryColor +
-        autoplay +
-        keyboardControl +
-        playButtonShowing +
-        playPauseAnimation +
-        mute +
-        logo +
-        onPauseHtml +
-        download +
-        theatre +
-        playbackRate +
-        controlBar +
+                        fillToContainer +
+                        primaryColor +
+                        autoplay +
+                        keyboardControl +
+                        playButtonShowing +
+                        playPauseAnimation +
+                        mute +
+                        logo +
+                        onPauseHtml +
+                        download +
+                        theatre +
+                        playbackRate +
+                        controlBar +
         "            },\n" +
         "            vastOptions: {\n" +
         "                // To implement ads see http://docs.fluidplayer.com/ad_configuration/\n" +
         "            }\n" +
         "        }\n" +
-        "    );\n" +
+        "    );\n";
+
+    var htmlToUse = "\n" +
+        "\<link rel=\"stylesheet\" href=\"http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css\" type=\"text/css\"/>\n" +
+        "\<script src=\"http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js\"></script> \n\n" +
+        "\<video id='video-id'>\n" +
+        "    \<source src='vid.mp4' type='video/mp4'/>\n" +
+        "\</video>\n\n" +
+        "\<script>\n" +
+            htmlToReturn +
         "\</script>";
     $('#fp_fill').text(htmlToUse);
+
+    return htmlToReturn;
 }
 
 function redoFluidPlayer(counter, htmlToUse) {

@@ -19,8 +19,8 @@ In order to set Fluid Player, three things are required:
 <html>
    <head>
       <title>Fluid Player</title>
-      <link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
-      <script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
+      <link rel="stylesheet" href="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
+      <script src="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
    </head>
    <body>
       <video id='my-video'>
@@ -64,8 +64,8 @@ Fluid Player can be customized by setting some optional parameters.
 The full list of parameters can be found under [Configuration](../configuration)
 
 ```html
-<link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
-<script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
+<link rel="stylesheet" href="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
+<script src="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
 
 <video id='my-video' controls style="width: 640px; height: 360px;">
     <source src='vid.mp4' type='video/mp4' />
