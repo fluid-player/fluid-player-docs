@@ -5,13 +5,13 @@ weight: 0
 ---
 <div id="video-holder">
     <video id='my-video-0' controls style="height: 445px; width: 890px;">
-        <source src='http://cdn.fluidplayer.com/current/docs/demo/video.mp4' title="1080p" type='video/mp4' />
+        <source src='https://cdn.fluidplayer.com/current/docs/demo/video.mp4' title="1080p" type='video/mp4' />
     </video>
 </div>
 <hr/>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
-<script src="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"/></script>
+<link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
+<script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"/></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
 <script src="builder.js"></script>
 
