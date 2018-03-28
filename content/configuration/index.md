@@ -433,6 +433,24 @@ fluidPlayer(
 
 <img src="screenshots/adText.png" style="width:600px;margin:auto;display:flex;">
 
+## adCTAText
+The landing page of the advertisement will show in the adCTAText area. You can add custom text above this URL, or you choose to disable this.
+The screenshot below shows how it will appear by default, and the code below shows how to alter or disable it.
+
+```javascript
+fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            // adCTAText: 'Subscribe!' // Default "Visit now!"
+            adCTAText: false // Disable adCTAText
+        }
+    }
+);
+```
+
+<img src="screenshots/adText.png" style="width:600px;margin:auto;display:flex;">
+
 ## vastTimeout
 This parameter lets you set the time, in milliseconds, to wait for the VAST to load. (**Default:** 5000)
 

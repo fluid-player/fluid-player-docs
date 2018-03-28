@@ -179,9 +179,81 @@
 
 
 
-<a  title="Configuration" href="/configuration/">
+<a  title="Builder" href="/builder/">
 	
-	Configuration
+	Builder
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Layout Configuration" href="/layout_configuration/">
+	
+	Layout Configuration
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Ad Configuration" href="/ad_configuration/">
+	
+	Ad Configuration
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Preview Configuration" href="/preview_configuration/">
+	
+	Preview Configuration
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="API" href="/api/">
+	
+	API
 </a>
 
 
@@ -281,6 +353,12 @@
 
 <h2 id="quick-integration">Quick Integration</h2>
 
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We have recently our new <a href="../builder">Fluid Player Builder</a>.
+Customise your player for the easiest integration yet!</p>
+</div>
+
 <p>In order to set Fluid Player, three things are required:</p>
 
 <ul>
@@ -292,8 +370,8 @@
 <pre><code class="language-html">&lt;html&gt;
    &lt;head&gt;
       &lt;title&gt;Fluid Player&lt;/title&gt;
-      &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css&quot; type=&quot;text/css&quot;/&gt;
-      &lt;script src=&quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js&quot;&gt;&lt;/script&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css&quot; type=&quot;text/css&quot;/&gt;
+      &lt;script src=&quot;http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js&quot;&gt;&lt;/script&gt;
    &lt;/head&gt;
    &lt;body&gt;
       &lt;video id='my-video'&gt;
@@ -316,7 +394,8 @@
 
 <h2 id="quality-switching">Quality Switching</h2>
 
-<p>Multiple sources can be added as shown below. The title will be displayed to the user when switching sources</p>
+<p>Multiple sources can be added as shown below.
+The title will be displayed to the user when switching sources, and should be set to the video quality as can be seen below (&lsquo;1080p&rsquo;, &lsquo;720p&rsquo; etc).</p>
 
 <pre><code class="language-html">&lt;video id='my-video' controls style=&quot;width: 640px; height: 360px;&quot;&gt;
     &lt;source src='vid_1080p.mp4' title='1080p' type='video/mp4' /&gt;
@@ -332,8 +411,8 @@
 <p>Fluid Player can be customized by setting some optional parameters.
 The full list of parameters can be found under <a href="../configuration">Configuration</a></p>
 
-<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css&quot; type=&quot;text/css&quot;/&gt;
-&lt;script src=&quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js&quot;&gt;&lt;/script&gt;
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css&quot; type=&quot;text/css&quot;/&gt;
+&lt;script src=&quot;http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;video id='my-video' controls style=&quot;width: 640px; height: 360px;&quot;&gt;
     &lt;source src='vid.mp4' type='video/mp4' /&gt;
@@ -346,7 +425,7 @@ fluidPlayer(
         layoutControls: {
             // Parameters to customise the look and feel of the player
         },
-        vastOption: {
+        vastOptions: {
             // Parameters to customise how the ads are displayed &amp; behave
         }
     }

@@ -4,6 +4,11 @@ type: homepage
 ---
 
 ## Quick Integration
+{{< note title="Note">}}
+We have recently our new [Fluid Player Builder](../builder). 
+Customise your player for the easiest integration yet!
+{{< /note >}}
+
 In order to set Fluid Player, three things are required:
 
 * The Javascript and CSS files of the player;
@@ -14,8 +19,8 @@ In order to set Fluid Player, three things are required:
 <html>
    <head>
       <title>Fluid Player</title>
-      <link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
-      <script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
+      <link rel="stylesheet" href="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
+      <script src="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
    </head>
    <body>
       <video id='my-video'>
@@ -39,7 +44,8 @@ fluidPlayer(idVideoPlayer[, options]);
 ```
 
 ## Quality Switching
-Multiple sources can be added as shown below. The title will be displayed to the user when switching sources
+Multiple sources can be added as shown below. 
+The title will be displayed to the user when switching sources, and should be set to the video quality as can be seen below ('1080p', '720p' etc).
 
 ```html
 <video id='my-video' controls style="width: 640px; height: 360px;">
@@ -58,8 +64,8 @@ Fluid Player can be customized by setting some optional parameters.
 The full list of parameters can be found under [Configuration](../configuration)
 
 ```html
-<link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
-<script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
+<link rel="stylesheet" href="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
+<script src="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
 
 <video id='my-video' controls style="width: 640px; height: 360px;">
     <source src='vid.mp4' type='video/mp4' />
@@ -72,7 +78,7 @@ fluidPlayer(
         layoutControls: {
             // Parameters to customise the look and feel of the player
         },
-        vastOption: {
+        vastOptions: {
             // Parameters to customise how the ads are displayed & behave
         }
     }

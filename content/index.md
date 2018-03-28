@@ -56,11 +56,11 @@ The Fluid Player code is found at https://github.com/fluid-player/ but is also a
 
 Specify the version:
 ```html
-https://cdn.fluidplayer.com/1.0.1/fluidplayer.min.js
-https://cdn.fluidplayer.com/1.0.1/fluidplayer.min.css
+http://cdn.fluidplayer.com/1.0.1/fluidplayer.min.js
+http://cdn.fluidplayer.com/1.0.1/fluidplayer.min.css
 ```
 Or use the most recent version:
 ```html
-https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js
-https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css
+http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js
+http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css
 ```

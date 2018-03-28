@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://docs.fluidplayer.com/builder/</loc>
+    <lastmod>2016-08-10T15:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://docs.fluidplayer.com/changelog/</loc>
     <lastmod>2016-08-10T15:00:00+00:00</lastmod>
   </url>
@@ -10,6 +15,30 @@
   <url>
     <loc>http://docs.fluidplayer.com/</loc>
     <lastmod>2016-08-10T15:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://docs.fluidplayer.com/api/</loc>
+  </url>
+  
+  <url>
+    <loc>http://docs.fluidplayer.com/ad_configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>http://docs.fluidplayer.com/ad_configuration/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://docs.fluidplayer.com/api/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://docs.fluidplayer.com/builder/</loc>
+    <lastmod>2016-08-10T15:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -62,6 +91,24 @@
   
   <url>
     <loc>http://docs.fluidplayer.com/integration/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://docs.fluidplayer.com/layout_configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>http://docs.fluidplayer.com/layout_configuration/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://docs.fluidplayer.com/preview_configuration/</loc>
+  </url>
+  
+  <url>
+    <loc>http://docs.fluidplayer.com/preview_configuration/</loc>
     <priority>0</priority>
   </url>
   
