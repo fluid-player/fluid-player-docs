@@ -1,7 +1,8 @@
 $( document ).ready(function() {
     var counter = 0;
     $("#fp_builder").change(function() {
-        htmlToUse = fillFluidText();
+        htmlToUse = getFluidParams();
+        fillBuilderTextDiv(htmlToUse);
         redoFluidPlayer(counter, htmlToUse);
         counter++;
     });
@@ -10,8 +11,10 @@ $( document ).ready(function() {
     var minHeight = (parseInt($('#video-holder').height()) + 75) + "px";
     $('#video-holder').css("min-height", minHeight);
 
+    // Set up our Fluid Player & copy text on the page
     fluidPlayer('my-video-0');
-    fillFluidText(counter);
+    fluidParams = getFluidParams();
+    fillBuilderTextDiv(fluidParams);
 
     new Clipboard('.btn-clipboard', {
         text: function() {
@@ -20,7 +23,7 @@ $( document ).ready(function() {
     });
 });
 
-function fillFluidText() {
+function getFluidParams() {
     var fillToContainer = evalFillToContainer();
     var primaryColor = evalPrimaryColor();
     var autoplay = evalAutoplay();
@@ -35,8 +38,8 @@ function fillFluidText() {
     var playbackRate = evalPlaybackRate();
     var controlBar = evalControlBar();
 
-    htmlToReturn = "" +
-        "        var myFP = fluidPlayer(\n" +
+    fluidParams = "" +
+        "    var myFP = fluidPlayer(\n" +
         "        'video-id',\n" +
         "        {\n" +
         "            layoutControls: {\n" +
@@ -60,18 +63,20 @@ function fillFluidText() {
         "        }\n" +
         "    );\n";
 
-    var htmlToUse = "\n" +
+    return fluidParams;
+}
+
+function fillBuilderTextDiv(textToFill) {
+    var fillDivText = "\n" +
         "\<link rel=\"stylesheet\" href=\"http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css\" type=\"text/css\"/>\n" +
         "\<script src=\"http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js\"></script> \n\n" +
         "\<video id='video-id'>\n" +
         "    \<source src='vid.mp4' type='video/mp4'/>\n" +
         "\</video>\n\n" +
         "\<script>\n" +
-            htmlToReturn +
+        textToFill +
         "\</script>";
-    $('#fp_fill').text(htmlToUse);
-
-    return htmlToReturn;
+    $('#fp_fill').text(fillDivText);
 }
 
 function redoFluidPlayer(counter, htmlToUse) {

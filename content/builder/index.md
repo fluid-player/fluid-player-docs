@@ -145,7 +145,7 @@ a.hover {
 <!-- Initial Play Button -->
 <div class="form-group">
   <label class="col-md-2 control-label" for="show_play">On Load:</label>
-  <div class="col-md-4"> 
+  <div class="col-md-10"> 
     <label class="radio-inline" for="show_play-0">
       <input type="radio" name="show_play" id="show_play-0" value="true" checked="checked">
       Show Play Button
@@ -159,8 +159,8 @@ a.hover {
 
 <!-- Auto-hide Controls-->
 <div class="form-group">
-      <label class="col-md-2 control-label" for="primary_color">Autohide Controls:</label>  
-  <div class="col-md-8" style="padding-top:5px;">
+  <label class="col-md-2 control-label" for="primary_color">Autohide Controls:</label>  
+  <div class="col-md-10" style="padding-top:5px;">
       <div style="float:left;" onclick="$('.autohide-display').toggle();">
           <input type="checkbox" name="autohide_enabled" id="autohide_enabled" value="true">
       </div>

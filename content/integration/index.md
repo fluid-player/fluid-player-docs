@@ -78,7 +78,7 @@ fluidPlayer(
         layoutControls: {
             // Parameters to customise the look and feel of the player
         },
-        vastOption: {
+        vastOptions: {
             // Parameters to customise how the ads are displayed & behave
         }
     }
