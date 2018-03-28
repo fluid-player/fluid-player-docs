@@ -1,4 +1,4 @@
-baseurl = "http://docs.fluidplayer.com/"
+baseurl = "https://docs.fluidplayer.com/"
 languageCode = "en-us"
 metadataformat = "yaml"
 title = "Fluid Player Documentation"
