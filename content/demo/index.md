@@ -58,6 +58,27 @@ type: homepage
     <source src='video360.mp4' type='video/mp4' title="360p" />
 </video>
 
+## Download
+
+* Allow the video to be downloaded easily by setting [allowDownload](../configuration#allowDownload) to _true_
+<br/><br/>
+
+<video id='download-video' controls style="width:720px;height:405px;">
+    <source src='video.mp4' type='video/mp4' title="720p" />
+    <source src='video360.mp4' type='video/mp4' title="360p" />
+</video>
+
+## Playback Rate
+
+* Adjustable video speed
+* Easily set by enabling [playbackRateEnabled](../configuration#playbackRateEnabled)
+<br/><br/>
+
+<video id='playback-video' controls style="width:720px;height:405px;">
+    <source src='video.mp4' type='video/mp4' title="720p" />
+    <source src='video360.mp4' type='video/mp4' title="360p" />
+</video>
+
 <link rel="stylesheet" href="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
 <script src="http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
 <script src="fp_generator.js"></script>

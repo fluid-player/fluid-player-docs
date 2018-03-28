@@ -128,3 +128,23 @@ fluidPlayer(
         }
     }
 );
+
+fluidPlayer(
+    'download-video',
+    {
+        layoutControls: {
+            fillToContainer: true,
+            allowDownload: true
+        }
+    }
+);
+
+fluidPlayer(
+    'playback-video',
+    {
+        layoutControls: {
+            fillToContainer: true,
+            playbackRateEnabled: true
+        }
+    }
+);
