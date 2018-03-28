@@ -179,7 +179,7 @@ We can specify the callback functions on the different VAST events.
 * **vastLoadedCallback:** When the VAST has loaded.
 * **noVastVideoCallback:** When there is no VAST video.
 * **vastVideoSkippedCallback:** If the ad is skipped.
-* **vastVideoEndedCallback:** When the ad and ended.
+* **vastVideoEndedCallback:** When the ad has ended.
 
 ```javascript
 fluidPlayer(

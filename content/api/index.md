@@ -84,3 +84,17 @@ Using **toggleFullScreen(boolean)** we can set the video to fullscreen. **true**
 ```javascript
 myFluidPlayer.toggleFullScreen(true);
 ```
+
+## on('play', function(){})
+The **on('play', function(){})** can be used to handle the play event for the Fluid Player.
+
+```javascript
+myFluidPlayer.on('play', function(){ console.log('Video is playing'); });
+```
+
+## on('pause')
+The **on('pause', function(){})** can be used to handle the pause event for the Fluid Player.
+
+```javascript
+myFluidPlayer.on('pause', function(){ console.log('Video is now paused'); });
+```

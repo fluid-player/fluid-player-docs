@@ -434,6 +434,20 @@ If we wanted to to set or change the HTML that&rsquo;s set for this we can do it
 <pre><code class="language-javascript">myFluidPlayer.toggleFullScreen(true);
 </code></pre>
 
+<h2 id="on-play-function">on(&lsquo;play&rsquo;, function(){})</h2>
+
+<p>The <strong>on(&lsquo;play&rsquo;, function(){})</strong> can be used to handle the play event for the Fluid Player.</p>
+
+<pre><code class="language-javascript">myFluidPlayer.on('play', function(){ console.log('Video is playing'); });
+</code></pre>
+
+<h2 id="on-pause">on(&lsquo;pause&rsquo;)</h2>
+
+<p>The <strong>on(&lsquo;pause&rsquo;, function(){})</strong> can be used to handle the pause event for the Fluid Player.</p>
+
+<pre><code class="language-javascript">myFluidPlayer.on('pause', function(){ console.log('Video is now paused'); });
+</code></pre>
+
 
 			<aside class="copyright" role="note" style="text-align: center;">
 				© 2018 <a href="https://www.fluidplayer.com">Fluid Player</a>. All Rights Reserved.

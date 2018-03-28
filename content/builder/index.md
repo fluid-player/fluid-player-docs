@@ -5,10 +5,10 @@ weight: 0
 ---
 <div id="video-holder">
     <video id='my-video-0' controls style="height: 445px; width: 890px;">
-        <source src='http://cdn.fluidplayer.com/current/docs/demo/video.mp4' title="1080p" type='video/mp4' />
+        <source src='https://cdn.fluidplayer.com/current/docs/demo/video.mp4' title="1080p" type='video/mp4' />
     </video>
 </div>
-
+<hr/>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="fp_testing.css" type="text/css"/>
 <script src="fp_js_testing.js"/></script>
@@ -32,7 +32,7 @@ a.hover {
 </style>
 
 <h2> Styling </h2>
-<form class="form-horizontal" id="fp_builder" style="font-size:13px;">
+<form class="form-horizontal" id="fp_builder">
 <fieldset>
 
 <!-- Primary Colour-->
@@ -241,17 +241,7 @@ a.hover {
 
 
 <pre>
-<code class="language-html hljs xml" id="fp_fill">
-    var myFP = fluidPlayer(
-        'video-id',
-        {
-            layoutControls: {
-            },
-            vastOptions: {
-                // To implement ads see http://docs.fluidplayer.com/ad_configuration/
-            }
-        }
-    );
+<code class="hljs xml" id="fp_fill">
 </code>
 </pre>
 <br/>

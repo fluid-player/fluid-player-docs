@@ -4,6 +4,11 @@ type: homepage
 ---
 
 ## Quick Integration
+{{< note title="Note">}}
+We have recently our new [Fluid Player Builder](../builder). 
+Customise your player for the easiest integration yet!
+{{< /note >}}
+
 In order to set Fluid Player, three things are required:
 
 * The Javascript and CSS files of the player;
@@ -39,7 +44,8 @@ fluidPlayer(idVideoPlayer[, options]);
 ```
 
 ## Quality Switching
-Multiple sources can be added as shown below. The title will be displayed to the user when switching sources
+Multiple sources can be added as shown below. 
+The title will be displayed to the user when switching sources, and should be set to the video quality as can be seen below ('1080p', '720p' etc).
 
 ```html
 <video id='my-video' controls style="width: 640px; height: 360px;">

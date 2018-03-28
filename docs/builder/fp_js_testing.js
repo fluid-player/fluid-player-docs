@@ -3053,6 +3053,7 @@ var fluidPlayerClass = {
         var logoImage = document.createElement('img');
         logoImage.src = player.displayOptions.layoutControls.logo.imageUrl;
         logoImage.style.position = 'absolute';
+        logoImage.style.margin = '3px';
         var logoPosition = player.displayOptions.layoutControls.logo.position.toLowerCase();
         if (logoPosition.indexOf('bottom') !== -1) {
             logoImage.style.bottom = 0;
