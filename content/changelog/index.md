@@ -4,12 +4,16 @@ title: "Changelog"
 weight: 0
 ---
 
-### 2.1
+### 2.1.1
+* [Pull #107](https://github.com/fluid-player/fluid-player/pull/107)
+   * Improve the theater mode UI
+   * Fix issues with multiple player instances and download link
+
+### 2.1.0
 * [Pull #101](https://github.com/fluid-player/fluid-player/pull/101) Quality indicator
 * [Pull #102](https://github.com/fluid-player/fluid-player/pull/102) API functions
 * [Pull #103](https://github.com/fluid-player/fluid-player/pull/103) Landing page displayed in In-Stream ads
 * [Pull #104](https://github.com/fluid-player/fluid-player/pull/104) Theater mode, download & playback rate
-
 
 ### 2.0.0
 * [Pull #91](https://github.com/fluid-player/fluid-player/pull/91)

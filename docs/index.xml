@@ -26,7 +26,7 @@
       <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
       
       <guid>https://docs.fluidplayer.com/changelog/</guid>
-      <description>2.1  Pull #101 Quality indicator Pull #102 API functions Pull #103 Landing page displayed in In-Stream ads Pull #104 Theater mode, download &amp;amp; playback rate  2.0.0  Pull #91  New default template Add play button Play pause animations Restructuring of optional parameters Remove templates General fixes   1.2.2  Pull #88 Improve nonlinear ads  1.2.1  Pull #86 Pull #87 Mid roll current time fix  1.</description>
+      <description>2.1.1  Pull #107  Improve the theater mode UI Fix issues with multiple player instances and download link   2.1.0  Pull #101 Quality indicator Pull #102 API functions Pull #103 Landing page displayed in In-Stream ads Pull #104 Theater mode, download &amp;amp; playback rate  2.0.0  Pull #91  New default template Add play button Play pause animations Restructuring of optional parameters Remove templates General fixes   1.</description>
     </item>
     
     <item>
