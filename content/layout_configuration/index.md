@@ -108,7 +108,7 @@ If the Fluid Player is placed into a container on your page you can use this par
 Set this parameter to **true** to set the width and height to 100%.
 
 {{< note title="Note">}}
-It is important to ensure that the container has defined width and height, otherwise the player will not have fixed sizes.
+It is important to ensure that the container has a defined width and height, otherwise the player will not have a fixed size.
 {{< /note >}}
 
 ```javascript

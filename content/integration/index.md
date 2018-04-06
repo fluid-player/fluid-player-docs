@@ -5,8 +5,8 @@ type: homepage
 
 ## Quick Integration
 {{< note title="Note">}}
-We have recently our new [Fluid Player Builder](../builder). 
-Customise your player for the easiest integration yet!
+We have recently launched our new [Fluid Player Builder](../builder). 
+Use the Builder to customise your player for the easiest integration yet!
 {{< /note >}}
 
 In order to set Fluid Player, three things are required:
