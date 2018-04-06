@@ -105,7 +105,8 @@ fluidPlayer(
 
 ## fillToContainer
 If the Fluid Player is placed into a container on your page you can use this parameter to fill to the size of that container. 
-Set this parameter to **true** to set the width and height to 100%
+It is important to ensure that the container has defined width and height, otherwise the player will not have fixed sizes.
+Set this parameter to **true** to set the width and height to 100%.
 
 ```javascript
 fluidPlayer(
