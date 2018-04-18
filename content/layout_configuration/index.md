@@ -72,6 +72,21 @@ fluidPlayer(
 <img src="screenshots/primaryColour.png" style="height:400px;margin:auto;display:flex;">
 <img src="screenshots/primaryColour2.png" style="height:400px;margin:auto;display:flex;">
 
+## posterImage
+The poster attribute for videos allows an image to be shown before the video plays. This can be set as a Fluid Player parameter.
+By default it will be set to false, and show no image.
+
+```javascript
+fluidPlayer(
+   'my-video',
+    {
+        layoutControls: {
+            posterImage: 'path/to/my/image.jpg' // Default false
+        }
+    }
+);
+```
+
 ## playButtonShowing
 By default the play button will show in the middle of the player. To hide the button this option can be set to **false**.
 When this option is set to **false** the video controls will show by default.
