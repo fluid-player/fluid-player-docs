@@ -178,6 +178,10 @@ The _logo_ option allows you to show an image overlaid in the corner of the play
 * **position:** Where on the player the logo will show. (**Default:** 'top left')
 * **clickUrl:** If you want the logo to be a link to another page you can set the landing page with this parameter. (**Default:** null)
 * **opacity:** This will toggle the opacity styling option of the logo. (**Default:** 1)
+* **mouseOverImageUrl:** You can specify a separate image to show on mouseover of the logo. (**Default:** null)
+* **imageMargin:** The margin on the logo can be specified using this parameter. (**Default:** '2px')
+* **hideWithControls:** If you want the logo to only appear along with the video controls you can set this parameter to **true**. (**Default:** false)
+* **showOverAds:** The logo will not show during in-stream ads by default, but you can specify the logo to show during ads using this parameter. (**Default:** false)
 
 ```javascript
 fluidPlayer(
@@ -185,10 +189,14 @@ fluidPlayer(
     {
         layoutControls: {
             logo: {
-                imageUrl: 'https://www.routetomylogo.com', // Default null
+                imageUrl: 'https://www.routetomylogo.com/logo.jpg', // Default null
                 position: 'top right', // Default 'top left'
                 clickUrl: 'https://www.landingpage.com/welcome', // Default null
-                opacity:  0.8 // Default 1
+                opacity: 0.8, // Default 1
+                mouseOverImageUrl: 'image/on/hover.jpg', // Default null
+                imageMargin: '10px', // Default '2px'
+                hideWithControls: true, // Default false
+                showOverAds: 'https://www.routetomyotherlogo.com/logo_2.jpg' // Default false
             }
         }
     }

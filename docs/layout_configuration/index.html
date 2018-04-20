@@ -531,6 +531,10 @@ Set this parameter to <strong>true</strong> to set the width and height to 100%.
 <li><strong>position:</strong> Where on the player the logo will show. (<strong>Default:</strong> &lsquo;top left&rsquo;)</li>
 <li><strong>clickUrl:</strong> If you want the logo to be a link to another page you can set the landing page with this parameter. (<strong>Default:</strong> null)</li>
 <li><strong>opacity:</strong> This will toggle the opacity styling option of the logo. (<strong>Default:</strong> 1)</li>
+<li><strong>mouseOverImageUrl:</strong> You can specify a separate image to show on mouseover of the logo. (<strong>Default:</strong> null)</li>
+<li><strong>imageMargin:</strong> The margin on the logo can be specified using this parameter. (<strong>Default:</strong> &lsquo;2px&rsquo;)</li>
+<li><strong>hideWithControls:</strong> If you want the logo to only appear along with the video controls you can set this parameter to <strong>true</strong>. (<strong>Default:</strong> false)</li>
+<li><strong>showOverAds:</strong> The logo will not show during in-stream ads by default, but you can specify the logo to show during ads using this parameter. (<strong>Default:</strong> false)</li>
 </ul>
 
 <pre><code class="language-javascript">fluidPlayer(
@@ -538,10 +542,14 @@ Set this parameter to <strong>true</strong> to set the width and height to 100%.
     {
         layoutControls: {
             logo: {
-                imageUrl: 'https://www.routetomylogo.com', // Default null
+                imageUrl: 'https://www.routetomylogo.com/logo.jpg', // Default null
                 position: 'top right', // Default 'top left'
                 clickUrl: 'https://www.landingpage.com/welcome', // Default null
-                opacity:  0.8 // Default 1
+                opacity: 0.8, // Default 1
+                mouseOverImageUrl: 'image/on/hover.jpg', // Default null
+                imageMargin: '10px', // Default '2px'
+                hideWithControls: true, // Default false
+                showOverAds: 'https://www.routetomyotherlogo.com/logo_2.jpg' // Default false
             }
         }
     }
