@@ -11,14 +11,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
-    <title>WordPress - Fluid Player Documentation</title>
+    <title>Streaming - Fluid Player Documentation</title>
     <meta name="generator" content="Hugo 0.30.2" />
 
     
-    <link rel="canonical" href="https://docs.fluidplayer.com/wordpress/">
+    <link rel="canonical" href="https://docs.fluidplayer.com/streaming/">
     
 
-    <meta property="og:url" content="https://docs.fluidplayer.com/wordpress/">
+    <meta property="og:url" content="https://docs.fluidplayer.com/streaming/">
     <meta property="og:title" content="Fluid Player Documentation">
     <meta property="og:image" content="https://docs.fluidplayer.com/fluidplayer-logo.png">
     <meta name="apple-mobile-web-app-title" content="Fluid Player Documentation">
@@ -266,11 +266,14 @@
 
 
 
-<a  title="Streaming" href="/streaming/">
+<a class="current" title="Streaming" href="/streaming/">
 	
 	Streaming
 </a>
 
+
+<ul id="scrollspy">
+</ul>
 
 
   
@@ -284,14 +287,11 @@
 
 
 
-<a class="current" title="Wordpress" href="/wordpress/">
+<a  title="Wordpress" href="/wordpress/">
 	
 	Wordpress
 </a>
 
-
-<ul id="scrollspy">
-</ul>
 
 
   
@@ -365,28 +365,49 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>WordPress </h1>
+			<h1>Streaming </h1>
 
-			<p>A plugin has been developed to embed Fluid Player in WordPress blogs:
-<a href="https://wordpress.org/plugins/fluid-player/">https://wordpress.org/plugins/fluid-player/</a></p>
+			
 
-<p>Fluid Player can be easily embedded by using the custom [fluid-player] shortcode.
-The initial version accepts the following list of named parameters:</p>
+<p>Streaming is multimedia that is constantly received by and presented to an end-user while being delivered by a provider.
+Fluid Player supports MPEG-DASH and HLS streaming. These both work by splitting the content into segments.
+Segments contain video or audio content, and are selected based on the highest bit rate available.
+This is to ensure there are as few stalls and re-buffers as possible. More details on streaming can be found <a href="https://en.wikipedia.org/wiki/Streaming_media#Protocols">here.</a></p>
 
-<ul>
-<li><strong>video:</strong> path to actual video to be used by the player. If no value is passed it will fall back to the plugin sample video.</li>
-<li><strong>vast_file:</strong> path to vast file (optional)</li>
-<li><strong>vtt_file:</strong> path to VTT file (optional)</li>
-<li><strong>vtt_sprite:</strong> path to VTT sprites file (optional)</li>
-<li><strong>layout:</strong> any of the following themes are provided with the player: default/funky/metal, if no value is passed it will fall back to &lsquo;default&rsquo;</li>
-</ul>
+<h2 id="mpeg-dash">MPEG-DASH</h2>
 
-<p>Provided below is a generic example of how such a call would look like:</p>
+<p>Dynamic Adaptive Streaming over HTTP (DASH), also known as MPEG-DASH, is a streaming technique that can be played by Fluid Player.
+A media presentation description (MPD) file describes segment information. The individual segments are describe in <a href="https://www.brendanlong.com/the-structure-of-an-mpeg-dash-mpd.html">this article</a>.
+Segments contain information regarding the times, URL, resolution, bit rates etc, which informs the player what to serve to the client depending on the bandwidth availability.
+Full details on the MPEG-DASH protocol can be found on the <a href="https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP">wikipedia</a>.</p>
 
-<pre><code>[fluid-player video=&quot;foo.mp4&quot; vast_file=&quot;vast.xml&quot;  vtt_file=&quot;thumbs.vtt&quot; vtt_sprite=&quot;thumbs.jpg&quot; layout=&quot;default&quot;]
+<p>Fluid Player makes use of <a href="https://github.com/Dash-Industry-Forum/dash.js">Dash.js</a> to play MPD files.
+Once an mpd file is set as the source the Fluid Player will play it, as can be seen in the below example.</p>
+
+<pre><code class="language-html">&lt;video id='dash-video'&gt;
+    &lt;source src='stream_dash.mpd' type='application/dash+xml'/&gt;
+&lt;/video&gt;
+
+&lt;script&gt;
+fluidPlayer(
+    'dash-video',
+    {
+        layoutControls: {
+            fillToContainer: true
+        }
+    }
+);
+&lt;/script&gt;
 </code></pre>
 
-<p>For more information visit the Wordpress hosted plugin page.</p>
+<p><br/>
+<video id='dash-video' controls style="width:720px;height:405px;">
+    <source src='stream_dash.mpd' type='application/dash+xml' title="720p" />
+</video></p>
+
+<p><link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
+<script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"/></script>
+<script src="streaming.js"></script></p>
 
 
 			<aside class="copyright" role="note" style="text-align: center;">

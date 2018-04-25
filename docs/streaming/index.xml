@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Streamings on Fluid Player Documentation</title>
+    <link>https://docs.fluidplayer.com/streaming/</link>
+    <description>Recent content in Streamings on Fluid Player Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://docs.fluidplayer.com/streaming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Streaming</title>
+      <link>https://docs.fluidplayer.com/streaming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.fluidplayer.com/streaming/</guid>
+      <description>Streaming is multimedia that is constantly received by and presented to an end-user while being delivered by a provider. Fluid Player supports MPEG-DASH and HLS streaming. These both work by splitting the content into segments. Segments contain video or audio content, and are selected based on the highest bit rate available. This is to ensure there are as few stalls and re-buffers as possible. More details on streaming can be found here.</description>
+    </item>
+    
+  </channel>
+</rss>
