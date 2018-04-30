@@ -50,7 +50,7 @@ It works in a similar way to DASH by breaking the content into chunks and servin
 
 
 Fluid Player makes use of [hls.js](https://github.com/video-dev/hls.js) to play .m3u8 files.
-Once an mpd file is set as the source the Fluid Player will play it, as can be seen in the below example.
+Once an .m3u8 file is set as the source the Fluid Player will play it, as can be seen in the below example.
 
 ```html
 <video id='hls-video'>
