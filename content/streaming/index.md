@@ -42,6 +42,38 @@ fluidPlayer(
     <source src='stream_dash.mpd' type='application/dash+xml' title="720p" />
 </video>
 
+
+## HLS
+HTTP Live Streaming (also known as HLS) is an HTTP-based media streaming communications protocol implemented by Apple Inc. as part of its QuickTime, Safari, OS X, and iOS software.
+This definition taken from the [HLS wikipedia page](https://en.wikipedia.org/wiki/HTTP_Live_Streaming). 
+It works in a similar way to DASH, breaking the content into chunks and serving it one segment at a time, potentially with no final chunk.
+
+
+Fluid Player makes use of [hls.js](https://github.com/video-dev/hls.js) to play .m3u8 files.
+Once an mpd file is set as the source the Fluid Player will play it, as can be seen in the below example.
+
+```html
+<video id='hls-video'>
+    <source src='stream_hls.m3u8' type='application/x-mpegURL'/>
+</video>
+
+<script>
+fluidPlayer(
+    'hls-video',
+    {
+        layoutControls: {
+            fillToContainer: true
+        }
+    }
+);
+</script>
+```
+
+<br/>
+<video id='hls-video'>
+    <source src='https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8' type='application/x-mpegURL'/>
+</video>
+
 <link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
 <script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"/></script>
 <script src="streaming.js"></script>
