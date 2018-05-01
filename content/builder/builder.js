@@ -179,7 +179,7 @@ function evalLogo() {
         logoHoverURL = ($('#logo_hover_url').val() != '') ? "'" + $('#logo_hover_url').val() + "'" : 'null';
         logoMargin   = ($('#logo_margin').val() != '') ? $('#logo_margin').val() : '2px';
         controlsHide = ($('input[name=logo_hide]:checked').val()) ? 'true' : 'false';
-        showOverAds  = ($('#logo_show_ads').val() != '') ? $('#logo_show_ads').val() : 'false';
+        showOverAds  = ($('input[name=logo_show_ads]:checked').val()) ? 'true' : 'false';
 
         logoSetting = "\t\tlogo: {\n" +
             "\t\t\timageUrl: " + logoURL + ",\n" +

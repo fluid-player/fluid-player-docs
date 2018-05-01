@@ -124,10 +124,14 @@ a.hover {
       </div>
     </div>
     <div class="form-group">
-      <label class="col-md-2 control-label" for="logo_show_ads">Logo Show Over Ads:</label>  
-      <div class="col-md-7">
-      <input id="logo_show_ads" name="logo_show_ads" type="text" placeholder="https://www.landingpage.example" class="form-control input-md">
-      </div>
+      <label class="col-md-2 control-label" for="logo_show_ads">Logo Show Over Ads:</label>
+        <div class="col-md-1">
+        <div class="checkbox">
+          <label for="logo_show_ads">
+            <input type="checkbox" name="logo_show_ads" id="logo_show_ads" value="false">
+          </label>
+      	</div>
+        </div>
     </div>
 </div>
 

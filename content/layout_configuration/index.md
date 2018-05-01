@@ -175,7 +175,7 @@ fluidPlayer(
 The _logo_ option allows you to show an image overlaid in the corner of the player. There are 4 options that can be set to configure this logo.
 
 * **imageUrl:** The location of the image to show. (**Default:** null)
-* **position:** Where on the player the logo will show. (**Default:** 'top left')
+* **position:** Where on the player the logo will show. The options are **top left**, **top right**, **bottom left** or **bottom right**. (**Default:** 'top left')
 * **clickUrl:** If you want the logo to be a link to another page you can set the landing page with this parameter. (**Default:** null)
 * **opacity:** This will toggle the opacity styling option of the logo. (**Default:** 1)
 * **mouseOverImageUrl:** You can specify a separate image to show on mouseover of the logo. (**Default:** null)
@@ -196,7 +196,7 @@ fluidPlayer(
                 mouseOverImageUrl: 'image/on/hover.jpg', // Default null
                 imageMargin: '10px', // Default '2px'
                 hideWithControls: true, // Default false
-                showOverAds: 'https://www.routetomyotherlogo.com/logo_2.jpg' // Default false
+                showOverAds: 'true' // Default false
             }
         }
     }
