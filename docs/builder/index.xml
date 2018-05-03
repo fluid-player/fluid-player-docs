@@ -17,7 +17,7 @@
       <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
       
       <guid>https://docs.fluidplayer.com/builder/</guid>
-      <description>label { font-weight: normal !important; } a { color: black; text-decoration: none !important; } a.hover { color: #03a9f4; } .form-control { border-radius: 2px; }   Styling   Primary Color:   Fill Container Div:     Display Logo:    Top Left Top Right Bottom Left Bottom Right   Logo Opacity: %     Logo URL:   Logo Click URL:     Controls  Autoplay:    Keyboard Controls:     Mute On Load:    Play/Pause Animation:     On Load: Show Play Button  Show Control Bar    Autohide Controls:  After  second(s) Animate    Download:    Theatre Mode:     Playback Speed:     On-pause HTML On-pause HTML:</description>
+      <description>label { font-weight: normal !important; } a { color: black; text-decoration: none !important; } a.hover { color: #03a9f4; } .form-control { border-radius: 2px; }   Styling   Primary Color:   Poster Image:   Fill Container Div:     Display Logo:    Top Left Top Right Bottom Left Bottom Right   Logo Opacity: %     Logo URL:   Logo Click URL:     Controls  Autoplay:    Keyboard Controls:     Mute On Load:    Play/Pause Animation:     On Load: Show Play Button  Show Control Bar    Autohide Controls:  After  second(s) Animate    Download:    Theatre Mode:     Playback Speed:     On-pause HTML On-pause HTML:</description>
     </item>
     
   </channel>
