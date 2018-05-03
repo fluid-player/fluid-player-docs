@@ -498,13 +498,15 @@ Vast options relate to the ads served and the how the player handles them</p>
 
 <h2 id="adtext">adText</h2>
 
-<p>Custom text can be shown when an in-stream ad plays. This text appears in the top left corner of the player and will be set to the primary colour.</p>
+<p>Custom text can be shown when an in-stream ad plays. This text appears in the top left corner of the player and will be set to the primary colour.
+Has additional adTextPosition parameter, that can have values, like &lsquo;top right&rsquo;, &lsquo;top left&rsquo;, &lsquo;bottom right&rsquo;, &lsquo;bottom left&rsquo;.</p>
 
 <pre><code class="language-javascript">fluidPlayer(
    'my-video',
     {
         vastOptions: {
-            adText: 'Advertising helps us keep the lights on' // Default null
+            adText: 'Advertising helps us keep the lights on', // Default null,
+            adTextPosition: 'top left' // Default 'top left'
         }
     }
 );
@@ -515,13 +517,15 @@ Vast options relate to the ads served and the how the player handles them</p>
 <h2 id="adctatext">adCTAText</h2>
 
 <p>The landing page of the advertisement will show in the adCTAText area. You can add custom text above this URL, or you choose to disable this.
-The screenshot below shows how it will appear by default, and the code below shows how to alter or disable it.</p>
+The screenshot below shows how it will appear by default, and the code below shows how to alter or disable it.
+Has additional adCTATextPosition parameter, that can have values, like &lsquo;top right&rsquo;, &lsquo;top left&rsquo;, &lsquo;bottom right&rsquo;, &lsquo;bottom left&rsquo;.</p>
 
 <pre><code class="language-javascript">fluidPlayer(
    'my-video',
     {
         vastOptions: {
-            // adCTAText: 'Subscribe now!' // Default &quot;Visit now!&quot;
+            // adCTAText: 'Subscribe now!', // Default &quot;Visit now!&quot;,
+            // adCTATextPosition: 'bottom left', //Default 'bottom right'
             adCTAText: false // Disable adCTAText
         }
     }

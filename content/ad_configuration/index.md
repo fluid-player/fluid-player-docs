@@ -127,13 +127,15 @@ fluidPlayer(
 
 ## adText
 Custom text can be shown when an in-stream ad plays. This text appears in the top left corner of the player and will be set to the primary colour.
+Has additional adTextPosition parameter, that can have values, like 'top right', 'top left', 'bottom right', 'bottom left'.
 
 ```javascript
 fluidPlayer(
    'my-video',
     {
         vastOptions: {
-            adText: 'Advertising helps us keep the lights on' // Default null
+            adText: 'Advertising helps us keep the lights on', // Default null,
+            adTextPosition: 'top left' // Default 'top left'
         }
     }
 );
@@ -144,13 +146,15 @@ fluidPlayer(
 ## adCTAText
 The landing page of the advertisement will show in the adCTAText area. You can add custom text above this URL, or you choose to disable this.
 The screenshot below shows how it will appear by default, and the code below shows how to alter or disable it.
+Has additional adCTATextPosition parameter, that can have values, like 'top right', 'top left', 'bottom right', 'bottom left'.
 
 ```javascript
 fluidPlayer(
    'my-video',
     {
         vastOptions: {
-            // adCTAText: 'Subscribe now!' // Default "Visit now!"
+            // adCTAText: 'Subscribe now!', // Default "Visit now!",
+            // adCTATextPosition: 'bottom left', //Default 'bottom right'
             adCTAText: false // Disable adCTAText
         }
     }
