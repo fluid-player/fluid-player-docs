@@ -166,20 +166,32 @@ function evalLogo() {
         "\t\t\timageUrl: null,\n" +
         "\t\t\tposition: 'top left',\n" +
         "\t\t\tclickUrl: null,\n" +
-        "\t\t\topacity: 1\n" +
+        "\t\t\topacity: 1,\n" +
+        "\t\t\tmouseOverImageUrl: null,\n" +
+        "\t\t\timageMargin: '2px',\n" +
+        "\t\t\thideWithControls: false,\n" +
+        "\t\t\tshowOverAds: false\n" +
         "\t\t},\n";
     logoEnabled = $('input[name=logo]:checked').val();
     if (logoEnabled) {
         logoPosition = $('#logo_position').val();
-        logoURL      = $('#logo_url').val();
-        logoClickURL = $('#logo_click_url').val();
+        logoURL      = ($('#logo_url').val() != '') ? "'" + $('#logo_url').val() + "'" : 'null';
+        logoClickURL = ($('#logo_click_url').val() != '') ? "'" + $('#logo_click_url').val() + "'" : 'null';
         logoOpacity  = $('#logo_opacity').val();
+        logoHoverURL = ($('#logo_hover_url').val() != '') ? "'" + $('#logo_hover_url').val() + "'" : 'null';
+        logoMargin   = ($('#logo_margin').val() != '') ? $('#logo_margin').val() : '2px';
+        controlsHide = ($('input[name=logo_hide]:checked').val()) ? 'true' : 'false';
+        showOverAds  = ($('input[name=logo_show_ads]:checked').val()) ? 'true' : 'false';
 
         logoSetting = "\t\tlogo: {\n" +
-            "\t\t\timageUrl: '" + logoURL + "',\n" +
+            "\t\t\timageUrl: " + logoURL + ",\n" +
             "\t\t\tposition: '" + logoPosition +"',\n" +
-            "\t\t\tclickUrl: '" + logoClickURL +"',\n" +
-            "\t\t\topacity: " + parseFloat(logoOpacity / 100) + "\n" +
+            "\t\t\tclickUrl: " + logoClickURL +",\n" +
+            "\t\t\topacity: " + parseFloat(logoOpacity / 100) + ",\n" +
+            "\t\t\tmouseOverImageUrl: " + logoHoverURL + ",\n" +
+            "\t\t\timageMargin: '" + logoMargin + "',\n" +
+            "\t\t\thideWithControls: " + controlsHide + ",\n" +
+            "\t\t\tshowOverAds: " + showOverAds + "\n" +
             "\t\t},\n";
     }
     return logoSetting;
