@@ -26,7 +26,7 @@
       <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
       
       <guid>https://docs.fluidplayer.com/changelog/</guid>
-      <description>2.1.1  Pull #107  Improve the theater mode UI Fix issues with multiple player instances and download link   2.1.0  Pull #101 Quality indicator Pull #102 API functions Pull #103 Landing page displayed in In-Stream ads Pull #104 Theater mode, download &amp;amp; playback rate  2.0.0  Pull #91  New default template Add play button Play pause animations Restructuring of optional parameters Remove templates General fixes   1.</description>
+      <description>2.2.0  Pull #121 &amp;lsquo;Browser layout&amp;rsquo; VAST fixes Pull #122 iOS fullscreen improvements, use native player Pull #125 Fix for VAST tag: additional checks for CDATA node irregularity Pull #126 Pause player when linear ad opens (ad video is clicked) Pull #127 OnPause ad showing on source switch fix Pull #128 Pull #139 Poster Image as a param Pull #130 Create progressbar markers for nonLinear ads Pull #131 Pull #136 Additional logo parameters Pull #138 Support for DASH and HLS streaming Pull #143 Positioning of ad and cta text elements  2.</description>
     </item>
     
     <item>
