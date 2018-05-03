@@ -37,6 +37,7 @@ function getFluidParams() {
     var theatre = evalTheatre();
     var playbackRate = evalPlaybackRate();
     var controlBar = evalControlBar();
+    var posterImage = evalPosterImage();
 
     fluidParams = "" +
         "    var myFP = fluidPlayer(\n" +
@@ -45,6 +46,7 @@ function getFluidParams() {
         "            layoutControls: {\n" +
                         fillToContainer +
                         primaryColor +
+                        posterImage +
                         autoplay +
                         keyboardControl +
                         playButtonShowing +
@@ -261,4 +263,13 @@ function evalControlBar() {
     }
 
     return controlBar;
+}
+
+function evalPosterImage() {
+    posterImage = "\t\tposterImage: false,\n";
+    poster = $('#poster_image').val();
+    if (poster != "") {
+        posterImage = "\t\tposterImage: '" + poster  + "',\n";
+    }
+    return posterImage;
 }

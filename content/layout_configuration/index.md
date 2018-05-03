@@ -72,6 +72,21 @@ fluidPlayer(
 <img src="screenshots/primaryColour.png" style="height:400px;margin:auto;display:flex;">
 <img src="screenshots/primaryColour2.png" style="height:400px;margin:auto;display:flex;">
 
+## posterImage
+The poster attribute for videos allows an image to be shown before the video plays. This can be set as a Fluid Player parameter.
+By default it will be set to false, and show no image.
+
+```javascript
+fluidPlayer(
+   'my-video',
+    {
+        layoutControls: {
+            posterImage: 'path/to/my/image.jpg' // Default false
+        }
+    }
+);
+```
+
 ## playButtonShowing
 By default the play button will show in the middle of the player. To hide the button this option can be set to **false**.
 When this option is set to **false** the video controls will show by default.
@@ -105,8 +120,11 @@ fluidPlayer(
 
 ## fillToContainer
 If the Fluid Player is placed into a container on your page you can use this parameter to fill to the size of that container. 
-It is important to ensure that the container has defined width and height, otherwise the player will not have fixed sizes.
 Set this parameter to **true** to set the width and height to 100%.
+
+{{< note title="Note">}}
+It is important to ensure that the container has a defined width and height, otherwise the player will not have a fixed size.
+{{< /note >}}
 
 ```javascript
 fluidPlayer(

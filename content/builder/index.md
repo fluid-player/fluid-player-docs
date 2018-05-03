@@ -43,6 +43,14 @@ a.hover {
   </div>
 </div>
 
+<!-- Poster Image-->
+<div class="form-group">
+  <label class="col-md-2 control-label" for="poster_image">Poster Image:</label>  
+  <div class="col-md-7">
+      <input id="poster_image" name="poster_image" type="text" placeholder="/path/to/image.jpg" class="form-control input-md">
+  </div>
+</div>
+
 <!-- Layout & Fill Container -->
 <div class="form-group">
   <label class="col-md-2 control-label" for="container_div">Fill Container Div:</label>

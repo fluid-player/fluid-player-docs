@@ -17,7 +17,7 @@
       <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
       
       <guid>https://docs.fluidplayer.com/builder/</guid>
-      <description>label { font-weight: normal !important; } a { color: black; text-decoration: none !important; } a.hover { color: #03a9f4; } .form-control { border-radius: 2px; }   Styling   Primary Color:   Fill Container Div:     Display Logo:    Top Left Top Right Bottom Left Bottom Right   Logo Opacity: %     Logo URL:   Logo Click URL:    Logo Margin:  Logo Hide w/ Controls:      Logo Hover URL:   Logo Show Over Ads:       Controls  Autoplay:    Keyboard Controls:     Mute On Load:    Play/Pause Animation:     On Load: Show Play Button  Show Control Bar    Autohide Controls:  After  second(s) Animate    Download:    Theatre Mode:     Playback Speed:     On-pause HTML On-pause HTML:</description>
+      <description>label { font-weight: normal !important; } a { color: black; text-decoration: none !important; } a.hover { color: #03a9f4; } .form-control { border-radius: 2px; }   Styling   Primary Color:   Poster Image:   Fill Container Div:     Display Logo:    Top Left Top Right Bottom Left Bottom Right   Logo Opacity: %     Logo URL:   Logo Click URL:    Logo Margin:  Logo Hide w/ Controls:      Logo Hover URL:   Logo Show Over Ads:       Controls  Autoplay:    Keyboard Controls:     Mute On Load:    Play/Pause Animation:     On Load: Show Play Button  Show Control Bar    Autohide Controls:  After  second(s) Animate    Download:    Theatre Mode:     Playback Speed:     On-pause HTML On-pause HTML:</description>
     </item>
     
     <item>
@@ -101,9 +101,9 @@ For any other query, please submit it through our contact form</description>
       
       <guid>https://docs.fluidplayer.com/integration/</guid>
       <description>Quick Integration Note
-We have recently our new Fluid Player Builder. Customise your player for the easiest integration yet!
+We have recently launched our new Fluid Player Builder. Use the Builder to customise your player for the easiest integration yet!
  In order to set Fluid Player, three things are required:
- The Javascript and CSS files of the player; An HTML5 &amp;lt;video&amp;gt; tag; A single Javascript line of code that attaches the player to the video tag.  &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;Fluid Player&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css&amp;quot; type=&amp;quot;text/css&amp;quot;/&amp;gt; &amp;lt;script src=&amp;quot;http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;video id=&#39;my-video&#39;&amp;gt; &amp;lt;source src=&#39;vid.</description>
+ The Javascript and CSS files of the player; An HTML5 &amp;lt;video&amp;gt; tag; A single Javascript line of code that attaches the player to the video tag.  &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;Fluid Player&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;http://cdn.</description>
     </item>
     
     <item>
@@ -126,6 +126,15 @@ fluidPlayer( &#39;my-video&#39;, { layoutControls: { primaryColor: false, playBu
 
   
 VTT Format The format used is WebVTT, a HTML5 standard.</description>
+    </item>
+    
+    <item>
+      <title>Streaming</title>
+      <link>https://docs.fluidplayer.com/streaming/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.fluidplayer.com/streaming/</guid>
+      <description>Streaming is multimedia that is constantly received by, and presented to, an end-user while being delivered by a provider. Fluid Player supports MPEG-DASH and HLS streaming. These both work by splitting the content into segments. Segments contain video or audio content, and are selected based on the highest bit rate available. This is to ensure there are as few stalls and re-buffers as possible. More details on streaming can be found here.</description>
     </item>
     
     <item>

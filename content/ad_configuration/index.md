@@ -196,3 +196,19 @@ fluidPlayer(
     }
 );
 ```
+
+## showProgressbarMarkers
+There is the option to show in the progress bar where non-linear ads will appear. By default this parameter will be set to **false**, but can be enabled as shown below.
+
+```javascript
+fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            showProgressbarMarkers: true // Default false
+        }
+    }
+);
+```
+
+<img src="screenshots/showProgressbarMarkers.png" style="width:600px;margin:auto;display:flex;">
