@@ -17,7 +17,7 @@
       <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
       
       <guid>https://docs.fluidplayer.com/changelog/</guid>
-      <description>2.2.0  Pull #121 &amp;lsquo;Browser layout&amp;rsquo; VAST fixes Pull #122 iOS fullscreen improvements, use native player Pull #125 Fix for VAST tag: additional checks for CDATA node irregularity Pull #126 Pause player when linear ad opens (ad video is clicked) Pull #127 OnPause ad showing on source switch fix Pull #128 Pull #139 Poster Image as a param Pull #130 Create progressbar markers for nonLinear ads Pull #131 Pull #136 Additional logo parameters Pull #138 Support for DASH and HLS streaming Pull #143 Positioning of ad and cta text elements  2.</description>
+      <description>2.2.1  Pull #153 CDATA media file ignores whitespace correctly Pull #154 onPauseRoll not showing on source switch Pull #155 iOS native fullscreen Pull #156 CSS fixes for progress bar and logo Pull #157 Fix for onMainVideoEnded firing correctly Pull #158 Play / Pause animation to not show when changing source Pull #159 Theatre mode to not show in iframe Pull #148 Fix for currentTime being set for iOS and safari for ads and source switch Pull #165 Fix for video duration if passed as 00:00:00 in the VAST file Pull #167 Allow for individual images to be set in .</description>
     </item>
     
   </channel>

@@ -507,7 +507,8 @@ Set this parameter to <strong>true</strong> to set the width and height to 100%.
 
 <h2 id="autoplay">autoPlay</h2>
 
-<p>By default this parameter is set to <strong>false</strong>. When set to <strong>true</strong> the video will play automatically when the page loads.</p>
+<p>By default this parameter is set to <strong>false</strong>. When set to <strong>true</strong> the video will play automatically when the page loads.
+Please note that this feature may not work on certain browser versions and depends on their AutoPlay Policies.</p>
 
 <pre><code class="language-javascript">fluidPlayer(
     'my-video',
@@ -717,8 +718,9 @@ To enable this option use the following:</p>
 
 <h2 id="allowtheatre">allowTheatre</h2>
 
-<p>Theatre mode alters the size of the player, showing a full screen width and 75% screen height player instead.
-This overlays whatever is behind the player, but allows the users to scroll through the page as normal. This is enabled by default, but can</p>
+<p>Theatre mode alters the size of the player, showing a full screen width and 60% screen height player instead.
+This overlays whatever is behind the player, but allows the users to scroll through the page as normal. This is enabled by default, but can be set to false.
+Theatre mode will be hidden if Fluid Player is loaded in an iframe.</p>
 
 <pre><code class="language-javascript">fluidPlayer(
     'my-video',
