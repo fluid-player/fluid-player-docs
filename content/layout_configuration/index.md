@@ -340,8 +340,9 @@ fluidPlayer(
 ```
 
 ## allowTheatre
-Theatre mode alters the size of the player, showing a full screen width and 75% screen height player instead. 
-This overlays whatever is behind the player, but allows the users to scroll through the page as normal. This is enabled by default, but can 
+Theatre mode alters the size of the player, showing a full screen width and 60% screen height player instead. 
+This overlays whatever is behind the player, but allows the users to scroll through the page as normal. This is enabled by default, but can be set to false.
+Theatre mode will be hidden if Fluid Player is loaded in an iframe.
 
 ```javascript
 fluidPlayer(
