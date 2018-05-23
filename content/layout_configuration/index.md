@@ -139,6 +139,7 @@ fluidPlayer(
  
 ## autoPlay
 By default this parameter is set to **false**. When set to **true** the video will play automatically when the page loads.
+Please note that this feature may not work on certain browser versions and depends on their AutoPlay Policies.
 
 ```javascript
 fluidPlayer(

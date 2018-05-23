@@ -75,6 +75,7 @@ thumbnails.jpg#xywh=480,0,120,68
 To configure Fluid Player to use your VTT file, you can set is as the optional parameter **timelinePreview** under **layoutControls**. 
 This is also outlined [here](http://localhost:1313/layout_configuration/#timelinepreview). 
 Provided the file is correct, the below code will set the thumbnail previews.
+The sprite image paths (thumbnails.jpg) are relative to root url in the VTT file.
 
 ```javascript
 fluidPlayer(
@@ -83,6 +84,43 @@ fluidPlayer(
         layoutControls: {
             timelinePreview: {
                 file: 'thumbnails.vtt',
+                // spriteRelativePath: true, //Default false
+                // sprite: 'thumbnails.jpg',
+                type: 'VTT'
+            }
+        }
+    }
+);
+```
+
+You can make the sprite paths relative to the VTT file with the `spriteRelativePath` setting.
+In this case the `thumbnails.jpg#xywh=480,0,120,68` image path will be relative to `thumbs/` as a result  `thumbs/thumbnails.jpg`
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            timelinePreview: {
+                file: 'thumbs/thumbnails.vtt',
+                spriteRelativePath: true,
+                type: 'VTT'
+            }
+        }
+    }
+);
+```
+
+Optionally if the thumbnails image is not defined in thumbnails.vtt or want to overwrite than you may set `sprite` property.
+Please note, in this case the spriteRelativePath won't have any affect.
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            timelinePreview: {
+                file: 'thumbnails/thumbnails.vtt',
+                sprite: 'thumbnails/thumbnails.jpg',
                 type: 'VTT'
             }
         }

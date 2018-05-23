@@ -33,6 +33,7 @@ fluidPlayer(
 
 ## adList
 Setup one or multiple VAST tag. For each of the tags there are multiple options.
+Please note the VAST tag XML response `Content-Type` must be either `application/xml` or `text/xml`.
 
 * **roll (mandatory):** The available timeline positions: _preRoll_, _midRoll_, _postRoll_, _onPauseRoll_.
 * **vastTag (mandatory):** The url of the VAST XML (Please find the supported tags/attributes vastLinear.xml)
