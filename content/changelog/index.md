@@ -4,7 +4,7 @@ title: "Changelog"
 weight: 0
 ---
 
-## 2.2.1
+### 2.2.1
 * [Pull #153](https://github.com/fluid-player/fluid-player/pull/153) CDATA media file ignores whitespace correctly
 * [Pull #154](https://github.com/fluid-player/fluid-player/pull/154) onPauseRoll not showing on source switch
 * [Pull #155](https://github.com/fluid-player/fluid-player/pull/155) iOS native fullscreen
