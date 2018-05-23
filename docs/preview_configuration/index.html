@@ -445,7 +445,8 @@ thumbnails.jpg#xywh=480,0,120,68
 
 <p>To configure Fluid Player to use your VTT file, you can set is as the optional parameter <strong>timelinePreview</strong> under <strong>layoutControls</strong>.
 This is also outlined <a href="http://localhost:1313/layout_configuration/#timelinepreview">here</a>.
-Provided the file is correct, the below code will set the thumbnail previews.</p>
+Provided the file is correct, the below code will set the thumbnail previews.
+The sprite image paths (thumbnails.jpg) are relative to root url in the VTT file.</p>
 
 <pre><code class="language-javascript">fluidPlayer(
     'my-video',
@@ -453,6 +454,42 @@ Provided the file is correct, the below code will set the thumbnail previews.</p
         layoutControls: {
             timelinePreview: {
                 file: 'thumbnails.vtt',
+                // spriteRelativePath: true, //Default false
+                // sprite: 'thumbnails.jpg',
+                type: 'VTT'
+            }
+        }
+    }
+);
+</code></pre>
+
+<p>You can make the sprite paths relative to the VTT file with the <code>spriteRelativePath</code> setting.
+In this case the <code>thumbnails.jpg#xywh=480,0,120,68</code> image path will be relative to <code>thumbs/</code> as a result  <code>thumbs/thumbnails.jpg</code></p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            timelinePreview: {
+                file: 'thumbs/thumbnails.vtt',
+                spriteRelativePath: true,
+                type: 'VTT'
+            }
+        }
+    }
+);
+</code></pre>
+
+<p>Optionally if the thumbnails image is not defined in thumbnails.vtt or want to overwrite than you may set <code>sprite</code> property.
+Please note, in this case the spriteRelativePath won&rsquo;t have any affect.</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            timelinePreview: {
+                file: 'thumbnails/thumbnails.vtt',
+                sprite: 'thumbnails/thumbnails.jpg',
                 type: 'VTT'
             }
         }
