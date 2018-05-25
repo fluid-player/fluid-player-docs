@@ -17,9 +17,12 @@ fluidPlayer(
             adList:                     {},
             skipButtonCaption:          'Skip ad in [seconds]',
             skipButtonClickCaption:     'Skip ad <span class="skip_button_icon"></span>',
-            adText:                      null,
-            vastTimeout:                 5000,
-            maxAllowedVastTagRedirects:  1,
+            adText:                     null,
+            adTextPosition:             'top left',
+            adCTAText:                  'Visit now!',
+            adCTATextPosition:          'bottom right',
+            vastTimeout:                5000,
+            maxAllowedVastTagRedirects: 1,
 
             vastAdvanced: {
                 vastLoadedCallback:       (function() {}),
