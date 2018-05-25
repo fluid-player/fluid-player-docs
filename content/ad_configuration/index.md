@@ -224,7 +224,7 @@ fluidPlayer(
 
 
 ## maxAllowedVastTagRedirects
-Fluid Player supports VAST wrappers through <VASTAdTagURI>.There is the option to limit the maximum allowed redirects (wrappers).
+Fluid Player supports VAST wrappers through <VASTAdTagURI>.The `maxAllowedVastTagRedirects` sets the maximum allowed redirects (wrappers).
 
 ```javascript
 fluidPlayer(
