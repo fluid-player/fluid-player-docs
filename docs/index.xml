@@ -26,7 +26,7 @@
       <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
       
       <guid>https://docs.fluidplayer.com/changelog/</guid>
-      <description>2.2.1  Pull #153 CDATA media file ignores whitespace correctly Pull #154 onPauseRoll not showing on source switch Pull #155 iOS native fullscreen Pull #156 CSS fixes for progress bar and logo Pull #157 Fix for onMainVideoEnded firing correctly Pull #158 Play / Pause animation to not show when changing source Pull #159 Theatre mode to not show in iframe Pull #148 Fix for currentTime being set for iOS and safari for ads and source switch Pull #165 Fix for video duration if passed as 00:00:00 in the VAST file Pull #167 Allow for individual images to be set in .</description>
+      <description>2.2.2  Pull #175 Fullscreen mode variable correct place Pull #177 Fix fadeOut/fadeIn opacity to correct values in the end of animation Pull #180 Adding VASTAdTagURI support  2.2.1  Pull #153 CDATA media file ignores whitespace correctly Pull #154 onPauseRoll not showing on source switch Pull #155 iOS native fullscreen Pull #156 CSS fixes for progress bar and logo Pull #157 Fix for onMainVideoEnded firing correctly Pull #158 Play / Pause animation to not show when changing source Pull #159 Theatre mode to not show in iframe Pull #148 Fix for currentTime being set for iOS and safari for ads and source switch Pull #165 Fix for video duration if passed as 00:00:00 in the VAST file Pull #167 Allow for individual images to be set in .</description>
     </item>
     
     <item>
@@ -60,7 +60,7 @@ In short, VAST makes it possible for an ad provider to serve ads to various vide
       <guid>https://docs.fluidplayer.com/ad_configuration/</guid>
       <description>There are optional parameters that can be used to customise the Fluid Player ad serving. No parameters are required and will default if not passed through. Vast options relate to the ads served and the how the player handles them
 These options are specifically for when ads are shown in the player.
-fluidPlayer( &#39;my-video&#39;, { vastOptions: { adList: {}, skipButtonCaption: &#39;Skip ad in [seconds]&#39;, skipButtonClickCaption: &#39;Skip ad &amp;lt;span class=&amp;quot;skip_button_icon&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&#39;, adText: null, vastTimeout: 5000, vastAdvanced: { vastLoadedCallback: (function() {}), noVastVideoCallback: (function() {}), vastVideoSkippedCallback: (function() {}), vastVideoEndedCallback: (function() {}) } } } );  adList Setup one or multiple VAST tag.</description>
+fluidPlayer( &#39;my-video&#39;, { vastOptions: { adList: {}, skipButtonCaption: &#39;Skip ad in [seconds]&#39;, skipButtonClickCaption: &#39;Skip ad &amp;lt;span class=&amp;quot;skip_button_icon&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&#39;, adText: null, adTextPosition: &#39;top left&#39;, adCTAText: &#39;Visit now!</description>
     </item>
     
     <item>
