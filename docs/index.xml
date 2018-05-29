@@ -60,7 +60,7 @@ In short, VAST makes it possible for an ad provider to serve ads to various vide
       <guid>https://docs.fluidplayer.com/ad_configuration/</guid>
       <description>There are optional parameters that can be used to customise the Fluid Player ad serving. No parameters are required and will default if not passed through. Vast options relate to the ads served and the how the player handles them
 These options are specifically for when ads are shown in the player.
-fluidPlayer( &#39;my-video&#39;, { vastOptions: { adList: {}, skipButtonCaption: &#39;Skip ad in [seconds]&#39;, skipButtonClickCaption: &#39;Skip ad &amp;lt;span class=&amp;quot;skip_button_icon&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&#39;, adText: null, vastTimeout: 5000, vastAdvanced: { vastLoadedCallback: (function() {}), noVastVideoCallback: (function() {}), vastVideoSkippedCallback: (function() {}), vastVideoEndedCallback: (function() {}) } } } );  adList Setup one or multiple VAST tag.</description>
+fluidPlayer( &#39;my-video&#39;, { vastOptions: { adList: {}, skipButtonCaption: &#39;Skip ad in [seconds]&#39;, skipButtonClickCaption: &#39;Skip ad &amp;lt;span class=&amp;quot;skip_button_icon&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&#39;, adText: null, adTextPosition: &#39;top left&#39;, adCTAText: &#39;Visit now!</description>
     </item>
     
     <item>

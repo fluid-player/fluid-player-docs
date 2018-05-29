@@ -17,8 +17,12 @@ fluidPlayer(
             adList:                     {},
             skipButtonCaption:          'Skip ad in [seconds]',
             skipButtonClickCaption:     'Skip ad <span class="skip_button_icon"></span>',
-            adText:                      null,
-            vastTimeout:                 5000,
+            adText:                     null,
+            adTextPosition:             'top left',
+            adCTAText:                  'Visit now!',
+            adCTATextPosition:          'bottom right',
+            vastTimeout:                5000,
+            maxAllowedVastTagRedirects: 1,
 
             vastAdvanced: {
                 vastLoadedCallback:       (function() {}),
@@ -217,3 +221,18 @@ fluidPlayer(
 ```
 
 <img src="screenshots/showProgressbarMarkers.png" style="width:600px;margin:auto;display:flex;">
+
+
+## maxAllowedVastTagRedirects
+Fluid Player supports VAST wrappers through <VASTAdTagURI>.The `maxAllowedVastTagRedirects` sets the maximum allowed redirects (wrappers).
+
+```javascript
+fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            maxAllowedVastTagRedirects: 1 // Default 3
+        }
+    }
+);
+```

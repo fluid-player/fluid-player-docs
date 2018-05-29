@@ -382,8 +382,12 @@ Vast options relate to the ads served and the how the player handles them</p>
             adList:                     {},
             skipButtonCaption:          'Skip ad in [seconds]',
             skipButtonClickCaption:     'Skip ad &lt;span class=&quot;skip_button_icon&quot;&gt;&lt;/span&gt;',
-            adText:                      null,
-            vastTimeout:                 5000,
+            adText:                     null,
+            adTextPosition:             'top left',
+            adCTAText:                  'Visit now!',
+            adCTATextPosition:          'bottom right',
+            vastTimeout:                5000,
+            maxAllowedVastTagRedirects: 1,
 
             vastAdvanced: {
                 vastLoadedCallback:       (function() {}),
@@ -590,6 +594,20 @@ Has additional adCTATextPosition parameter, that can have values, like &lsquo;to
 </code></pre>
 
 <p><img src="screenshots/showProgressbarMarkers.png" style="width:600px;margin:auto;display:flex;"></p>
+
+<h2 id="maxallowedvasttagredirects">maxAllowedVastTagRedirects</h2>
+
+<p>Fluid Player supports VAST wrappers through <VASTAdTagURI>.The <code>maxAllowedVastTagRedirects</code> sets the maximum allowed redirects (wrappers).</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            maxAllowedVastTagRedirects: 1 // Default 3
+        }
+    }
+);
+</code></pre>
 
 
 			<aside class="copyright" role="note" style="text-align: center;">
