@@ -4,6 +4,11 @@ title: "Changelog"
 weight: 0
 ---
 
+### 2.2.2
+* [Pull #175](https://github.com/fluid-player/fluid-player/pull/175) Fullscreen mode variable correct place
+* [Pull #177](https://github.com/fluid-player/fluid-player/pull/177) Fix fadeOut/fadeIn opacity to correct values in the end of animation
+* [Pull #180](https://github.com/fluid-player/fluid-player/pull/180) Adding VASTAdTagURI support
+
 ### 2.2.1
 * [Pull #153](https://github.com/fluid-player/fluid-player/pull/153) CDATA media file ignores whitespace correctly
 * [Pull #154](https://github.com/fluid-player/fluid-player/pull/154) onPauseRoll not showing on source switch
