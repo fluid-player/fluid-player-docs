@@ -369,3 +369,23 @@ fluidPlayer(
     }
 );
 ```
+
+## persistentSettings
+If a user changes the **volume**, **quality**, **speed** or **theatre mode** of the video these settings will persist on following page loads for the player.
+If you do not want these settings to persist for the user you can set them to false, as shown below.
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            persistentSettings: {
+                volume:  false, // Default true
+                quality: false, // Default true
+                speed:   false, // Default true
+                theatre: false // Default true
+            }
+        }
+    }
+);
+```
