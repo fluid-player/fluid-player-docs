@@ -414,6 +414,9 @@ Please note the VAST tag XML response <code>Content-Type</code> must be either <
 <li><strong>[seconds]:</strong> The number of seconds until the ad begins. Example: <em>timer: 10</em></li>
 <li><strong>[percentage]:</strong> The percentage of the video to show before the ad begins. Example: <em>timer: 50%</em></li>
 </ul></li>
+<li><strong>adText (Optional for linear ads):</strong> The <a href="#adtext">adText section</a> describes the ability to set text to appear on ads.
+By using this parameter in the <strong>adList</strong> you can specify unique text per ad.</li>
+<li><strong>adTextPosition (Optional for linear ads):</strong> Only relevent if <strong>adText</strong> is in use. This allows you to set the position of <strong>adText</strong> per ad.</li>
 </ul>
 
 <p>We can set multiple <em>midRoll</em> VAST tags, however only one <em>preRoll</em> and <em>postRoll</em> can be set. See the example below:</p>
@@ -425,7 +428,8 @@ Please note the VAST tag XML response <code>Content-Type</code> must be either <
             adList: [
                 {
                     roll: 'preRoll',
-                    vastTag: 'vastPreRoll.xml'
+                    vastTag: 'vastPreRoll.xml',
+                    adText: 'Advertising supports us directly'
                 },
                 {
                     roll: 'midRoll',
@@ -439,7 +443,9 @@ Please note the VAST tag XML response <code>Content-Type</code> must be either <
                 },
                 {
                     roll: 'postRoll',
-                    vastTag: 'vastPostRoll.xml'
+                    vastTag: 'vastPostRoll.xml',
+                    adText: 'Thanks for watching',
+                    adTextPosition: 'top right'
                 }
             ]
         }
@@ -504,7 +510,8 @@ Please note the VAST tag XML response <code>Content-Type</code> must be either <
 <h2 id="adtext">adText</h2>
 
 <p>Custom text can be shown when an in-stream ad plays. This text appears in the top left corner of the player and will be set to the primary colour.
-Has additional adTextPosition parameter, that can have values, like &lsquo;top right&rsquo;, &lsquo;top left&rsquo;, &lsquo;bottom right&rsquo;, &lsquo;bottom left&rsquo;.</p>
+Has additional adTextPosition parameter, that can have values, like &lsquo;top right&rsquo;, &lsquo;top left&rsquo;, &lsquo;bottom right&rsquo;, &lsquo;bottom left&rsquo;.
+Ad text and position can also be set on a <a href="#adlist">per ad basis</a>.</p>
 
 <pre><code class="language-javascript">fluidPlayer(
    'my-video',

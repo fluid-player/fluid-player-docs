@@ -385,6 +385,20 @@
 <script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"/></script>
 <script src="fluidplayer/fp_generator.js"></script></p>
 
+<h3 id="quick-setup">Quick Setup</h3>
+
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css&quot; type=&quot;text/css&quot;/&gt;
+&lt;script src=&quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;video id=&quot;video-id&quot;&gt;
+    &lt;source src=&quot;video.mp4&quot; type=&quot;video/mp4&quot;/&gt;
+&lt;/video&gt;
+
+&lt;script&gt;
+    fluidPlayer(&quot;video-id&quot;);
+&lt;/script&gt;
+</code></pre>
+
 <h2 id="what-is-vast">What is VAST</h2>
 
 <p>The IAB Digital Video Ad Serving Template (VAST) specification is a universal XML schema for serving ads to digital video players, and describes expected video player behavior when executing VAST-formatted ad responses.</p>
@@ -402,6 +416,7 @@
 <li>Multiple VAST tags (pre-roll, mid-roll, post-roll)</li>
 <li>Linear (video) ads</li>
 <li>Non linear VAST tags (banner images (gif/jpg/png))</li>
+<li>VAST Wrappers</li>
 </ul></li>
 <li>Comes with its own design, which is easily customizable. Ability to use the browser default layout</li>
 <li>Timeline Preview</li>
