@@ -368,15 +368,36 @@ fluidPlayer(
     {
         layoutControls: {
             theatreSettings: {
-                width:      '60%', // Default '100%'
-                height:     '400px', // Default '60%'
-                marginTop:  50, // Default 0
-                align:      'center' // 'left', 'right' or 'center'
+                width:     '60%', // Default '100%'
+                height:    '400px', // Default '60%'
+                marginTop: 50, // Default 0
+                align:     'center' // 'left', 'right' or 'center'
             }
         }
     }
 );
 ```
+
+If you wish to keep the video in the same position on the page you can use the **keepRelativity** and **xAxisSlide** parameters.
+**keepRelativity** tells the player to remain relative to it's container. **xAxisSlide** allows you to move the player left and right, to position it where you wish in the page.
+If these parameters are in use it's advised not to use **marginTop** or **align** as you may get unexpected results. 
+The below settings would suit a video placed on the right, to be pulled to the left of the screen for theatre mode.
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            theatreSettings: {
+                width: '90%', // Default '100%'
+                keepRelativity: true, // Default false
+                xAxisSlide: '-32%' // Default 0px
+            }
+        }
+    }
+);
+```
+
 
 ## playerInitCallback
 This callback function can be used to execute custom code when the player in initialised.
