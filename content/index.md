@@ -20,7 +20,7 @@ Fluid Player is a free HTML5 video player. It is lightweight, easy to integrate 
 <script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"/></script>
 <script src="fluidplayer/fp_generator.js"></script>
 
-### Quick Setup
+## Quick Setup
 
 ```html
 <link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
