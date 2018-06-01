@@ -20,6 +20,21 @@ Fluid Player is a free HTML5 video player. It is lightweight, easy to integrate 
 <script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"/></script>
 <script src="fluidplayer/fp_generator.js"></script>
 
+## Fluid Player CDN
+
+The Fluid Player code is found at https://github.com/fluid-player/ but is also available for direct linking at http://cdn.fluidplayer.com/ 
+
+Specify the version:
+```html
+http://cdn.fluidplayer.com/1.0.1/fluidplayer.min.js
+http://cdn.fluidplayer.com/1.0.1/fluidplayer.min.css
+```
+Or use the most recent version:
+```html
+http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js
+http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css
+```
+
 ## What is VAST
 The IAB Digital Video Ad Serving Template (VAST) specification is a universal XML schema for serving ads to digital video players, and describes expected video player behavior when executing VAST-formatted ad responses.
 
@@ -32,6 +47,7 @@ A thorough description of the overall idea behind VAST, as well as the full VAST
   * Multiple VAST tags (pre-roll, mid-roll, post-roll)
   * Linear (video) ads
   * Non linear VAST tags (banner images (gif/jpg/png))
+  * VAST Wrappers
 * Comes with its own design, which is easily customizable. Ability to use the browser default layout
 * Timeline Preview
 * Lightweight
@@ -49,18 +65,3 @@ A thorough description of the overall idea behind VAST, as well as the full VAST
 ## License
 
 Fluid Player is licensed under the MIT License. View the [License File](https://github.com/fluid-player/fluid-player/blob/master/LICENSE).
-
-## Fluid Player CDN
-
-The Fluid Player code is found at https://github.com/fluid-player/ but is also available for direct linking at http://cdn.fluidplayer.com/ 
-
-Specify the version:
-```html
-http://cdn.fluidplayer.com/1.0.1/fluidplayer.min.js
-http://cdn.fluidplayer.com/1.0.1/fluidplayer.min.css
-```
-Or use the most recent version:
-```html
-http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js
-http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css
-```
