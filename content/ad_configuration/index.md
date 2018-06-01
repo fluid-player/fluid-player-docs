@@ -44,6 +44,9 @@ Please note the VAST tag XML response `Content-Type` must be either `application
 * **timer (only for mid-roll):** the timer property schedules when the ad should show. There are two ways to define this:
   - **[seconds]:** The number of seconds until the ad begins. Example: _timer: 10_
   - **[percentage]:** The percentage of the video to show before the ad begins. Example: _timer: 50%_
+* **adText (Optional for linear ads):** The [adText section](#adtext) describes the ability to set text to appear on ads.
+    By using this parameter in the **adList** you can specify unique text per ad.
+* **adTextPosition (Optional for linear ads):** Only relevent if **adText** is in use. This allows you to set the position of **adText** per ad.
 
 We can set multiple _midRoll_ VAST tags, however only one _preRoll_ and _postRoll_ can be set. See the example below:
 
@@ -55,7 +58,8 @@ fluidPlayer(
             adList: [
                 {
                     roll: 'preRoll',
-                    vastTag: 'vastPreRoll.xml'
+                    vastTag: 'vastPreRoll.xml',
+                    adText: 'Advertising supports us directly'
                 },
                 {
                     roll: 'midRoll',
@@ -69,7 +73,9 @@ fluidPlayer(
                 },
                 {
                     roll: 'postRoll',
-                    vastTag: 'vastPostRoll.xml'
+                    vastTag: 'vastPostRoll.xml',
+                    adText: 'Thanks for watching',
+                    adTextPosition: 'top right'
                 }
             ]
         }
@@ -133,6 +139,7 @@ fluidPlayer(
 ## adText
 Custom text can be shown when an in-stream ad plays. This text appears in the top left corner of the player and will be set to the primary colour.
 Has additional adTextPosition parameter, that can have values, like 'top right', 'top left', 'bottom right', 'bottom left'.
+Ad text and position can also be set on a [per ad basis](#adlist).
 
 ```javascript
 fluidPlayer(
