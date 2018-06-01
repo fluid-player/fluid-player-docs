@@ -746,6 +746,26 @@ Theatre mode will be hidden if Fluid Player is loaded in an iframe.</p>
 );
 </code></pre>
 
+<h2 id="persistentsettings">persistentSettings</h2>
+
+<p>If a user changes the <strong>volume</strong>, <strong>quality</strong>, <strong>speed</strong> or <strong>theatre mode</strong> of the video these settings will persist on following page loads for the player.
+If you do not want these settings to persist for the user you can set them to false, as shown below.</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            persistentSettings: {
+                volume:  false, // Default true
+                quality: false, // Default true
+                speed:   false, // Default true
+                theatre: false // Default true
+            }
+        }
+    }
+);
+</code></pre>
+
 
 			<aside class="copyright" role="note" style="text-align: center;">
 				© 2018 <a href="https://www.fluidplayer.com">Fluid Player</a>. All Rights Reserved.
