@@ -66,15 +66,16 @@ A thorough description of the overall idea behind VAST, as well as the full VAST
 
 The Fluid Player code is found at https://github.com/fluid-player/ but is also available for direct linking at http://cdn.fluidplayer.com/ 
 
-Specify the version:
-```html
-http://cdn.fluidplayer.com/1.0.1/fluidplayer.min.js
-http://cdn.fluidplayer.com/1.0.1/fluidplayer.min.css
-```
-Or use the most recent version:
+Automatically use the most recent version (recommended):
 ```html
 http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js
 http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css
+```
+
+Or specify the version:
+```html
+http://cdn.fluidplayer.com/1.0.1/fluidplayer.min.js
+http://cdn.fluidplayer.com/1.0.1/fluidplayer.min.css
 ```
 
 ## License
