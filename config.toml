@@ -84,9 +84,9 @@ publishDir = "docs"
 
 [params]
 	highlightjs = "css/highlight.css"
-	favicon = "favicon.ico"
+	favicon = "favicon.png"
 
-    logo = "fluidplayer-logo.png"
+    logo = "fluid-logo.svg"
     version = "2.0.0"
 
 [params.palette]
