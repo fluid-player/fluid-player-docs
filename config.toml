@@ -86,7 +86,7 @@ publishDir = "docs"
 	highlightjs = "css/highlight.css"
 	favicon = "favicon.png"
 
-    logo = "fluid-logo.svg"
+    logo = "logo-color.svg"
     version = "2.0.0"
 
 [params.palette]
