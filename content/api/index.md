@@ -92,9 +92,23 @@ The **on('play', function(){})** can be used to handle the play event for the Fl
 myFluidPlayer.on('play', function(){ console.log('Video is playing'); });
 ```
 
-## on('pause')
+## on('pause', function(){})
 The **on('pause', function(){})** can be used to handle the pause event for the Fluid Player.
 
 ```javascript
 myFluidPlayer.on('pause', function(){ console.log('Video is now paused'); });
+```
+
+## on('theatreModeOn', function(){})
+The **on('theatreModeOn', function(){})** can be used to execute specific functionality when theatre mode is enabled.
+
+```javascript
+myFluidPlayer.on('theatreModeOn', function(){ console.log('Theatre mode is enabled'); });
+```
+
+## on('theatreModeOff', function(){})
+The **on('theatreModeOff', function(){})** can be used to execute specific functionality when theatre mode is disabled.
+
+```javascript
+myFluidPlayer.on('theatreModeOff', function(){ console.log('Theatre mode is disabled'); });
 ```

@@ -356,6 +356,32 @@ fluidPlayer(
 );
 ```
 
+## theatreAdvanced
+The default theatre mode is designed to be as generic as possible. If you wish to implement a more custom solution for theatre mode this provides a way to do so.
+You can specify the id of an element on the page, most likely a container div which the player is in, and a class to apply to it when theatre mode is enabled.
+If the element cannot be found then the default theatre mode will activate.
+
+An example scenario; the player is placed in a container on the page, set to [fillToContainer](#filltocontainer), which you want to expand on theatre mode. 
+You pass in that containers id and the class to apply to it. This class can have css applied which will alter the container, and therefore the player itself. 
+When theatre mode is pressed the parent container has the class applied and removed accordingly.
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            theatreAdvanced: { // default false
+                theatreElement: 'container-id',
+                classToApply: 'my-theatre-class'
+            }
+        }
+    }
+);
+```
+
+As theatre mode often requires other elements on the page to move / hide we have added listener events for [theatreModeOn](../api#on-theatremodeon-function) and [theatreModeOff](../api#on-theatremodeoff-function).
+This allows you to easily execute additional functionality when toggling theatre mode.
+
 ## theatreSettings
 The dimensions and alignment of the player while in theatre mode are configurable. 
 The **width** and **height** can be specified in either **%** or **px**. The default for these settings are 100% & 60% respectively.
