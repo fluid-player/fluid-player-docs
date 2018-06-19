@@ -382,6 +382,28 @@ fluidPlayer(
 As theatre mode often requires other elements on the page to move / hide we have added listener events for [theatreModeOn](../api#on-theatremodeon-function) and [theatreModeOff](../api#on-theatremodeoff-function).
 This allows you to easily execute additional functionality when toggling theatre mode.
 
+## theatreSettings
+The dimensions and alignment of the player while in theatre mode are configurable. 
+The **width** and **height** can be specified in either **%** or **px**. The default for these settings are 100% & 60% respectively.
+The **marginTop** will be the pixel value of space between the top of the screen and the player, which is 0 by default.
+**align** can be used to float the player **left**, **right** or **center**, defaulted to **center**
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            theatreSettings: {
+                width:     '60%', // Default '100%'
+                height:    '400px', // Default '60%'
+                marginTop: 50, // Default 0
+                horizontalAlign:     'center' // 'left', 'right' or 'center'
+            }
+        }
+    }
+);
+```
+
 ## playerInitCallback
 This callback function can be used to execute custom code when the player in initialised.
 
