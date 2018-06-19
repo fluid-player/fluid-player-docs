@@ -57,6 +57,23 @@ The title will be displayed to the user when switching sources, and should be se
 
 <img src="screenshots/qualitySwitch.png" style="width:600px;margin:auto;display:flex;">
 
+## Define Source as HD
+The sources set for [quality switching](#quality-switching) can be defined as HD by adding a **data-fluid-hd** attribute to the **<source>** tag.
+The colour of this text will match the [primary color](../layout_configuration#primarycolor). If you wish to override this colour you can do so using custom CSS on your own page. 
+The class responsible for the colour is __fp_hd_source__. An example of overriding this colour is shown below.
+```css 
+.fp_hd_source { color: yellow !important; }
+```
+
+An example of how the HD is set in the sources is show below.
+```html
+<video id='my-video' controls style="width: 640px; height: 360px;">
+    <source data-fluid-hd src='vid_1080p.mp4' title='1080p' type='video/mp4' />
+    <source data-fluid-hd src='vid_720p.mp4' title='720p' type='video/mp4' />
+    <source src='vid_480p.mp4' title='480p' type='video/mp4' />
+</video>
+```
+<img src="screenshots/hdSource.png" style="width:600px;margin:auto;display:flex;">
 
 ## Integration Using Optional Parameters
 
