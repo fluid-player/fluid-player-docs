@@ -424,6 +424,26 @@ The title will be displayed to the user when switching sources, and should be se
 
 <p><img src="screenshots/qualitySwitch.png" style="width:600px;margin:auto;display:flex;"></p>
 
+<h2 id="define-source-as-hd">Define Source as HD</h2>
+
+<p>The sources set for <a href="#quality-switching">quality switching</a> can be defined as HD by adding a <strong>data-fluid-hd</strong> attribute to the <strong><source></strong> tag.
+The colour of this text will match the <a href="../layout_configuration#primarycolor">primary color</a>. If you wish to override this colour you can do so using custom CSS on your own page.
+The class responsible for the colour is <strong>fp_hd_source</strong>. An example of overriding this colour is shown below.</p>
+
+<pre><code class="language-css">.fp_hd_source { color: yellow !important; }
+</code></pre>
+
+<p>An example of how the HD is set in the sources is show below.</p>
+
+<pre><code class="language-html">&lt;video id='my-video' controls style=&quot;width: 640px; height: 360px;&quot;&gt;
+    &lt;source data-fluid-hd src='vid_1080p.mp4' title='1080p' type='video/mp4' /&gt;
+    &lt;source data-fluid-hd src='vid_720p.mp4' title='720p' type='video/mp4' /&gt;
+    &lt;source src='vid_480p.mp4' title='480p' type='video/mp4' /&gt;
+&lt;/video&gt;
+</code></pre>
+
+<p><img src="screenshots/hdSource.png" style="width:600px;margin:auto;display:flex;"></p>
+
 <h2 id="integration-using-optional-parameters">Integration Using Optional Parameters</h2>
 
 <p>Fluid Player can be customized by setting some optional parameters.

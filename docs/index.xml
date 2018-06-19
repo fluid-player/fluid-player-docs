@@ -26,7 +26,7 @@
       <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
       
       <guid>https://docs.fluidplayer.com/changelog/</guid>
-      <description>2.3.0  Pull #192 Persist user settings across pages for volume, speed, quality and theatre mode Pull #194 Fix for play event on video click for certain devices Pull #193 Option to set adText and adTextPosition on a per ad basis Pull #184 Fix for thumbnails appearing incorrectly on mobile Pull #181 Fix for poster image for dash file Pull #195 Loading icon while player is waiting Pull #200 Ad text positioning fix Pull #196 Fix for issue causing controls to hide incorrectly Pull #191 Scrubbing to no longer trigger Fluid on.</description>
+      <description>2.4.0  Pull #214 Avoid looping VAST Ad Pull #206 Fix tracking impression events for nonLinear ads Pull #221 Fix VAST loading issue by AdBlock Pull #207 Add support for HD icon on quality select Pull #209 Advanced theatre mode Pull #208 Compress files Pull #179 Fix to prevent changing speed during ads Pull #217 Prevent video size change on quality switch Pull #213 Controls to stay working with adblock and fix for double event on mobile touch Pull #212 Poster image to fit player size Pull #186 Fix for source switch on Edge Pull #219 Play / pause icon fix and progress bar to disappear correctly Pull #218 Optional theatre settings  2.</description>
     </item>
     
     <item>

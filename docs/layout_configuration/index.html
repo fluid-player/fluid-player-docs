@@ -732,6 +732,54 @@ Theatre mode will be hidden if Fluid Player is loaded in an iframe.</p>
 );
 </code></pre>
 
+<h2 id="theatreadvanced">theatreAdvanced</h2>
+
+<p>The default theatre mode is designed to be as generic as possible. If you wish to implement a more custom solution for theatre mode this provides a way to do so.
+You can specify the id of an element on the page, most likely a container div which the player is in, and a class to apply to it when theatre mode is enabled.
+If the element cannot be found then the default theatre mode will activate.</p>
+
+<p>An example scenario; the player is placed in a container on the page, set to <a href="#filltocontainer">fillToContainer</a>, which you want to expand on theatre mode.
+You pass in that containers id and the class to apply to it. This class can have css applied which will alter the container, and therefore the player itself.
+When theatre mode is pressed the parent container has the class applied and removed accordingly.</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            theatreAdvanced: { // default false
+                theatreElement: 'container-id',
+                classToApply: 'my-theatre-class'
+            }
+        }
+    }
+);
+</code></pre>
+
+<p>As theatre mode often requires other elements on the page to move / hide we have added listener events for <a href="../api#on-theatremodeon-function">theatreModeOn</a> and <a href="../api#on-theatremodeoff-function">theatreModeOff</a>.
+This allows you to easily execute additional functionality when toggling theatre mode.</p>
+
+<h2 id="theatresettings">theatreSettings</h2>
+
+<p>The dimensions and alignment of the player while in theatre mode are configurable.
+The <strong>width</strong> and <strong>height</strong> can be specified in either <strong>%</strong> or <strong>px</strong>. The default for these settings are 100% &amp; 60% respectively.
+The <strong>marginTop</strong> will be the pixel value of space between the top of the screen and the player, which is 0 by default.
+<strong>align</strong> can be used to float the player <strong>left</strong>, <strong>right</strong> or <strong>center</strong>, defaulted to <strong>center</strong></p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            theatreSettings: {
+                width:     '60%', // Default '100%'
+                height:    '400px', // Default '60%'
+                marginTop: 50, // Default 0
+                horizontalAlign:     'center' // 'left', 'right' or 'center'
+            }
+        }
+    }
+);
+</code></pre>
+
 <h2 id="playerinitcallback">playerInitCallback</h2>
 
 <p>This callback function can be used to execute custom code when the player in initialised.</p>

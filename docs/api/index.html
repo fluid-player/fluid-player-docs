@@ -459,11 +459,25 @@ If we wanted to to set or change the HTML that&rsquo;s set for this we can do it
 <pre><code class="language-javascript">myFluidPlayer.on('play', function(){ console.log('Video is playing'); });
 </code></pre>
 
-<h2 id="on-pause">on(&lsquo;pause&rsquo;)</h2>
+<h2 id="on-pause-function">on(&lsquo;pause&rsquo;, function(){})</h2>
 
 <p>The <strong>on(&lsquo;pause&rsquo;, function(){})</strong> can be used to handle the pause event for the Fluid Player.</p>
 
 <pre><code class="language-javascript">myFluidPlayer.on('pause', function(){ console.log('Video is now paused'); });
+</code></pre>
+
+<h2 id="on-theatremodeon-function">on(&lsquo;theatreModeOn&rsquo;, function(){})</h2>
+
+<p>The <strong>on(&lsquo;theatreModeOn&rsquo;, function(){})</strong> can be used to execute specific functionality when theatre mode is enabled.</p>
+
+<pre><code class="language-javascript">myFluidPlayer.on('theatreModeOn', function(){ console.log('Theatre mode is enabled'); });
+</code></pre>
+
+<h2 id="on-theatremodeoff-function">on(&lsquo;theatreModeOff&rsquo;, function(){})</h2>
+
+<p>The <strong>on(&lsquo;theatreModeOff&rsquo;, function(){})</strong> can be used to execute specific functionality when theatre mode is disabled.</p>
+
+<pre><code class="language-javascript">myFluidPlayer.on('theatreModeOff', function(){ console.log('Theatre mode is disabled'); });
 </code></pre>
 
 
