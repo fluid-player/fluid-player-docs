@@ -11,9 +11,9 @@ Fluid Player is a free HTML5 video player. It is lightweight, easy to integrate 
 <br/>
 
 <video id='my-video' controls style="width:720px;height:405px;">
-    <source src='https://cdn.fluidplayer.com/videos/1.3/fluidplayer_1080.mp4' title="1080p" type='video/mp4' />
-    <source src='https://cdn.fluidplayer.com/videos/1.3/fluidplayer_720.mp4' title="720p" type='video/mp4' />
-    <source src='https://cdn.fluidplayer.com/videos/1.3/fluidplayer_480.mp4' title="480p" type='video/mp4' />
+    <source src='https://cdn.fluidplayer.com/videos/valerian-1080p.mkv' title="1080p" type='video/mp4' />
+    <source src='https://cdn.fluidplayer.com/videos/valerian-720p.mkv' title="720p" type='video/mp4' />
+    <source src='https://cdn.fluidplayer.com/videos/valerian-480p.mkv' title="480p" type='video/mp4' />
 </video>
 
 <link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
