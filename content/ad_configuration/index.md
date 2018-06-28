@@ -47,6 +47,7 @@ Please note the VAST tag XML response `Content-Type` must be either `application
 * **adText (Optional for linear ads):** The [adText section](#adtext) describes the ability to set text to appear on ads.
     By using this parameter in the **adList** you can specify unique text per ad.
 * **adTextPosition (Optional for linear ads):** Only relevent if **adText** is in use. This allows you to set the position of **adText** per ad.
+* **adClickable (Optional for linear ads):** Disable opening the landing page in a new tab when the player is clicked, and keep play pause functionality.
 
 We can set multiple _midRoll_ VAST tags, however only one _preRoll_ and _postRoll_ can be set. See the example below:
 
@@ -69,7 +70,8 @@ fluidPlayer(
                 {
                     roll: 'midRoll',
                     vastTag: 'vastMidRoll2.xml',
-                    timer: 10
+                    timer: 10,
+                    adClickable: false // Default true
                 },
                 {
                     roll: 'postRoll',
@@ -239,6 +241,22 @@ fluidPlayer(
     {
         vastOptions: {
             maxAllowedVastTagRedirects: 1 // Default 3
+        }
+    }
+);
+```
+
+## adClickable
+Clicking the player while an in-stream ad is showing will open open the landing page in a new tab. 
+If you wish to disable this, and only allow opening the landing page via the [call to action](#adctatext), you can use the **adClickable** parameter.
+This can be set for all in-stream ads or per ad listed. For details on how to add it per ad please see the [adlist](#adlist) section.
+
+```javascript
+fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            adClickable: false // Default true
         }
     }
 );
