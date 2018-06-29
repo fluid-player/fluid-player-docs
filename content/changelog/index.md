@@ -4,6 +4,13 @@ title: "Changelog"
 weight: 0
 ---
 
+### 2.4.1
+* [Pull #228](https://github.com/fluid-player/fluid-player/pull/228) Persistent volume settings from before mute on page navigation 
+* [Pull #229](https://github.com/fluid-player/fluid-player/pull/229) Link to FP on menu button working correctly
+* [Pull #230](https://github.com/fluid-player/fluid-player/pull/230) Fix for right click on initial play button
+* [Pull #227](https://github.com/fluid-player/fluid-player/pull/227) Optional parameter to disable clickthrough layer on instream ads
+* [Pull #231](https://github.com/fluid-player/fluid-player/pull/231) Fixes for how thumbnails are drawn and mouse event detection
+
 ### 2.4.0
 * [Pull #214](https://github.com/fluid-player/fluid-player/pull/241) Avoid looping VAST Ad
 * [Pull #206](https://github.com/fluid-player/fluid-player/pull/206) Fix tracking impression events for nonLinear ads 
