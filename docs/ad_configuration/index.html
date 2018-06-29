@@ -417,6 +417,7 @@ Please note the VAST tag XML response <code>Content-Type</code> must be either <
 <li><strong>adText (Optional for linear ads):</strong> The <a href="#adtext">adText section</a> describes the ability to set text to appear on ads.
 By using this parameter in the <strong>adList</strong> you can specify unique text per ad.</li>
 <li><strong>adTextPosition (Optional for linear ads):</strong> Only relevent if <strong>adText</strong> is in use. This allows you to set the position of <strong>adText</strong> per ad.</li>
+<li><strong>adClickable (Optional for linear ads):</strong> Disable opening the landing page in a new tab when the player is clicked, and keep play pause functionality.</li>
 </ul>
 
 <p>We can set multiple <em>midRoll</em> VAST tags, however only one <em>preRoll</em> and <em>postRoll</em> can be set. See the example below:</p>
@@ -439,7 +440,8 @@ By using this parameter in the <strong>adList</strong> you can specify unique te
                 {
                     roll: 'midRoll',
                     vastTag: 'vastMidRoll2.xml',
-                    timer: 10
+                    timer: 10,
+                    adClickable: false // Default true
                 },
                 {
                     roll: 'postRoll',
@@ -611,6 +613,22 @@ Has additional adCTATextPosition parameter, that can have values, like &lsquo;to
     {
         vastOptions: {
             maxAllowedVastTagRedirects: 1 // Default 3
+        }
+    }
+);
+</code></pre>
+
+<h2 id="adclickable">adClickable</h2>
+
+<p>Clicking the player while an in-stream ad is showing will open open the landing page in a new tab.
+If you wish to disable this, and only allow opening the landing page via the <a href="#adctatext">call to action</a>, you can use the <strong>adClickable</strong> parameter.
+This can be set for all in-stream ads or per ad listed. For details on how to add it per ad please see the <a href="#adlist">adlist</a> section.</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            adClickable: false // Default true
         }
     }
 );
