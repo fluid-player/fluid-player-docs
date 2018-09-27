@@ -4,6 +4,14 @@ title: "Changelog"
 weight: 0
 ---
 
+### 2.4.3
+* [Pull #266](https://github.com/fluid-player/fluid-player/pull/266) Fix play pause issue on mobile
+* [Pull #268](https://github.com/fluid-player/fluid-player/pull/268) Fix iOS scrubbing bugs
+* [Pull #270](https://github.com/fluid-player/fluid-player/pull/270) Fix for iOS switching to unsupported file types
+
+### 2.4.2
+* [Pull #235](https://github.com/fluid-player/fluid-player/pull/235) [Pull #236](https://github.com/fluid-player/fluid-player/pull/236) Fix the controls randomly disappearing on scrubbing clicks
+
 ### 2.4.1
 * [Pull #228](https://github.com/fluid-player/fluid-player/pull/228) Persistent volume settings from before mute on page navigation 
 * [Pull #229](https://github.com/fluid-player/fluid-player/pull/229) Link to FP on menu button working correctly
