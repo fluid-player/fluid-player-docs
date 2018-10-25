@@ -70,8 +70,8 @@ function getFluidParams() {
 
 function fillBuilderTextDiv(textToFill) {
     var fillDivText = "\n" +
-        "\<link rel=\"stylesheet\" href=\"http://cdn.fluidplayer.com/v2/current/fluidplayer.min.css\" type=\"text/css\"/>\n" +
-        "\<script src=\"http://cdn.fluidplayer.com/v2/current/fluidplayer.min.js\"></script> \n\n" +
+        "\<link rel=\"stylesheet\" href=\"https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css\" type=\"text/css\"/>\n" +
+        "\<script src=\"https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js\"></script> \n\n" +
         "\<video id='video-id'>\n" +
         "    \<source src='vid.mp4' type='video/mp4'/>\n" +
         "\</video>\n\n" +
