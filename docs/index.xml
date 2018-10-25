@@ -101,7 +101,7 @@ fluidPlayer( &#39;my-video&#39;, { layoutControls: { primaryColor: false, playBu
       <description>Quick Integration Note
 We have recently launched our new Fluid Player Builder. Use the Builder to customise your player for the easiest integration yet!
  In order to set Fluid Player, three things are required:
- The Javascript and CSS files of the player; An HTML5 &amp;lt;video&amp;gt; tag; A single Javascript line of code that attaches the player to the video tag.  &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;Fluid Player&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;http://cdn.</description>
+ The Javascript and CSS files of the player; An HTML5 &amp;lt;video&amp;gt; tag; A single Javascript line of code that attaches the player to the video tag.  &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;Fluid Player&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;https://cdn.</description>
     </item>
     
     <item>
