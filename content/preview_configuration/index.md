@@ -73,7 +73,7 @@ thumbnails.jpg#xywh=480,0,120,68
 
 ## Adding to Fluid Player
 To configure Fluid Player to use your VTT file, you can set is as the optional parameter **timelinePreview** under **layoutControls**. 
-This is also outlined [here](http://localhost:1313/layout_configuration/#timelinepreview). 
+This is also outlined [here](https://docs.fluidplayer.com/layout_configuration/#timelinepreview). 
 Provided the file is correct, the below code will set the thumbnail previews.
 The sprite image paths (thumbnails.jpg) are relative to root url in the VTT file.
 
