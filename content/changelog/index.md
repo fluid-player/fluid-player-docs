@@ -4,7 +4,7 @@ title: "Changelog"
 weight: 0
 ---
 
-## 2.4.4
+### 2.4.4
 * [Pull #289](https://github.com/fluid-player/fluid-player/pull/289) Fix window.getComputedStyle call on null
 * [Pull #290](https://github.com/fluid-player/fluid-player/pull/290) Prevent multi click event on download btn
 * [Pull #293](https://github.com/fluid-player/fluid-player/pull/293) Check if Hls already exposed in window
