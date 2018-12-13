@@ -17,7 +17,7 @@
       <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
       
       <guid>https://docs.fluidplayer.com/changelog/</guid>
-      <description>2.4.3  Pull #266 Fix play pause issue on mobile Pull #268 Fix iOS scrubbing bugs Pull #270 Fix for iOS switching to unsupported file types  2.4.2  Pull #235 Pull #236 Fix the controls randomly disappearing on scrubbing clicks  2.4.1  Pull #228 Persistent volume settings from before mute on page navigation Pull #229 Link to FP on menu button working correctly Pull #230 Fix for right click on initial play button Pull #227 Optional parameter to disable clickthrough layer on instream ads Pull #231 Fixes for how thumbnails are drawn and mouse event detection  2.</description>
+      <description>2.4.4  Pull #289 Fix window.getComputedStyle call on null Pull #290 Prevent multi click event on download btn Pull #293 Check if Hls already exposed in window  2.4.3  Pull #266 Fix play pause issue on mobile Pull #268 Fix iOS scrubbing bugs Pull #270 Fix for iOS switching to unsupported file types  2.4.2  Pull #235 Pull #236 Fix the controls randomly disappearing on scrubbing clicks  2.</description>
     </item>
     
   </channel>
