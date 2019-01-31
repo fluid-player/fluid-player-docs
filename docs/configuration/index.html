@@ -646,13 +646,13 @@ If you don&rsquo;t need that behaviour then add <strong>e.stopPropagation()</str
 <h2 id="layout">layout</h2>
 
 <p>The default layout is <strong>default</strong>. It provides own skin to the player.
-Another option is <strong>browser</strong>, meaning that the standard video player layout and behaviour, specific for each browser, is used.</p>
+Optionally you can define your own custom layout with CSS.</p>
 
 <pre><code class="language-javascript">fluidPlayer(
     'my-video',
     {
         layoutControls: {
-            layout: 'browser' // Default 'default'
+            layout: 'default' // Default 'default'
         }
     }
 );

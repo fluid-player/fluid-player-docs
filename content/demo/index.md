@@ -25,17 +25,6 @@ type: homepage
     <source src='video360.mp4' type='video/mp4' title="360p" />
 </video>
 
-## Browser-Based Layout
-
-* Ability to have more than 1 player per page.
-* Ability to use the default video layout for the current browser.
-<br/><br/>
-
-<video id='default-video' controls style="width:720px;height:405px;">
-    <source src='video.mp4' type='video/mp4' title="720p" />
-    <source src='video360.mp4' type='video/mp4' title="360p" />
-</video>
-
 ## Multiple VAST and NonLinear Ad
 
 * Ability to have more than 1 VAST (example: pre-roll and mid-roll).
