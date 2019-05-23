@@ -387,6 +387,7 @@ Vast options relate to the ads served and the how the player handles them</p>
             adCTAText:                  'Visit now!',
             adCTATextPosition:          'bottom right',
             vastTimeout:                5000,
+            showPlayButton:             false,
             maxAllowedVastTagRedirects: 1,
 
             vastAdvanced: {
@@ -603,6 +604,20 @@ Has additional adCTATextPosition parameter, that can have values, like &lsquo;to
 </code></pre>
 
 <p><img src="screenshots/showProgressbarMarkers.png" style="width:600px;margin:auto;display:flex;"></p>
+
+<h2 id="showPlayButton">showPlayButton</h2>
+
+<p>Option to show play button icon after add video was stoped. Set <strong>true</strong> to enable</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            showPlayButton: true // Default false
+        }
+    }
+);
+</code></pre>
 
 <h2 id="maxallowedvasttagredirects">maxAllowedVastTagRedirects</h2>
 

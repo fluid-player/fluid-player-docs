@@ -383,12 +383,14 @@ The full list of <em>layoutControls</em> are below:</p>
             playPauseAnimation:     true,
             fillToContainer:        false,
             autoPlay:               false,
+            preload:                false,
             mute:                   false,
             keyboardControl:        true,
             layout:                 'default',
             allowDownload:          false,
             playbackRateEnabled:    false,
             allowTheatre:           true,
+            title:                  false,
             logo: {
                 imageUrl:           null,
                 position:           'top left',
@@ -520,6 +522,20 @@ Please note that this feature may not work on certain browser versions and depen
 );
 </code></pre>
 
+<h2 id="preload">preload</h2>
+
+<p>Allows to add preload attribute to player. Set it to <strong>auto</strong> and whole video will be downloaded on page load</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            preload: auto // Default false
+        }
+    }
+);
+</code></pre>
+
 <h2 id="mute">mute</h2>
 
 <p>Set this parameter to <strong>true</strong> to have the video muted by default.</p>
@@ -556,6 +572,20 @@ Please note that this feature may not work on certain browser versions and depen
         layoutControls: {
             keyboardControl: false // Default true
         }
+    }
+);
+</code></pre>
+
+<h2 id="title">title</h2>
+
+<p>Set this parameter to <strong>string value</strong> to have the title displayed on your video. Disabled by default.</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            title: 'My video title' // Default false
+        }    
     }
 );
 </code></pre>
