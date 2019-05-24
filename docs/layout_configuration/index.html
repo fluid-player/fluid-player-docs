@@ -844,6 +844,26 @@ If you do not want these settings to persist for the user you can set them to fa
 );
 </code></pre>
 
+<h2 id="captions">captions</h2>
+
+<p>This option is used to change default captions <strong>play</strong>, <strong>pause</strong>, <strong>mute</strong>, <strong>unmute</strong>, <strong>fullscreen</strong>, <strong>exit fullscreen</strong> on control buttons.</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            captions: {
+                play: 'Play',
+                pause: 'Pause',
+                mute: 'Mute',
+                unmute: 'Unmute',
+                fullscreen: 'Fullscreen',
+                exitFullscreen: 'Exit Fullscreen'
+            }
+        }
+    }
+);
+</code></pre>
 
 			<aside class="copyright" role="note" style="text-align: center;">
 				© 2018 <a href="https://www.fluidplayer.com">Fluid Player</a>. All Rights Reserved.
