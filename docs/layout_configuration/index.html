@@ -865,6 +865,65 @@ If you do not want these settings to persist for the user you can set them to fa
 );
 </code></pre>
 
+<h2 id="iconsStyle">Custom icons style</h2>
+
+<p>To replace default icons use CSS to target icon you want to change. Available to replace icons: <strong>play</strong>, <strong>pause</strong>, <strong>volume</strong>, <strong>mute</strong>, <strong>video source</strong>, <strong>fullscreen mode</strong>, <strong>exit fullscreen mode</strong>, <strong>playback rate</strong>, <strong>download</strong>, <strong>theatre mode</strong></p>
+
+</p>
+
+<pre><code class="language-css">
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_play:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* play */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_pause:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* pause */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_volume:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* volume */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_mute:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* mute */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_video_source:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* video source */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_fullscreen:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* fullscreen mode */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_fullscreen_exit:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* exit fullscreen mode*/
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_playback_rate:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* playback rate */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_download:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* download */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_theatre:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* theatre mode */
+
+</code></pre>
+
 			<aside class="copyright" role="note" style="text-align: center;">
 				© 2018 <a href="https://www.fluidplayer.com">Fluid Player</a>. All Rights Reserved.
 			</aside>
