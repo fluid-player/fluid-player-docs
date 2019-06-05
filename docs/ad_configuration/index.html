@@ -651,7 +651,7 @@ This can be set for all in-stream ads or per ad listed. For details on how to ad
 
 <h2 id="multiplevast">Multiple vast per roll</h2>
 
-<p>Playing several advertisements per roll. If one is not available switching to next. Supported vast types <strong>preRoll</strong>, <strong>midRoll</strong>, <strong>postRoll</strong>.</p>
+<p>Playing several advertisements per roll. If one is not available switching to next. Supported vast types <strong>preRoll</strong>, <strong>midRoll</strong>, <strong>postRoll</strong>. If you want to add few midrolls you must set the same <strong>timer</strong> option</p>
 
 <pre><code class="language-javascript">fluidPlayer(
    'my-video',
@@ -665,6 +665,16 @@ This can be set for all in-stream ads or per ad listed. For details on how to ad
                 {
                     roll: 'preRoll', //roll type
                     vastTag: 'vastNonLinear.xml', //second vast tag
+                },
+                {
+                    roll: 'midRoll', //roll type
+                    vastTag: 'vastNonLinear.xml', //first vast tag
+                    timer : 25 //must be same for all midrolls
+                },
+                {
+                    roll: 'midRoll', //roll type
+                    vastTag: 'vastNonLinear.xml', //second vast tag
+                    timer : 25 //must be same for all midrolls
                 }
             ]
         }
