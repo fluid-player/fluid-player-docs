@@ -59,15 +59,6 @@ fluidPlayer(
     }
 );
 
-fluidPlayer(
-    'default-video',
-    {
-        layoutControls: {
-            layout: 'browser',
-            fillToContainer: true
-        }
-    }
-);
 
 fluidPlayer(
     'vast-video',
