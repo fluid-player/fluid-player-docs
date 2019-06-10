@@ -387,6 +387,7 @@ Vast options relate to the ads served and the how the player handles them</p>
             adCTAText:                  'Visit now!',
             adCTATextPosition:          'bottom right',
             vastTimeout:                5000,
+            showPlayButton:             false,
             maxAllowedVastTagRedirects: 1,
 
             vastAdvanced: {
@@ -604,6 +605,20 @@ Has additional adCTATextPosition parameter, that can have values, like &lsquo;to
 
 <p><img src="screenshots/showProgressbarMarkers.png" style="width:600px;margin:auto;display:flex;"></p>
 
+<h2 id="showPlayButton">showPlayButton</h2>
+
+<p>Option to show play button icon after ad video was stoped. Set <strong>true</strong> to enable</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            showPlayButton: true // Default false
+        }
+    }
+);
+</code></pre>
+
 <h2 id="maxallowedvasttagredirects">maxAllowedVastTagRedirects</h2>
 
 <p>Fluid Player supports VAST wrappers through <VASTAdTagURI>.The <code>maxAllowedVastTagRedirects</code> sets the maximum allowed redirects (wrappers).</p>
@@ -629,6 +644,39 @@ This can be set for all in-stream ads or per ad listed. For details on how to ad
     {
         vastOptions: {
             adClickable: false // Default true
+        }
+    }
+);
+</code></pre>
+
+<h2 id="multiplevast">Multiple vast per roll</h2>
+
+<p>Playing several advertisements per roll. If one is not available switching to next. Supported vast types <strong>preRoll</strong>, <strong>midRoll</strong>, <strong>postRoll</strong>. If you want to add few midrolls you must set the same <strong>timer</strong> option</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            adList: [
+                {
+                    roll: 'preRoll', //roll type
+                    vastTag: 'vastNonLinear.xml', //first vast tag
+                },
+                {
+                    roll: 'preRoll', //roll type
+                    vastTag: 'vastNonLinear.xml', //second vast tag
+                },
+                {
+                    roll: 'midRoll', //roll type
+                    vastTag: 'vastNonLinear.xml', //first vast tag
+                    timer : 25 //must be same for all midrolls
+                },
+                {
+                    roll: 'midRoll', //roll type
+                    vastTag: 'vastNonLinear.xml', //second vast tag
+                    timer : 25 //must be same for all midrolls
+                }
+            ]
         }
     }
 );

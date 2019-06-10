@@ -383,12 +383,14 @@ The full list of <em>layoutControls</em> are below:</p>
             playPauseAnimation:     true,
             fillToContainer:        false,
             autoPlay:               false,
+            preload:                false,
             mute:                   false,
             keyboardControl:        true,
             layout:                 'default',
             allowDownload:          false,
             playbackRateEnabled:    false,
             allowTheatre:           true,
+            title:                  false,
             logo: {
                 imageUrl:           null,
                 position:           'top left',
@@ -520,6 +522,20 @@ Please note that this feature may not work on certain browser versions and depen
 );
 </code></pre>
 
+<h2 id="preload">preload</h2>
+
+<p>Allows to add preload attribute to player. Set it to <strong>auto</strong> and whole video will be downloaded on page load</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            preload: auto // Default false
+        }
+    }
+);
+</code></pre>
+
 <h2 id="mute">mute</h2>
 
 <p>Set this parameter to <strong>true</strong> to have the video muted by default.</p>
@@ -556,6 +572,20 @@ Please note that this feature may not work on certain browser versions and depen
         layoutControls: {
             keyboardControl: false // Default true
         }
+    }
+);
+</code></pre>
+
+<h2 id="title">title</h2>
+
+<p>Set this parameter to <strong>string value</strong> to have the title displayed on your video. Disabled by default.</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            title: 'My video title' // Default false
+        }    
     }
 );
 </code></pre>
@@ -814,6 +844,85 @@ If you do not want these settings to persist for the user you can set them to fa
 );
 </code></pre>
 
+<h2 id="captions">captions</h2>
+
+<p>This option is used to change default captions <strong>play</strong>, <strong>pause</strong>, <strong>mute</strong>, <strong>unmute</strong>, <strong>fullscreen</strong>, <strong>exit fullscreen</strong> on control buttons.</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            captions: {
+                play: 'Play',
+                pause: 'Pause',
+                mute: 'Mute',
+                unmute: 'Unmute',
+                fullscreen: 'Fullscreen',
+                exitFullscreen: 'Exit Fullscreen'
+            }
+        }
+    }
+);
+</code></pre>
+
+<h2 id="iconsStyle">Custom icons style</h2>
+
+<p>To replace default icons use CSS to target icon you want to change. Available to replace icons: <strong>play</strong>, <strong>pause</strong>, <strong>volume</strong>, <strong>mute</strong>, <strong>video source</strong>, <strong>fullscreen mode</strong>, <strong>exit fullscreen mode</strong>, <strong>playback rate</strong>, <strong>download</strong>, <strong>theatre mode</strong></p>
+
+</p>
+
+<pre><code class="language-css">
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_play:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* play */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_pause:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* pause */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_volume:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* volume */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_mute:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* mute */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_video_source:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* video source */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_fullscreen:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* fullscreen mode */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_fullscreen_exit:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* exit fullscreen mode*/
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_playback_rate:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* playback rate */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_download:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* download */
+
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_theatre:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* theatre mode */
+
+</code></pre>
 
 			<aside class="copyright" role="note" style="text-align: center;">
 				© 2018 <a href="https://www.fluidplayer.com">Fluid Player</a>. All Rights Reserved.
