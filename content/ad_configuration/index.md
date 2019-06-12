@@ -232,7 +232,7 @@ fluidPlayer(
 
 <img src="screenshots/showProgressbarMarkers.png" style="width:600px;margin:auto;display:flex;">
 
-##showPlayButton
+## showPlayButton
 Option to show play button icon after ad video has stopped. By default this parameter will be set to **false**, but can be enabled as shown below.
 
 ```javascript
