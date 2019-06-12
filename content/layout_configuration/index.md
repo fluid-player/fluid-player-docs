@@ -209,7 +209,7 @@ fluidPlayer(
 
 ## title
 
-Set this parameter to <strong>string value</strong> to have the title displayed on your video. Disabled by default.
+Set this parameter to have the title displayed on your video. Disabled by default.
 
 ```javascript
 fluidPlayer(
@@ -473,7 +473,14 @@ fluidPlayer(
 
 ## captions
 
-This option enables you to customise the control buttons default captions <strong>play</strong>, <strong>pause</strong>, <strong>mute</strong>, <strong>unmute</strong>, <strong>fullscreen</strong>, <strong>exit fullscreen</strong>.
+This option enables you to customise the control buttons default caption.
+
+* play
+* pause
+* mute
+* unmute
+* fullscreen
+* exit fullscreen
 
 ```javascript
 fluidPlayer(
@@ -497,16 +504,16 @@ fluidPlayer(
 
 You can override the default icons using CSS.
 
-*play
-*pause
-*volume
-*mute
-*video source
-*fullscreen mode
-*exit fullscreen mode
-*playback rate
-*download
-*theatre mode
+* play
+* pause
+* volume
+* mute
+* video source
+* fullscreen mode
+* exit fullscreen mode
+* playback rate
+* download
+* theatre mode
 
 ```javascript
     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_play:before {
