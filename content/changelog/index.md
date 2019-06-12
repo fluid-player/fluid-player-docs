@@ -1,3 +1,9 @@
+---
+date: 2016-08-10T15:00:00+00:00
+title: "Changelog"
+weight: 0
+---
+
 # CHANGELOG
 
 ## Master
