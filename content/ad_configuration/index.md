@@ -22,6 +22,7 @@ fluidPlayer(
             adCTAText:                  'Visit now!',
             adCTATextPosition:          'bottom right',
             vastTimeout:                5000,
+            showPlayButton:             false,
             maxAllowedVastTagRedirects: 1,
 
             vastAdvanced: {
@@ -231,6 +232,19 @@ fluidPlayer(
 
 <img src="screenshots/showProgressbarMarkers.png" style="width:600px;margin:auto;display:flex;">
 
+##showPlayButton
+Option to show play button icon after ad video has stopped. By default this parameter will be set to **false**, but can be enabled as shown below.
+
+```javascript
+fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            showPlayButton: true // Default false
+        }
+    }
+);
+```
 
 ## maxAllowedVastTagRedirects
 Fluid Player supports VAST wrappers through <VASTAdTagURI>.The `maxAllowedVastTagRedirects` sets the maximum allowed redirects (wrappers).
