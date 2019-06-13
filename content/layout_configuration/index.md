@@ -18,12 +18,14 @@ fluidPlayer(
             playPauseAnimation:     true,
             fillToContainer:        false,
             autoPlay:               false,
+            preload:                false,
             mute:                   false,
             keyboardControl:        true,
             layout:                 'default',
             allowDownload:          false,
             playbackRateEnabled:    false,
             allowTheatre:           true,
+            title:                  false,
             logo: {
                 imageUrl:           null,
                 position:           'top left',
@@ -151,6 +153,21 @@ fluidPlayer(
     }
 );
 ```
+
+## preload
+
+By default this parameter is set to **false**. When set to **auto** the complete video will be downloaded on page load.
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            preload: auto // Default false
+        }
+    }
+);
+```
  
 ## mute
 Set this parameter to **true** to have the video muted by default.
@@ -189,6 +206,22 @@ fluidPlayer(
     }
 );
 ```
+
+## title
+
+Set this parameter to have the title displayed on your video. Disabled by default.
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            title: 'My video title' // Default false
+        }    
+    }
+);
+```
+
 
 ## logo
 The _logo_ option allows you to show an image overlaid in the corner of the player. There are 4 options that can be set to configure this logo.
@@ -436,4 +469,100 @@ fluidPlayer(
         }
     }
 );
+```
+
+## captions
+
+This option enables you to customise the control buttons default caption.
+
+* play
+* pause
+* mute
+* unmute
+* fullscreen
+* exit fullscreen
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            captions: {
+                play: 'Play',
+                pause: 'Pause',
+                mute: 'Mute',
+                unmute: 'Unmute',
+                fullscreen: 'Fullscreen',
+                exitFullscreen: 'Exit Fullscreen'
+            }
+        }
+    }
+);
+```
+
+## Custom icons style
+
+You can override the default icons using CSS.
+
+* play
+* pause
+* volume
+* mute
+* video source
+* fullscreen mode
+* exit fullscreen mode
+* playback rate
+* download
+* theatre mode
+
+```javascript
+    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_play:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* play */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_pause:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* pause */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_volume:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* volume */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_mute:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* mute */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_video_source:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* video source */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_fullscreen:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* fullscreen mode */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_fullscreen_exit:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* exit fullscreen mode*/
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_playback_rate:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* playback rate */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_download:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* download */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_theatre:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* theatre mode */
 ```
