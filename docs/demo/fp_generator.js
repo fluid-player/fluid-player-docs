@@ -59,7 +59,6 @@ fluidPlayer(
     }
 );
 
-
 fluidPlayer(
     'vast-video',
     {

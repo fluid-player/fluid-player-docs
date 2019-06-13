@@ -156,7 +156,7 @@ fluidPlayer(
 
 ## preload
 
-By default this parameter is set to **false**. When set to **auto** the complete video will be downloaded on page load.
+Sets the preload parameter on video tag. By default this parameter is set to **false**.
 
 ```javascript
 fluidPlayer(
