@@ -270,14 +270,14 @@ fluidPlayer(
  
 ## layout
 The default layout is **default**. It provides own skin to the player. 
-Another option is **browser**, meaning that the standard video player layout and behaviour, specific for each browser, is used.
+Optionally you can define your own custom layout with CSS.
 
 ```javascript
 fluidPlayer(
     'my-video',
     {
         layoutControls: {
-            layout: 'browser' // Default 'default'
+            layout: 'default' // Default 'default'
         }
     }
 );

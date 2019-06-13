@@ -4,6 +4,16 @@ title: "Changelog"
 weight: 0
 ---
 
+### 2.4.5
+* [Pull #325](https://github.com/fluid-player/fluid-player/pull/325) Add poster image size option (posterImageSize)
+* [Pull #330](https://github.com/fluid-player/fluid-player/pull/330) Add showPlayButton config to display Play button on ad
+* [Pull #306](https://github.com/fluid-player/fluid-player/pull/306) Remove unsupported browser layout parts
+* [Pull #331](https://github.com/fluid-player/fluid-player/pull/331) Add ability to change controls titles
+* [Pull #332](https://github.com/fluid-player/fluid-player/pull/332) Fix multiple videos play
+* [Pull #335](https://github.com/fluid-player/fluid-player/pull/335) Improve timecode
+* [Pull #336](https://github.com/fluid-player/fluid-player/pull/336) Add title
+* [Pull #334](https://github.com/fluid-player/fluid-player/pull/334) Add ability to set preload value
+
 ### 2.4.4
 * [Pull #289](https://github.com/fluid-player/fluid-player/pull/289) Fix window.getComputedStyle call on null
 * [Pull #290](https://github.com/fluid-player/fluid-player/pull/290) Prevent multi click event on download btn
@@ -89,9 +99,9 @@ weight: 0
 * [Pull #111](https://github.com/fluid-player/fluid-player/pull/111) Adjust how iconClickThrough is gotten
 
 ### 2.1.1
-* [Pull #107](https://github.com/fluid-player/fluid-player/pull/107)
-   * Improve the theater mode UI
-   * Fix issues with multiple player instances and download link
+* [Pull #107](https://github.com/fluid-player/fluid-player/pull/107) Download and Theatre fixes
+    * Improve the theater mode UI
+    * Fix issues with multiple player instances and download link
 
 ### 2.1.0
 * [Pull #101](https://github.com/fluid-player/fluid-player/pull/101) Quality indicator
@@ -105,9 +115,9 @@ weight: 0
     * Add play button
     * Play pause animations
     * Restructuring of optional parameters
-    * Remove templates
-    * General fixes
- 
+    * Remove templates 
+    * General fixes 
+
 ### 1.2.2
 * [Pull #88](https://github.com/fluid-player/fluid-player/pull/88) Improve nonlinear ads
 

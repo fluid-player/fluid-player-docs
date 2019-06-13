@@ -17,7 +17,7 @@
       <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
       
       <guid>https://docs.fluidplayer.com/changelog/</guid>
-      <description>2.4.4  Pull #289 Fix window.getComputedStyle call on null Pull #290 Prevent multi click event on download btn Pull #293 Check if Hls already exposed in window  2.4.3  Pull #266 Fix play pause issue on mobile Pull #268 Fix iOS scrubbing bugs Pull #270 Fix for iOS switching to unsupported file types  2.4.2  Pull #235 Pull #236 Fix the controls randomly disappearing on scrubbing clicks  2.</description>
+      <description>2.4.5  Pull #325 Add poster image size option (posterImageSize) Pull #330 Add showPlayButton config to display Play button on ad Pull #306 Remove unsupported browser layout parts Pull #331 Add ability to change controls titles Pull #332 Fix multiple videos play Pull #335 Improve timecode Pull #336 Add title Pull #334 Add ability to set preload value  2.4.4  Pull #289 Fix window.getComputedStyle call on null Pull #290 Prevent multi click event on download btn Pull #293 Check if Hls already exposed in window  2.</description>
     </item>
     
   </channel>

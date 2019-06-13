@@ -383,12 +383,14 @@ The full list of <em>layoutControls</em> are below:</p>
             playPauseAnimation:     true,
             fillToContainer:        false,
             autoPlay:               false,
+            preload:                false,
             mute:                   false,
             keyboardControl:        true,
             layout:                 'default',
             allowDownload:          false,
             playbackRateEnabled:    false,
             allowTheatre:           true,
+            title:                  false,
             logo: {
                 imageUrl:           null,
                 position:           'top left',
@@ -520,6 +522,20 @@ Please note that this feature may not work on certain browser versions and depen
 );
 </code></pre>
 
+<h2 id="preload">preload</h2>
+
+<p>Sets the preload parameter on video tag. By default this parameter is set to <strong>false</strong>.</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            preload: auto // Default false
+        }
+    }
+);
+</code></pre>
+
 <h2 id="mute">mute</h2>
 
 <p>Set this parameter to <strong>true</strong> to have the video muted by default.</p>
@@ -556,6 +572,20 @@ Please note that this feature may not work on certain browser versions and depen
         layoutControls: {
             keyboardControl: false // Default true
         }
+    }
+);
+</code></pre>
+
+<h2 id="title">title</h2>
+
+<p>Set this parameter to have the title displayed on your video. Disabled by default.</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            title: 'My video title' // Default false
+        }    
     }
 );
 </code></pre>
@@ -675,13 +705,13 @@ If you don&rsquo;t need that behaviour then add <strong>e.stopPropagation()</str
 <h2 id="layout">layout</h2>
 
 <p>The default layout is <strong>default</strong>. It provides own skin to the player.
-Another option is <strong>browser</strong>, meaning that the standard video player layout and behaviour, specific for each browser, is used.</p>
+Optionally you can define your own custom layout with CSS.</p>
 
 <pre><code class="language-javascript">fluidPlayer(
     'my-video',
     {
         layoutControls: {
-            layout: 'browser' // Default 'default'
+            layout: 'default' // Default 'default'
         }
     }
 );
@@ -812,6 +842,104 @@ If you do not want these settings to persist for the user you can set them to fa
         }
     }
 );
+</code></pre>
+
+<h2 id="captions">captions</h2>
+
+<p>This option enables you to customise the control buttons default caption.</p>
+
+<ul>
+<li>play</li>
+<li>pause</li>
+<li>mute</li>
+<li>unmute</li>
+<li>fullscreen</li>
+<li>exit fullscreen</li>
+</ul>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            captions: {
+                play: 'Play',
+                pause: 'Pause',
+                mute: 'Mute',
+                unmute: 'Unmute',
+                fullscreen: 'Fullscreen',
+                exitFullscreen: 'Exit Fullscreen'
+            }
+        }
+    }
+);
+</code></pre>
+
+<h2 id="custom-icons-style">Custom icons style</h2>
+
+<p>You can override the default icons using CSS.</p>
+
+<ul>
+<li>play</li>
+<li>pause</li>
+<li>volume</li>
+<li>mute</li>
+<li>video source</li>
+<li>fullscreen mode</li>
+<li>exit fullscreen mode</li>
+<li>playback rate</li>
+<li>download</li>
+<li>theatre mode</li>
+</ul>
+
+<pre><code class="language-javascript">    .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_play:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* play */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_pause:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* pause */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_volume:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* volume */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_mute:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* mute */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_video_source:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* video source */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_fullscreen:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* fullscreen mode */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_fullscreen_exit:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* exit fullscreen mode*/
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_playback_rate:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* playback rate */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_download:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* download */
+
+     .fluid_video_wrapper.fluid_player_layout_default .fluid_controls_container .fluid_button.fluid_button_theatre:before {
+            background: url(/images/example.svg) no-repeat !important;
+            background-position: 0px 0px !important;
+    } /* theatre mode */
 </code></pre>
 
 

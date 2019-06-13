@@ -26,7 +26,7 @@
       <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
       
       <guid>https://docs.fluidplayer.com/changelog/</guid>
-      <description>2.4.4  Pull #289 Fix window.getComputedStyle call on null Pull #290 Prevent multi click event on download btn Pull #293 Check if Hls already exposed in window  2.4.3  Pull #266 Fix play pause issue on mobile Pull #268 Fix iOS scrubbing bugs Pull #270 Fix for iOS switching to unsupported file types  2.4.2  Pull #235 Pull #236 Fix the controls randomly disappearing on scrubbing clicks  2.</description>
+      <description>2.4.5  Pull #325 Add poster image size option (posterImageSize) Pull #330 Add showPlayButton config to display Play button on ad Pull #306 Remove unsupported browser layout parts Pull #331 Add ability to change controls titles Pull #332 Fix multiple videos play Pull #335 Improve timecode Pull #336 Add title Pull #334 Add ability to set preload value  2.4.4  Pull #289 Fix window.getComputedStyle call on null Pull #290 Prevent multi click event on download btn Pull #293 Check if Hls already exposed in window  2.</description>
     </item>
     
     <item>
@@ -89,7 +89,7 @@ fluidPlayer( &#39;my-video&#39;, { layoutControls: { primaryColor: false, playBu
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://docs.fluidplayer.com/demo/</guid>
-      <description>Default Layout  Supports VAST (Video Ad Serving Template). Comes with its own design, which is easily customizable. Timeline Preview. Lightweight. Compatible with modern web browsers.    Custom Themed Layout  Easily customised with our primaryColor configuration.    Browser-Based Layout  Ability to have more than 1 player per page. Ability to use the default video layout for the current browser.    Multiple VAST and NonLinear Ad  Ability to have more than 1 VAST (example: pre-roll and mid-roll).</description>
+      <description>Default Layout  Supports VAST (Video Ad Serving Template). Comes with its own design, which is easily customizable. Timeline Preview. Lightweight. Compatible with modern web browsers.    Custom Themed Layout  Easily customised with our primaryColor configuration.    Multiple VAST and NonLinear Ad  Ability to have more than 1 VAST (example: pre-roll and mid-roll). Ability to show non Linear (Banner) ads.    Autoplay with Mute enabled  Video playing when user lands Sound muted by default    Download  Allow the video to be downloaded easily by setting allowDownload to true    Playback Rate  Adjustable video speed Easily set by enabling playbackRateEnabled</description>
     </item>
     
     <item>
@@ -111,7 +111,7 @@ We have recently launched our new Fluid Player Builder. Use the Builder to custo
       
       <guid>https://docs.fluidplayer.com/layout_configuration/</guid>
       <description>There are optional parameters that can be used to customise the Fluid Player. None of the options are required but can be tailored to better suit your own design. Layout controls relate to the functionality and styling of the player itself. The full list of layoutControls are below:
-fluidPlayer( &#39;my-video&#39;, { layoutControls: { primaryColor: false, playButtonShowing: true, playPauseAnimation: true, fillToContainer: false, autoPlay: false, mute: false, keyboardControl: true, layout: &#39;default&#39;, allowDownload: false, playbackRateEnabled: false, allowTheatre: true, logo: { imageUrl: null, position: &#39;top left&#39;, clickUrl: null, opacity: 1 }, controlBar: { autoHide: true, autoHideTimeout: 3, animated: true }, timelinePreview: {}, htmlOnPauseBlock: { html: null, height: null, width: null }, playerInitCallback: (function() {}) } } );  primaryColor Primary color affects the following areas of the Fluid Player:</description>
+fluidPlayer( &#39;my-video&#39;, { layoutControls: { primaryColor: false, playButtonShowing: true, playPauseAnimation: true, fillToContainer: false, autoPlay: false, preload: false, mute: false, keyboardControl: true, layout: &#39;default&#39;, allowDownload: false, playbackRateEnabled: false, allowTheatre: true, title: false, logo: { imageUrl: null, position: &#39;top left&#39;, clickUrl: null, opacity: 1 }, controlBar: { autoHide: true, autoHideTimeout: 3, animated: true }, timelinePreview: {}, htmlOnPauseBlock: { html: null, height: null, width: null }, playerInitCallback: (function() {}) } } );  primaryColor Primary color affects the following areas of the Fluid Player:</description>
     </item>
     
     <item>

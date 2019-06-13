@@ -55,7 +55,7 @@ myFluidPlayer.setVolume(0);
 ```
 
 ## setHtmlOnPauseBlock
-The purpose of the htmlOnPauseBlock is [outlined here](http://localhost:1313/configuration/#htmlonpauseblock). 
+The purpose of the htmlOnPauseBlock is [outlined here](https://docs.fluidplayer.com/layout_configuration/#htmlonpauseblock). 
 If we wanted to to set or change the HTML that's set for this we can do it using the following.
 
 **html**: This is HTML we want to show when the player in paused
