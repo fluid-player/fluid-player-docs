@@ -202,7 +202,7 @@ fluidPlayer(
 ## subtitlesEnabled
 Subtitles is discussed more [here](../subtitles).
 
-Set this parameter to **true** to have subtitles, provided tarck information given.
+Set this parameter to **true** to have subtitles, provided track information given.
 
 ```javascript
 fluidPlayer(
