@@ -7,7 +7,7 @@ type: homepage
 Subtitles are text derived from either a transcript or screenplay of the dialog or commentary in films, television programs, video games, and the like, usually displayed at the bottom of the screen. Below is an example video showing the subtitles.
 ## Example
 <video id='subtitles-video' controls style="width:720px;height:405px;">
-    <source src="https://cdn.fluidplayer.com/videos/valerian-480p.mkv" type="video/mp4"/>
+    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4"/>
     <track label="English" kind="metadata" srclang="en"
            src="subtitles/english.vtt" default>
     <track label="Deutsch" kind="metadata" srclang="de"
