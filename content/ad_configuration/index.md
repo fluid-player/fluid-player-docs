@@ -51,7 +51,7 @@ Please note the VAST tag XML response `Content-Type` must be either `application
 * **adTextPosition (Optional for linear ads):** Only relevent if **adText** is in use. This allows you to set the position of **adText** per ad.
 * **adClickable (Optional for linear ads):** Disable opening the landing page in a new tab when the player is clicked, and keep play pause functionality.
 
-We can set **multiple _midRoll_ of same timer**, also **multiple _preRoll_, _postRoll_ and _onPauseRoll_** can be set. See the example below:
+We can set **multiple _midRoll_ with the same timer value**, also **multiple _preRoll_, _postRoll_ and _onPauseRoll_** can be set. See the example below:
 
 ```javascript
 fluidPlayer(
