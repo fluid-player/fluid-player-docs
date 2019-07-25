@@ -71,7 +71,7 @@ fluidPlayer(
 
 <br/>
 <video id='hls-video'>
-    <source src='https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8' type='application/x-mpegURL'/>
+    <source src='http://184.72.239.149/vod/smil:BigBuckBunny.smil/playlist.m3u8' type='application/x-mpegURL'/>
 </video>
 
 <link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
