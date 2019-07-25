@@ -20,6 +20,7 @@ fluidPlayer(
             autoPlay:               false,
             preload:                false,
             mute:                   false,
+            doubleclickFullscreen:  true,
             subtitlesEnabled:       false,
             keyboardControl:        true,
             layout:                 'default',
@@ -179,6 +180,20 @@ fluidPlayer(
     {
         layoutControls: {
             mute: true // Default false
+        }
+    }
+);
+```
+
+## doubleclickFullscreen
+Set this parameter to **true** to have double click to toggle fullscreen
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            doubleclickFullscreen: true, // Default true
         }
     }
 );
