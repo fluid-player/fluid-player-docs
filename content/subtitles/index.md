@@ -46,9 +46,9 @@ WEBVTT
 ## Adding to Fluid Player
 To configure Fluid Player to use your VTT file, you can set is as the optional parameter **subtitlesEnabled** under **layoutControls**.
 
-Provide subtitles url in tack tags under **kind='metadata'**
+Provide subtitles url in track tags under **kind='metadata'**
 
-Please note **do not provide** as kind='subtitles' for cross browser issue
+Please make sure that you **do not specify as** kind='subtitles', because that doesn't work in some browsers.
 ```javascript
 
 <video id="my-video" controls >
