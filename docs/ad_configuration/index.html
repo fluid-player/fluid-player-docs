@@ -415,13 +415,14 @@ Please note the VAST tag XML response <code>Content-Type</code> must be either <
 <li><strong>[seconds]:</strong> The number of seconds until the ad begins. Example: <em>timer: 10</em></li>
 <li><strong>[percentage]:</strong> The percentage of the video to show before the ad begins. Example: <em>timer: 50%</em></li>
 </ul></li>
+<li><strong>fallbackVastTags (Optional):</strong> An array which holds the Vast Urls, if Url in vastTag fails then player will try with these.</li>
 <li><strong>adText (Optional for linear ads):</strong> The <a href="#adtext">adText section</a> describes the ability to set text to appear on ads.
 By using this parameter in the <strong>adList</strong> you can specify unique text per ad.</li>
 <li><strong>adTextPosition (Optional for linear ads):</strong> Only relevent if <strong>adText</strong> is in use. This allows you to set the position of <strong>adText</strong> per ad.</li>
 <li><strong>adClickable (Optional for linear ads):</strong> Disable opening the landing page in a new tab when the player is clicked, and keep play pause functionality.</li>
 </ul>
 
-<p>We can set multiple <em>midRoll</em> VAST tags, however only one <em>preRoll</em> and <em>postRoll</em> can be set. See the example below:</p>
+<p>We can set <strong>multiple <em>midRoll</em> of same timer</strong>, also <strong>multiple <em>preRoll</em>, <em>postRoll</em> and <em>onPauseRoll</em></strong> can be set. See the example below:</p>
 
 <pre><code class="language-javascript">fluidPlayer(
    'my-video',
@@ -430,17 +431,28 @@ By using this parameter in the <strong>adList</strong> you can specify unique te
             adList: [
                 {
                     roll: 'preRoll',
-                    vastTag: 'vastPreRoll.xml',
+                    vastTag: 'vastPreRoll_1.xml',
                     adText: 'Advertising supports us directly'
                 },
                 {
+                    roll: 'preRoll',
+                    vastTag: 'vastPreRoll_2.xml',
+                    adText: 'Advertising supports us directly'
+                },                
+                {
                     roll: 'midRoll',
-                    vastTag: 'vastMidRoll.xml',
+                    vastTag: 'vastMidRoll_1.xml',
                     timer: 8
                 },
                 {
                     roll: 'midRoll',
-                    vastTag: 'vastMidRoll2.xml',
+                    vastTag: 'vastMidRoll_2.xml',
+                    fallbackVastTags: ['vastMidRoll_3.xml', 'vastMidRoll_4.xml'], // Incase vastTag fail, player will fallback to one of valid tag from this array  
+                    timer: 8 // multiple ad for same time
+                },                
+                {
+                    roll: 'midRoll',
+                    vastTag: 'vastMidRoll_2.xml',
                     timer: 10,
                     adClickable: false // Default true
                 },

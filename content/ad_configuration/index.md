@@ -45,12 +45,13 @@ Please note the VAST tag XML response `Content-Type` must be either `application
 * **timer (only for mid-roll):** the timer property schedules when the ad should show. There are two ways to define this:
   - **[seconds]:** The number of seconds until the ad begins. Example: _timer: 10_
   - **[percentage]:** The percentage of the video to show before the ad begins. Example: _timer: 50%_
+* **fallbackVastTags (Optional):** An array which holds the Vast Urls, if Url in vastTag fails then player will try with these.
 * **adText (Optional for linear ads):** The [adText section](#adtext) describes the ability to set text to appear on ads.
     By using this parameter in the **adList** you can specify unique text per ad.
 * **adTextPosition (Optional for linear ads):** Only relevent if **adText** is in use. This allows you to set the position of **adText** per ad.
 * **adClickable (Optional for linear ads):** Disable opening the landing page in a new tab when the player is clicked, and keep play pause functionality.
 
-We can set multiple _midRoll_ VAST tags, however only one _preRoll_ and _postRoll_ can be set. See the example below:
+We can set **multiple _midRoll_ of same timer**, also **multiple _preRoll_, _postRoll_ and _onPauseRoll_** can be set. See the example below:
 
 ```javascript
 fluidPlayer(
@@ -60,17 +61,28 @@ fluidPlayer(
             adList: [
                 {
                     roll: 'preRoll',
-                    vastTag: 'vastPreRoll.xml',
+                    vastTag: 'vastPreRoll_1.xml',
                     adText: 'Advertising supports us directly'
                 },
                 {
+                    roll: 'preRoll', //multiple preRoll Ads
+                    vastTag: 'vastPreRoll_2.xml',
+                    adText: 'Advertising supports us directly'
+                },                
+                {
                     roll: 'midRoll',
-                    vastTag: 'vastMidRoll.xml',
+                    vastTag: 'vastMidRoll_1.xml',
                     timer: 8
                 },
                 {
                     roll: 'midRoll',
-                    vastTag: 'vastMidRoll2.xml',
+                    vastTag: 'vastMidRoll_2.xml',
+                    fallbackVastTags: ['vastMidRoll_3.xml', 'vastMidRoll_4.xml'], // Incase vastTag fail, player will fallback to one of valid tag from this array  
+                    timer: 8 // multiple ad for same time
+                },                
+                {
+                    roll: 'midRoll',
+                    vastTag: 'vastMidRoll_2.xml',
                     timer: 10,
                     adClickable: false // Default true
                 },
