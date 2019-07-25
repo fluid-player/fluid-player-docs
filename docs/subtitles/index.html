@@ -432,7 +432,20 @@
 
 <p>To configure Fluid Player to use your VTT file, you can set is as the optional parameter <strong>subtitlesEnabled</strong> under <strong>layoutControls</strong>.</p>
 
-<pre><code class="language-javascript">fluidPlayer(
+<p>Provide subtitles url in tack tags under <strong>kind=&lsquo;metadata&rsquo;</strong></p>
+
+<p>Please note <strong>do not provide</strong> as kind=&lsquo;subtitles&rsquo; for cross browser issue</p>
+
+<pre><code class="language-javascript">
+&lt;video id=&quot;my-video&quot; controls &gt;
+    &lt;source src=&quot;video.mp4&quot; type=&quot;video/mp4&quot;/&gt;
+    &lt;track label=&quot;English&quot; kind=&quot;metadata&quot; srclang=&quot;en&quot;
+           src=&quot;english.vtt&quot; default&gt;
+    &lt;track label=&quot;Deutsch&quot; kind=&quot;metadata&quot; srclang=&quot;de&quot;
+           src=&quot;deutsch.vtt&quot;&gt;
+&lt;/video&gt;
+
+fluidPlayer(
     'my-video',
     {
         layoutControls: {
