@@ -200,7 +200,7 @@ fluidPlayer(
 ```
 
 ## subtitlesEnabled
-Set this parameter to **true** to have subtitles, provided tacks information given.
+Set this parameter to **true** to have subtitles, provided tarck information given.
 
 ```javascript
 fluidPlayer(
