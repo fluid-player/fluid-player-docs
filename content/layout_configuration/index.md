@@ -20,6 +20,7 @@ fluidPlayer(
             autoPlay:               false,
             preload:                false,
             mute:                   false,
+            subtitlesEnabled:       false,
             keyboardControl:        true,
             layout:                 'default',
             allowDownload:          false,
@@ -178,6 +179,20 @@ fluidPlayer(
     {
         layoutControls: {
             mute: true // Default false
+        }
+    }
+);
+```
+
+## subtitlesEnabled
+Set this parameter to **true** to have subtitles, provided tacks information given.
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            subtitlesEnabled: true, // Default false
         }
     }
 );

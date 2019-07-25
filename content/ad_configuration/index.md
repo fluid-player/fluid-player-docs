@@ -97,7 +97,20 @@ fluidPlayer(
     }
 );
 ```
-                        
+
+
+<video id='video-ads' style="width:720px;height:405px;">
+    <source src='https://cdn.fluidplayer.com/videos/valerian-1080p.mkv' title="1080p" type='video/mp4' />
+    <source src='https://cdn.fluidplayer.com/videos/valerian-720p.mkv' title="720p" type='video/mp4' />
+    <source src='https://cdn.fluidplayer.com/videos/valerian-480p.mkv' title="480p" type='video/mp4' />
+</video>
+
+<link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
+<script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
+
+<script src="player_ads.js"></script>
+
+<br/>                        
 * **vAlign** (only for nonLinear, optional): The available vertical positions for nonLinear Ads: top, middle, bottom. Default: bottom.
 * **nonLinearDuration** (only for nonLinear, optional): The number of seconds until the nonLinear Ad will be shown. If not set nor the minSuggestedDuration attribute of VAST XML than wont close until end of video.
 * **size** (only for nonLinear, optional): The dimension of the Ad. Supported sizes: 468x60, 300x250, 728x90
@@ -120,6 +133,7 @@ fluidPlayer(
     }
 );
 ```
+
 
 ## skipButtonCaption
 The text to display the countdown during an ad. The **[seconds]** placeholder is used for the second countdown.

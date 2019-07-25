@@ -122,6 +122,15 @@
   </url>
   
   <url>
+    <loc>https://docs.fluidplayer.com/subtitles/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docs.fluidplayer.com/subtitles/</loc>
+  </url>
+  
+  <url>
     <loc>https://docs.fluidplayer.com/tags/</loc>
     <priority>0</priority>
   </url>

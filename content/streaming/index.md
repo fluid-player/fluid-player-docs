@@ -75,5 +75,5 @@ fluidPlayer(
 </video>
 
 <link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
-<script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"/></script>
+<script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
 <script src="streaming.js"></script>
