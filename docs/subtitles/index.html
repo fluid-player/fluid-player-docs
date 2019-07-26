@@ -400,8 +400,9 @@
 </video>
 
 <p><link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
-<script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
-<script src='fluid_subtitles.js'></script></p>
+<script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script></p>
+
+<script src='fluid_subtitles.js'></script>
 
 <h2 id="vtt-format">VTT format</h2>
 
@@ -440,9 +441,9 @@
 &lt;video id=&quot;my-video&quot; controls &gt;
     &lt;source src=&quot;video.mp4&quot; type=&quot;video/mp4&quot;/&gt;
     &lt;track label=&quot;English&quot; kind=&quot;metadata&quot; srclang=&quot;en&quot;
-           src=&quot;english.vtt&quot; default&gt;
+           src=&quot;/subtitles/english.vtt&quot; default&gt;
     &lt;track label=&quot;Deutsch&quot; kind=&quot;metadata&quot; srclang=&quot;de&quot;
-           src=&quot;deutsch.vtt&quot;&gt;
+           src=&quot;/subtitles/deutsch.vtt&quot;&gt;
 &lt;/video&gt;
 
 fluidPlayer(

@@ -142,8 +142,8 @@ VTT Format The format used is WebVTT, a HTML5 standard.</description>
       
       <guid>https://docs.fluidplayer.com/subtitles/</guid>
       <description>Subtitles are text derived from either a transcript or screenplay of the dialog or commentary in films, television programs, video games, and the like, usually displayed at the bottom of the screen. Below is an example video showing the subtitles.
-Example   
-VTT format WEBVTT 1 00:00:15.000 --&amp;gt; 00:00:18.000 align:start &amp;lt;v Proog&amp;gt;At the left we can see...&amp;lt;/v&amp;gt; 2 00:00:18.167 --&amp;gt; 00:00:20.083 align:middle &amp;lt;v Proog&amp;gt;At the right we can see the.</description>
+Example  
+ VTT format WEBVTT 1 00:00:15.000 --&amp;gt; 00:00:18.000 align:start &amp;lt;v Proog&amp;gt;At the left we can see...&amp;lt;/v&amp;gt; 2 00:00:18.167 --&amp;gt; 00:00:20.083 align:middle &amp;lt;v Proog&amp;gt;At the right we can see the.</description>
     </item>
     
     <item>

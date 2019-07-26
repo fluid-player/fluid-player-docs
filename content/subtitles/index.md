@@ -16,6 +16,7 @@ Subtitles are text derived from either a transcript or screenplay of the dialog 
 
 <link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
 <script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
+
 <script src='fluid_subtitles.js'></script>
 
 ## VTT format
@@ -54,9 +55,9 @@ Please make sure that you **do not specify as** kind='subtitles', because that d
 <video id="my-video" controls >
     <source src="video.mp4" type="video/mp4"/>
     <track label="English" kind="metadata" srclang="en"
-           src="english.vtt" default>
+           src="/subtitles/english.vtt" default>
     <track label="Deutsch" kind="metadata" srclang="de"
-           src="deutsch.vtt">
+           src="/subtitles/deutsch.vtt">
 </video>
 
 fluidPlayer(
