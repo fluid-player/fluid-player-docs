@@ -20,6 +20,8 @@ fluidPlayer(
             autoPlay:               false,
             preload:                false,
             mute:                   false,
+            doubleclickFullscreen:  true,
+            subtitlesEnabled:       false,
             keyboardControl:        true,
             layout:                 'default',
             allowDownload:          false,
@@ -178,6 +180,34 @@ fluidPlayer(
     {
         layoutControls: {
             mute: true // Default false
+        }
+    }
+);
+```
+
+## doubleclickFullscreen
+Set this parameter to **true** to have double click to toggle fullscreen
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            doubleclickFullscreen: true, // Default true
+        }
+    }
+);
+```
+
+## subtitlesEnabled
+Set this parameter to **true** to have subtitles, provided track information given. You can read more about subtitles [here](../subtitles).
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            subtitlesEnabled: true, // Default false
         }
     }
 );
