@@ -74,8 +74,8 @@ https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css
 
 Or specify the version:
 ```html
-https://cdn.fluidplayer.com/1.0.1/fluidplayer.min.js
-https://cdn.fluidplayer.com/1.0.1/fluidplayer.min.css
+https://cdn.fluidplayer.com/2.4.6/fluidplayer.min.js
+https://cdn.fluidplayer.com/2.4.6/fluidplayer.min.css
 ```
 
 ## License
