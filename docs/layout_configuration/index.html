@@ -287,6 +287,24 @@
 
 
 
+<a  title="Subtitles" href="/subtitles/">
+	
+	Subtitles
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
 <a  title="Wordpress" href="/wordpress/">
 	
 	Wordpress
@@ -385,6 +403,8 @@ The full list of <em>layoutControls</em> are below:</p>
             autoPlay:               false,
             preload:                false,
             mute:                   false,
+            doubleclickFullscreen:  true,
+            subtitlesEnabled:       false,
             keyboardControl:        true,
             layout:                 'default',
             allowDownload:          false,
@@ -545,6 +565,34 @@ Please note that this feature may not work on certain browser versions and depen
     {
         layoutControls: {
             mute: true // Default false
+        }
+    }
+);
+</code></pre>
+
+<h2 id="doubleclickfullscreen">doubleclickFullscreen</h2>
+
+<p>Set this parameter to <strong>true</strong> to have double click to toggle fullscreen</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            doubleclickFullscreen: true, // Default true
+        }
+    }
+);
+</code></pre>
+
+<h2 id="subtitlesenabled">subtitlesEnabled</h2>
+
+<p>Set this parameter to <strong>true</strong> to have subtitles, provided track information given. You can read more about subtitles <a href="../subtitles">here</a>.</p>
+
+<pre><code class="language-javascript">fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            subtitlesEnabled: true, // Default false
         }
     }
 );

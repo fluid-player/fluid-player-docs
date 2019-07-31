@@ -26,7 +26,7 @@
       <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
       
       <guid>https://docs.fluidplayer.com/changelog/</guid>
-      <description>2.4.5  Pull #325 Add poster image size option (posterImageSize) Pull #330 Add showPlayButton config to display Play button on ad Pull #306 Remove unsupported browser layout parts Pull #331 Add ability to change controls titles Pull #332 Fix multiple videos play Pull #335 Improve timecode Pull #336 Add title Pull #334 Add ability to set preload value  2.4.4  Pull #289 Fix window.getComputedStyle call on null Pull #290 Prevent multi click event on download btn Pull #293 Check if Hls already exposed in window  2.</description>
+      <description>2.4.7  Pull #361 Adding subtitles, multiple ad-roll, fallback vast ad, fixing dash playback, double click to fullscreen Pull #354 VAST Multiple mediafile support, announce proper error codes and some bug fixes Pull #356 Seeked and ended html5 event listeners  2.4.6  Pull #358 fix bug with dash js api  2.4.5  Pull #325 Add poster image size option (posterImageSize) Pull #330 Add showPlayButton config to display Play button on ad Pull #306 Remove unsupported browser layout parts Pull #331 Add ability to change controls titles Pull #332 Fix multiple videos play Pull #335 Improve timecode Pull #336 Add title Pull #334 Add ability to set preload value  2.</description>
     </item>
     
     <item>
@@ -111,7 +111,7 @@ We have recently launched our new Fluid Player Builder. Use the Builder to custo
       
       <guid>https://docs.fluidplayer.com/layout_configuration/</guid>
       <description>There are optional parameters that can be used to customise the Fluid Player. None of the options are required but can be tailored to better suit your own design. Layout controls relate to the functionality and styling of the player itself. The full list of layoutControls are below:
-fluidPlayer( &#39;my-video&#39;, { layoutControls: { primaryColor: false, playButtonShowing: true, playPauseAnimation: true, fillToContainer: false, autoPlay: false, preload: false, mute: false, keyboardControl: true, layout: &#39;default&#39;, allowDownload: false, playbackRateEnabled: false, allowTheatre: true, title: false, logo: { imageUrl: null, position: &#39;top left&#39;, clickUrl: null, opacity: 1 }, controlBar: { autoHide: true, autoHideTimeout: 3, animated: true }, timelinePreview: {}, htmlOnPauseBlock: { html: null, height: null, width: null }, playerInitCallback: (function() {}) } } );  primaryColor Primary color affects the following areas of the Fluid Player:</description>
+fluidPlayer( &#39;my-video&#39;, { layoutControls: { primaryColor: false, playButtonShowing: true, playPauseAnimation: true, fillToContainer: false, autoPlay: false, preload: false, mute: false, doubleclickFullscreen: true, subtitlesEnabled: false, keyboardControl: true, layout: &#39;default&#39;, allowDownload: false, playbackRateEnabled: false, allowTheatre: true, title: false, logo: { imageUrl: null, position: &#39;top left&#39;, clickUrl: null, opacity: 1 }, controlBar: { autoHide: true, autoHideTimeout: 3, animated: true }, timelinePreview: {}, htmlOnPauseBlock: { html: null, height: null, width: null }, playerInitCallback: (function() {}) } } );  primaryColor Primary color affects the following areas of the Fluid Player:</description>
     </item>
     
     <item>
@@ -133,6 +133,17 @@ VTT Format The format used is WebVTT, a HTML5 standard.</description>
       
       <guid>https://docs.fluidplayer.com/streaming/</guid>
       <description>Streaming is multimedia that is constantly received by, and presented to, an end-user while being delivered by a provider. Fluid Player supports MPEG-DASH and HLS streaming. These both work by splitting the content into segments. Segments contain video or audio content, and are selected based on the highest bit rate available. This is to ensure there are as few stalls and re-buffers as possible. More details on streaming can be found here.</description>
+    </item>
+    
+    <item>
+      <title>Subtitles</title>
+      <link>https://docs.fluidplayer.com/subtitles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.fluidplayer.com/subtitles/</guid>
+      <description>Subtitles are text derived from either a transcript or screenplay of the dialog or commentary in films, television programs, video games, and the like, usually displayed at the bottom of the screen. Below is an example video showing the subtitles.
+Example  
+ VTT format WEBVTT 1 00:00:15.000 --&amp;gt; 00:00:18.000 align:start &amp;lt;v Proog&amp;gt;At the left we can see...&amp;lt;/v&amp;gt; 2 00:00:18.167 --&amp;gt; 00:00:20.083 align:middle &amp;lt;v Proog&amp;gt;At the right we can see the.</description>
     </item>
     
     <item>

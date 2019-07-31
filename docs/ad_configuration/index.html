@@ -287,6 +287,24 @@
 
 
 
+<a  title="Subtitles" href="/subtitles/">
+	
+	Subtitles
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
 <a  title="Wordpress" href="/wordpress/">
 	
 	Wordpress
@@ -415,13 +433,14 @@ Please note the VAST tag XML response <code>Content-Type</code> must be either <
 <li><strong>[seconds]:</strong> The number of seconds until the ad begins. Example: <em>timer: 10</em></li>
 <li><strong>[percentage]:</strong> The percentage of the video to show before the ad begins. Example: <em>timer: 50%</em></li>
 </ul></li>
+<li><strong>fallbackVastTags (Optional):</strong> An array which holds the Vast Urls, if Url in vastTag fails then player will try with these.</li>
 <li><strong>adText (Optional for linear ads):</strong> The <a href="#adtext">adText section</a> describes the ability to set text to appear on ads.
 By using this parameter in the <strong>adList</strong> you can specify unique text per ad.</li>
 <li><strong>adTextPosition (Optional for linear ads):</strong> Only relevent if <strong>adText</strong> is in use. This allows you to set the position of <strong>adText</strong> per ad.</li>
 <li><strong>adClickable (Optional for linear ads):</strong> Disable opening the landing page in a new tab when the player is clicked, and keep play pause functionality.</li>
 </ul>
 
-<p>We can set multiple <em>midRoll</em> VAST tags, however only one <em>preRoll</em> and <em>postRoll</em> can be set. See the example below:</p>
+<p>We can set <strong>multiple <em>midRoll</em> with the same timer value</strong>, also <strong>multiple <em>preRoll</em>, <em>postRoll</em> and <em>onPauseRoll</em></strong> can be set. See the example below:</p>
 
 <pre><code class="language-javascript">fluidPlayer(
    'my-video',
@@ -430,17 +449,28 @@ By using this parameter in the <strong>adList</strong> you can specify unique te
             adList: [
                 {
                     roll: 'preRoll',
-                    vastTag: 'vastPreRoll.xml',
+                    vastTag: 'vastPreRoll_1.xml',
                     adText: 'Advertising supports us directly'
                 },
                 {
+                    roll: 'preRoll', //multiple preRoll Ads
+                    vastTag: 'vastPreRoll_2.xml',
+                    adText: 'Advertising supports us directly'
+                },                
+                {
                     roll: 'midRoll',
-                    vastTag: 'vastMidRoll.xml',
+                    vastTag: 'vastMidRoll_1.xml',
                     timer: 8
                 },
                 {
                     roll: 'midRoll',
-                    vastTag: 'vastMidRoll2.xml',
+                    vastTag: 'vastMidRoll_2.xml',
+                    fallbackVastTags: ['vastMidRoll_3.xml', 'vastMidRoll_4.xml'], // In case vastTag fails, the player will fallback to one of the valid tags from this array
+                    timer: 8 // multiple ads for the same time
+                },                
+                {
+                    roll: 'midRoll',
+                    vastTag: 'vastMidRoll_2.xml',
                     timer: 10,
                     adClickable: false // Default true
                 },
@@ -456,11 +486,21 @@ By using this parameter in the <strong>adList</strong> you can specify unique te
 );
 </code></pre>
 
-<ul>
-<li><strong>vAlign</strong> (only for nonLinear, optional): The available vertical positions for nonLinear Ads: top, middle, bottom. Default: bottom.</li>
-<li><strong>nonLinearDuration</strong> (only for nonLinear, optional): The number of seconds until the nonLinear Ad will be shown. If not set nor the minSuggestedDuration attribute of VAST XML than wont close until end of video.</li>
-<li><strong>size</strong> (only for nonLinear, optional): The dimension of the Ad. Supported sizes: 468x60, 300x250, 728x90</li>
-</ul>
+<video id='video-ads' style="width:720px;height:405px;">
+    <source src='https://cdn.fluidplayer.com/videos/valerian-1080p.mkv' title="1080p" type='video/mp4' />
+    <source src='https://cdn.fluidplayer.com/videos/valerian-720p.mkv' title="720p" type='video/mp4' />
+    <source src='https://cdn.fluidplayer.com/videos/valerian-480p.mkv' title="480p" type='video/mp4' />
+</video>
+
+<p><link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
+<script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script></p>
+
+<script src="player_ads.js"></script>
+
+<p><br/><br />
+* <strong>vAlign</strong> (only for nonLinear, optional): The available vertical positions for nonLinear Ads: top, middle, bottom. Default: bottom.
+* <strong>nonLinearDuration</strong> (only for nonLinear, optional): The number of seconds until the nonLinear Ad will be shown. If not set nor the minSuggestedDuration attribute of VAST XML than wont close until end of video.
+* <strong>size</strong> (only for nonLinear, optional): The dimension of the Ad. Supported sizes: 468x60, 300x250, 728x90</p>
 
 <pre><code class="language-javascript">fluidPlayer(
    'my-video',

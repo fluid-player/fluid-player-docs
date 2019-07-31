@@ -11,14 +11,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
-    <title>Integration - Fluid Player Documentation</title>
+    <title>Subtitles - Fluid Player Documentation</title>
     <meta name="generator" content="Hugo 0.30.2" />
 
     
-    <link rel="canonical" href="https://docs.fluidplayer.com/integration/">
+    <link rel="canonical" href="https://docs.fluidplayer.com/subtitles/">
     
 
-    <meta property="og:url" content="https://docs.fluidplayer.com/integration/">
+    <meta property="og:url" content="https://docs.fluidplayer.com/subtitles/">
     <meta property="og:title" content="Fluid Player Documentation">
     <meta property="og:image" content="https://docs.fluidplayer.com/logo-color.svg">
     <meta name="apple-mobile-web-app-title" content="Fluid Player Documentation">
@@ -158,14 +158,11 @@
 
 
 
-<a class="current" title="Integration" href="/integration/">
+<a  title="Integration" href="/integration/">
 	
 	Integration
 </a>
 
-
-<ul id="scrollspy">
-</ul>
 
 
   
@@ -287,11 +284,14 @@
 
 
 
-<a  title="Subtitles" href="/subtitles/">
+<a class="current" title="Subtitles" href="/subtitles/">
 	
 	Subtitles
 </a>
 
+
+<ul id="scrollspy">
+</ul>
 
 
   
@@ -383,110 +383,77 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>Integration </h1>
+			<h1>Subtitles </h1>
 
 			
 
-<h2 id="quick-integration">Quick Integration</h2>
+<p>Subtitles are text derived from either a transcript or screenplay of the dialog or commentary in films, television programs, video games, and the like, usually displayed at the bottom of the screen. Below is an example video showing the subtitles.</p>
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We have recently launched our new <a href="../builder">Fluid Player Builder</a>.
-Use the Builder to customise your player for the easiest integration yet!</p>
-</div>
+<h2 id="example">Example</h2>
 
-<p>In order to set Fluid Player, three things are required:</p>
+<video id='subtitles-video' controls style="width:720px;height:405px;">
+    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4"/>
+    <track label="English" kind="metadata" srclang="en"
+           src="subtitles/english.vtt" default>
+    <track label="Deutsch" kind="metadata" srclang="de"
+           src="subtitles/deutsch.vtt">
+</video>
 
-<ul>
-<li>The Javascript and CSS files of the player;</li>
-<li>An HTML5 <code>&lt;video&gt;</code> tag;</li>
-<li>A single Javascript line of code that attaches the player to the video tag.</li>
-</ul>
+<p><link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
+<script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script></p>
 
-<pre><code class="language-html">&lt;html&gt;
-   &lt;head&gt;
-      &lt;title&gt;Fluid Player&lt;/title&gt;
-      &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css&quot; type=&quot;text/css&quot;/&gt;
-      &lt;script src=&quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js&quot;&gt;&lt;/script&gt;
-   &lt;/head&gt;
-   &lt;body&gt;
-      &lt;video id='my-video'&gt;
-         &lt;source src='vid.mp4' type='video/mp4' /&gt;
-      &lt;/video&gt;
-      
-      &lt;script type=&quot;text/javascript&quot;&gt;
-         fluidPlayer('my-video');
-      &lt;/script&gt;
-   &lt;/body&gt;
-&lt;/html&gt;
+<script src='fluid_subtitles.js'></script>
+
+<h2 id="vtt-format">VTT format</h2>
+
+<pre><code class="language-text">WEBVTT
+
+1
+00:00:15.000 --&gt; 00:00:18.000 align:start
+&lt;v Proog&gt;At the left we can see...&lt;/v&gt;
+
+2
+00:00:18.167 --&gt; 00:00:20.083 align:middle
+&lt;v Proog&gt;At the right we can see the...&lt;/v&gt;
+
+3
+00:00:20.083 --&gt; 00:00:22.000
+&lt;v Proog&gt;...the &lt;c.highlight&gt;head-snarlers&lt;/c&gt;&lt;/v&gt;
+
+4
+00:00:22.000 --&gt; 00:00:24.417 align:end
+&lt;v Proog&gt;Everything is safe. Perfectly safe.&lt;/v&gt;
+
+5
+00:00:24.583 --&gt; 00:00:27.083
+&lt;v Proog&gt;Emo?&lt;/v&gt;
 </code></pre>
 
-<p>The <code>fluidPlayer()</code> function gets the video tag id as a first parameter, which is required.</p>
+<h2 id="adding-to-fluid-player">Adding to Fluid Player</h2>
 
-<h3 id="syntax">Syntax</h3>
+<p>To configure Fluid Player to use your VTT file, you can set is as the optional parameter <strong>subtitlesEnabled</strong> under <strong>layoutControls</strong>.</p>
 
-<pre><code class="language-javascript">fluidPlayer(idVideoPlayer[, options]);
-</code></pre>
+<p>Provide subtitles url in track tags under <strong>kind=&lsquo;metadata&rsquo;</strong></p>
 
-<h2 id="quality-switching">Quality Switching</h2>
+<p>Please make sure that you <strong>do not specify as</strong> kind=&lsquo;subtitles&rsquo;, because that doesn&rsquo;t work in some browsers.</p>
 
-<p>Multiple sources can be added as shown below.
-The title will be displayed to the user when switching sources, and should be set to the video quality as can be seen below (&lsquo;1080p&rsquo;, &lsquo;720p&rsquo; etc).</p>
-
-<pre><code class="language-html">&lt;video id='my-video' controls style=&quot;width: 640px; height: 360px;&quot;&gt;
-    &lt;source src='vid_1080p.mp4' title='1080p' type='video/mp4' /&gt;
-    &lt;source src='vid_720p.mp4' title='720p' type='video/mp4' /&gt;
-    &lt;source src='vid_480p.mp4' title='480p' type='video/mp4' /&gt;
-&lt;/video&gt;
-</code></pre>
-
-<p><img src="screenshots/qualitySwitch.png" style="width:600px;margin:auto;display:flex;"></p>
-
-<h2 id="define-source-as-hd">Define Source as HD</h2>
-
-<p>The sources set for <a href="#quality-switching">quality switching</a> can be defined as HD by adding a <strong>data-fluid-hd</strong> attribute to the <strong><source></strong> tag.
-The colour of this text will match the <a href="../layout_configuration#primarycolor">primary color</a>. If you wish to override this colour you can do so using custom CSS on your own page.
-The class responsible for the colour is <strong>fp_hd_source</strong>. An example of overriding this colour is shown below.</p>
-
-<pre><code class="language-css">.fp_hd_source { color: yellow !important; }
-</code></pre>
-
-<p>An example of how the HD is set in the sources is show below.</p>
-
-<pre><code class="language-html">&lt;video id='my-video' controls style=&quot;width: 640px; height: 360px;&quot;&gt;
-    &lt;source data-fluid-hd src='vid_1080p.mp4' title='1080p' type='video/mp4' /&gt;
-    &lt;source data-fluid-hd src='vid_720p.mp4' title='720p' type='video/mp4' /&gt;
-    &lt;source src='vid_480p.mp4' title='480p' type='video/mp4' /&gt;
-&lt;/video&gt;
-</code></pre>
-
-<p><img src="screenshots/hdSource.png" style="width:600px;margin:auto;display:flex;"></p>
-
-<h2 id="integration-using-optional-parameters">Integration Using Optional Parameters</h2>
-
-<p>Fluid Player can be customized by setting some optional parameters.
-The full list of parameters can be found under <a href="../configuration">Configuration</a></p>
-
-<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css&quot; type=&quot;text/css&quot;/&gt;
-&lt;script src=&quot;https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;video id='my-video' controls style=&quot;width: 640px; height: 360px;&quot;&gt;
-    &lt;source src='vid.mp4' type='video/mp4' /&gt;
+<pre><code class="language-javascript">
+&lt;video id=&quot;my-video&quot; controls &gt;
+    &lt;source src=&quot;video.mp4&quot; type=&quot;video/mp4&quot;/&gt;
+    &lt;track label=&quot;English&quot; kind=&quot;metadata&quot; srclang=&quot;en&quot;
+           src=&quot;/subtitles/english.vtt&quot; default&gt;
+    &lt;track label=&quot;Deutsch&quot; kind=&quot;metadata&quot; srclang=&quot;de&quot;
+           src=&quot;/subtitles/deutsch.vtt&quot;&gt;
 &lt;/video&gt;
 
-&lt;script type=&quot;text/javascript&quot;&gt;
 fluidPlayer(
-   'my-video',
+    'my-video',
     {
         layoutControls: {
-            // Parameters to customise the look and feel of the player
-        },
-        vastOptions: {
-            // Parameters to customise how the ads are displayed &amp; behave
+            subtitlesEnabled: true
         }
     }
 );
-&lt;/script&gt;
 </code></pre>
 
 

@@ -59,28 +59,34 @@ publishDir = "docs"
     weight     = 8
 
     [[menu.main]]
+    identifier = "subtitles"
+    name       = "Subtitles"
+    url        = "subtitles/"
+    weight     = 9    
+
+    [[menu.main]]
     identifier = "wordpress"
     name       = "Wordpress"
     url        = "wordpress/"
-    weight     = 9
+    weight     = 10
 
     [[menu.main]]
     identifier = "demo"
     name       = "Demo"
     url        = "demo/"
-    weight     = 10
+    weight     = 11
 
     [[menu.main]]
     identifier = "changelog"
     name       = "Changelog"
     url        = "changelog/"
-    weight     = 11
+    weight     = 12
 
     [[menu.main]]
     identifier = "help"
     name       = "Help"
     url        = "help/"
-    weight     = 12
+    weight     = 13
 
 [params]
 	highlightjs = "css/highlight.css"

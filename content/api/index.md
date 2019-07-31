@@ -92,11 +92,32 @@ The **on('play', function(){})** can be used to handle the play event for the Fl
 myFluidPlayer.on('play', function(){ console.log('Video is playing'); });
 ```
 
+## on('playing', function(){})
+The **on('playing', function(){})** can be used to handle the playing event for the Fluid Player.
+
+```javascript
+myFluidPlayer.on('playing', function(){ console.log('Video is now playing'); });
+```
+
 ## on('pause', function(){})
 The **on('pause', function(){})** can be used to handle the pause event for the Fluid Player.
 
 ```javascript
 myFluidPlayer.on('pause', function(){ console.log('Video is now paused'); });
+```
+
+## on('ended', function(){})
+The **on('ended', function(){})** can be used to handle the pause ended for the Fluid Player.
+
+```javascript
+myFluidPlayer.on('ended', function(){ console.log('Video is now ended'); });
+```
+
+## on('seeked', function(){})
+The **on('seeked', function(){})** can be used to handle the pause seeked for the Fluid Player.
+
+```javascript
+myFluidPlayer.on('seeked', function(){ console.log('Video is now seeked'); });
 ```
 
 ## on('theatreModeOn', function(){})
