@@ -106,6 +106,20 @@ The **on('pause', function(){})** can be used to handle the pause event for the 
 myFluidPlayer.on('pause', function(){ console.log('Video is now paused'); });
 ```
 
+## on('ended', function(){})
+The **on('ended', function(){})** can be used to handle the pause ended for the Fluid Player.
+
+```javascript
+myFluidPlayer.on('ended', function(){ console.log('Video is now ended'); });
+```
+
+## on('seeked', function(){})
+The **on('seeked', function(){})** can be used to handle the pause seeked for the Fluid Player.
+
+```javascript
+myFluidPlayer.on('seeked', function(){ console.log('Video is now seeked'); });
+```
+
 ## on('theatreModeOn', function(){})
 The **on('theatreModeOn', function(){})** can be used to execute specific functionality when theatre mode is enabled.
 
