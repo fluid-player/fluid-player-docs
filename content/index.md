@@ -51,6 +51,7 @@ Fluid Player is a free HTML5 video player. It is lightweight, easy to integrate 
 * Allows adding multiple video sources for user to switch between different video quality
 * Autoplay control
 * Allows adding a custom logo
+* Subtitles
 * Custom call to action text when playing a video ad
 * Wordpress Plugin
 * Scripts and resources available via CDN
