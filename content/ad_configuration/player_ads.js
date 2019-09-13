@@ -58,3 +58,24 @@ fluidPlayer(
          }
      }
  );
+
+
+
+ fluidPlayer(
+    'video-vpaid-ads',
+     {
+         vastOptions: {
+            adList: [
+                {
+                    roll: 'preRoll',
+                    vastTag: './vastxmls/vpaid_linear.xml'
+                },
+                {
+                    roll: 'midRoll',
+                    vastTag: './vastxmls/vpaid_nonlinear.xml',
+                    timer: 5
+                },
+            ]
+         }
+     }
+ );
