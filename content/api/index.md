@@ -133,3 +133,14 @@ The **on('theatreModeOff', function(){})** can be used to execute specific funct
 ```javascript
 myFluidPlayer.on('theatreModeOff', function(){ console.log('Theatre mode is disabled'); });
 ```
+
+## on('timeupdate', function(currentTime, duration, isCurrentAdPlaying){})
+The **on('timeupdate', function(currentTime, duration, isCurrentAdPlaying){})** can be used to execute specific functionality everytime whe player makes timeupdate call.
+
+```javascript
+myFluidPlayer.on('timeupdate', function(currentTime, duration, isCurrentAdPlaying) {
+     console.log('current time is '+ currentTime); 
+     console.log('total video duration is  '+ duration);
+     console.log('is video ad playing '+ isCurrentAdPlaying);
+     });
+```
