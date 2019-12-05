@@ -301,10 +301,10 @@ fluidPlayer(
 ```
 
 ## VPAID
-Unlike regular VAST ads, VPAID is very dynamic and interactive
-For more info https://www.iab.com/guidelines/digital-video-player-ad-interface-definition-vpaid-2-0/
-To enable loading VPAID ads **allowVPAID** option has to be set to true (false by default).
-Player supports VPAID version 2.0
+Unlike regular VAST ads, VPAID is very dynamic and interactive.  
+For more info https://www.iab.com/guidelines/digital-video-player-ad-interface-definition-vpaid-2-0/  
+To enable loading VPAID ads **allowVPAID** option has to be set to true (false by default).  
+Player supports VPAID version 2.0  
 
 <video id='video-vpaid-ads' style="width:720px;height:405px;">
     <source src='https://cdn.fluidplayer.com/videos/valerian-1080p.mkv' title="1080p" type='video/mp4' />
