@@ -42,19 +42,23 @@ fluidPlayer(
  );
 
 
+
  fluidPlayer(
-    'video-onpause-ads',
+    'video-vpaid-ads',
      {
          vastOptions: {
-            adList: [
-                {
-                    roll: 'onPauseRoll',
-                    vastTag: './vastxmls/vastNonLinear.xml',
-                    vAlign: 'top',
-                    nonlinearDuration: 10,
-                    size: '300x250'
-                }
-            ]
+             allowVPAID: true,
+             adList: [
+                 {
+                     roll: 'preRoll',
+                     vastTag: './vastxmls/vpaid_linear.xml'
+                 },
+                 {
+                     roll: 'midRoll',
+                     vastTag: './vastxmls/vpaid_nonlinear.xml',
+                     timer: 5
+                 },
+             ]
          }
      }
  );

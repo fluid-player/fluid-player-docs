@@ -495,8 +495,6 @@ By using this parameter in the <strong>adList</strong> you can specify unique te
 <p><link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
 <script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script></p>
 
-<script src="player_ads.js"></script>
-
 <p><br/><br />
 * <strong>vAlign</strong> (only for nonLinear, optional): The available vertical positions for nonLinear Ads: top, middle, bottom. Default: bottom.
 * <strong>nonLinearDuration</strong> (only for nonLinear, optional): The number of seconds until the nonLinear Ad will be shown. If not set nor the minSuggestedDuration attribute of VAST XML than wont close until end of video.
@@ -688,6 +686,40 @@ This can be set for all in-stream ads or per ad listed. For details on how to ad
     }
 );
 </code></pre>
+
+<h2 id="vpaid">VPAID</h2>
+
+<p>Unlike regular VAST ads, VPAID is very dynamic and interactive
+For more info <a href="https://www.iab.com/guidelines/digital-video-player-ad-interface-definition-vpaid-2-0/">https://www.iab.com/guidelines/digital-video-player-ad-interface-definition-vpaid-2-0/</a>
+To enable loading VPAID ads <strong>allowVPAID</strong> option has to be set to true (false by default).
+Player supports VPAID version 2.0</p>
+
+<video id='video-vpaid-ads' style="width:720px;height:405px;">
+    <source src='https://cdn.fluidplayer.com/videos/valerian-1080p.mkv' title="1080p" type='video/mp4' />
+</video>
+
+<pre><code class="language-javascript">    fluidPlayer(
+        'video-vpaid-ads',
+        {
+            vastOptions: {
+                allowVPAID: true, // Default false.
+                adList: [
+                    {
+                        roll: 'preRoll',
+                        vastTag: './vastxmls/vpaid_linear.xml'
+                    },
+                    {
+                        roll: 'midRoll',
+                        vastTag: './vastxmls/vpaid_nonlinear.xml',
+                        timer: 5
+                    },
+                ]
+            }
+        }
+    );
+</code></pre>
+
+<script src="player_ads.js"></script>
 
 
 			<aside class="copyright" role="note" style="text-align: center;">

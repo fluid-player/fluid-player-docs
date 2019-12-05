@@ -4,6 +4,12 @@ title: "Changelog"
 weight: 0
 ---
 
+## 2.4.9
+* [Pull #398](https://github.com/fluid-player/fluid-player/pull/398) Add support for VPAID (2.0)
+
+## 2.4.8
+* [Pull #374](https://github.com/fluid-player/fluid-player/pull/374) Skip ad button on VAST preroll opening a new blank tab
+
 ### 2.4.7
 * [Pull #361](https://github.com/fluid-player/fluid-player/pull/361) Adding subtitles, multiple ad-roll, fallback vast ad, fixing dash playback, double click to fullscreen
 * [Pull #354](https://github.com/fluid-player/fluid-player/pull/354) VAST Multiple mediafile support, announce proper error codes and some bug fixes
