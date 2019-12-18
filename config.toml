@@ -77,16 +77,22 @@ publishDir = "docs"
     weight     = 11
 
     [[menu.main]]
+    identifier = "vr"
+    name       = "VR (experimental)"
+    url        = "vr/"
+    weight     = 12
+
+    [[menu.main]]
     identifier = "changelog"
     name       = "Changelog"
     url        = "changelog/"
-    weight     = 12
+    weight     = 13
 
     [[menu.main]]
     identifier = "help"
     name       = "Help"
     url        = "help/"
-    weight     = 13
+    weight     = 14
 
 [params]
 	highlightjs = "css/highlight.css"
