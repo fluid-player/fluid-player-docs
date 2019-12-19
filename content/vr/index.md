@@ -12,7 +12,7 @@ With the possibility to render them as a 360 panorama or in "cardboard mode" if 
 To enable the VR feature **showCardBoardView** has to be set to true.
 
 ```html
-<video id='vr-video'>
+<video id='vr-video' crossorigin="anonymous">
     <source src='monoscopicvideo.mp4' title='1080p'  type="video/mp4"  />
 </video>
 
@@ -30,7 +30,7 @@ fluidPlayer(
 ```
 
 <br/>
-<video id='vr-video' controls style="width:720px;height:405px;">
+<video id='vr-video' controls style="width:720px;height:405px;" crossorigin="anonymous">
     <source src='https://pchen66.github.io/Panolens/examples/asset/textures/video/ClashofClans.mp4' title='1080p'  type="video/mp4"  />
 </video>
 

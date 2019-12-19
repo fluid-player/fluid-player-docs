@@ -412,7 +412,7 @@
 <p>With the possibility to render them as a 360 panorama or in &ldquo;cardboard mode&rdquo; if the cardboard icon is clicked.
 To enable the VR feature <strong>showCardBoardView</strong> has to be set to true.</p>
 
-<pre><code class="language-html">&lt;video id='vr-video'&gt;
+<pre><code class="language-html">&lt;video id='vr-video' crossorigin=&quot;anonymous&quot;&gt;
     &lt;source src='monoscopicvideo.mp4' title='1080p'  type=&quot;video/mp4&quot;  /&gt;
 &lt;/video&gt;
 
@@ -430,7 +430,7 @@ fluidPlayer(
 </code></pre>
 
 <p><br/>
-<video id='vr-video' controls style="width:720px;height:405px;">
+<video id='vr-video' controls style="width:720px;height:405px;" crossorigin="anonymous">
     <source src='https://pchen66.github.io/Panolens/examples/asset/textures/video/ClashofClans.mp4' title='1080p'  type="video/mp4"  />
 </video></p>
 
