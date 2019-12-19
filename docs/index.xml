@@ -26,7 +26,7 @@
       <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
       
       <guid>https://docs.fluidplayer.com/changelog/</guid>
-      <description>2.4.9  Pull #398 Add support for VPAID (2.0)  2.4.8  Pull #374 Skip ad button on VAST preroll opening a new blank tab  2.4.7  Pull #361 Adding subtitles, multiple ad-roll, fallback vast ad, fixing dash playback, double click to fullscreen Pull #354 VAST Multiple mediafile support, announce proper error codes and some bug fixes Pull #356 Seeked and ended html5 event listeners  2.4.6  Pull #358 fix bug with dash js api  2.</description>
+      <description>2.4.10  Pull #399 Adding VR Features to player (experimental)  2.4.9  Pull #398 Add support for VPAID (2.0)  2.4.8  Pull #374 Skip ad button on VAST preroll opening a new blank tab  2.4.7  Pull #361 Adding subtitles, multiple ad-roll, fallback vast ad, fixing dash playback, double click to fullscreen Pull #354 VAST Multiple mediafile support, announce proper error codes and some bug fixes Pull #356 Seeked and ended html5 event listeners  2.</description>
     </item>
     
     <item>
@@ -144,6 +144,17 @@ VTT Format The format used is WebVTT, a HTML5 standard.</description>
       <description>Subtitles are text derived from either a transcript or screenplay of the dialog or commentary in films, television programs, video games, and the like, usually displayed at the bottom of the screen. Below is an example video showing the subtitles.
 Example  
  VTT format WEBVTT 1 00:00:15.000 --&amp;gt; 00:00:18.000 align:start &amp;lt;v Proog&amp;gt;At the left we can see...&amp;lt;/v&amp;gt; 2 00:00:18.167 --&amp;gt; 00:00:20.083 align:middle &amp;lt;v Proog&amp;gt;At the right we can see the.</description>
+    </item>
+    
+    <item>
+      <title>VR (experimental)</title>
+      <link>https://docs.fluidplayer.com/vr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://docs.fluidplayer.com/vr/</guid>
+      <description>Currently the player supports monoscopic (equirectangular) videos with 360-degree view, the original would look like this:
+With the possibility to render them as a 360 panorama or in &amp;ldquo;cardboard mode&amp;rdquo; if the cardboard icon is clicked. To enable the VR feature showCardBoardView has to be set to true.
+&amp;lt;video id=&#39;vr-video&#39;&amp;gt; &amp;lt;source src=&#39;monoscopicvideo.mp4&#39; title=&#39;1080p&#39; type=&amp;quot;video/mp4&amp;quot; /&amp;gt; &amp;lt;/video&amp;gt; &amp;lt;script&amp;gt; fluidPlayer( &#39;vr-video&#39;, { layoutControls: { showCardBoardView: true, showCardBoardJoystick: true } } ); &amp;lt;/script&amp;gt;</description>
     </item>
     
     <item>

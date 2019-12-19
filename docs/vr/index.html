@@ -11,14 +11,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
-    <title>Contact Us - Fluid Player Documentation</title>
+    <title>VR (experimental) - Fluid Player Documentation</title>
     <meta name="generator" content="Hugo 0.30.2" />
 
     
-    <link rel="canonical" href="https://docs.fluidplayer.com/help/">
+    <link rel="canonical" href="https://docs.fluidplayer.com/vr/">
     
 
-    <meta property="og:url" content="https://docs.fluidplayer.com/help/">
+    <meta property="og:url" content="https://docs.fluidplayer.com/vr/">
     <meta property="og:title" content="Fluid Player Documentation">
     <meta property="og:image" content="https://docs.fluidplayer.com/logo-color.svg">
     <meta name="apple-mobile-web-app-title" content="Fluid Player Documentation">
@@ -338,11 +338,14 @@
 
 
 
-<a  title="VR (experimental)" href="/vr/">
+<a class="current" title="VR (experimental)" href="/vr/">
 	
 	VR (experimental)
 </a>
 
+
+<ul id="scrollspy">
+</ul>
 
 
   
@@ -374,14 +377,11 @@
 
 
 
-<a class="current" title="Help" href="/help/">
+<a  title="Help" href="/help/">
 	
 	Help
 </a>
 
-
-<ul id="scrollspy">
-</ul>
 
 
   
@@ -401,9 +401,89 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>Contact Us </h1>
+			<h1>VR (experimental) </h1>
 
-			<p>If you have a technical issue or question, please submit it on <a href="https://github.com/fluid-player/fluid-player">GitHub</a></p>
+			
+
+<p>Currently the player supports monoscopic (equirectangular) videos with 360-degree view, the original would look like this:</p>
+
+<p><img src="monoscopic-example.png" style="width:600px;margin:auto;display:flex;"></p>
+
+<p>With the possibility to render them as a 360 panorama or in &ldquo;cardboard mode&rdquo; if the cardboard icon is clicked.
+To enable the VR feature <strong>showCardBoardView</strong> has to be set to true.</p>
+
+<pre><code class="language-html">&lt;video id='vr-video'&gt;
+    &lt;source src='monoscopicvideo.mp4' title='1080p'  type=&quot;video/mp4&quot;  /&gt;
+&lt;/video&gt;
+
+&lt;script&gt;
+fluidPlayer(
+    'vr-video',
+    {
+        layoutControls: {
+            showCardBoardView: true,
+            showCardBoardJoystick: true
+        }
+    }
+);
+&lt;/script&gt;
+</code></pre>
+
+<p><br/>
+<video id='vr-video' controls style="width:720px;height:405px;">
+    <source src='https://pchen66.github.io/Panolens/examples/asset/textures/video/ClashofClans.mp4' title='1080p'  type="video/mp4"  />
+</video></p>
+
+<p><link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
+<script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
+<script src="vr.js"></script></p>
+
+<h2 id="ads">Ads</h2>
+
+<p>Currently we can show only 360degree video ads.
+Ads need to be served under VAST, with attribute <strong>mediaType=&ldquo;360&rdquo;</strong> in <MediaFile> tag.
+Non-linear ads are not supported.</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;VAST version=&quot;3.0&quot;&gt;
+  &lt;Ad id=&quot;1&quot;&gt;
+    &lt;InLine&gt;
+      &lt;AdSystem&gt;example1&lt;/AdSystem&gt;
+      &lt;AdTitle/&gt;
+      &lt;Impression id=&quot;example1&quot;&gt;&lt;![CDATA[https://example1.com/view?tracking_event=impression&amp;idzone=9999999]]&gt;&lt;/Impression&gt;
+      &lt;Impression id=&quot;example12&quot;&gt;&lt;![CDATA[https://example1.com/view2?tracking_event=impression&amp;idzone=9999999]]&gt;&lt;/Impression&gt;
+      &lt;Creatives&gt;
+        &lt;Creative sequence=&quot;1&quot; id=&quot;1&quot;&gt;
+          &lt;Linear skipoffset=&quot;00:00:03&quot;&gt;
+            &lt;TrackingEvents&gt;
+              &lt;Tracking event=&quot;progress&quot; offset=&quot;00:00:01.000&quot;&gt;&lt;![CDATA[https://example1.com/view?tracking_event=progress&amp;progress=00:00:01.000&amp;idzone=9999999]]&gt;&lt;/Tracking&gt;
+              &lt;Tracking event=&quot;progress&quot; offset=&quot;00:00:02.000&quot;&gt;&lt;![CDATA[https://example1.com/view?tracking_event=progress&amp;progress=00:00:02.000&amp;idzone=9999999]]&gt;&lt;/Tracking&gt;
+              &lt;Tracking event=&quot;progress&quot; offset=&quot;00:00:05.000&quot;&gt;&lt;![CDATA[https://example1.com/view?tracking_event=progress&amp;progress=00:00:05.000&amp;idzone=9999999]]&gt;&lt;/Tracking&gt;
+              &lt;Tracking event=&quot;progress&quot; offset=&quot;00:00:05.000&quot;&gt;&lt;![CDATA[https://example1.com/view2?tracking_event=progress&amp;progress=00:00:05.000&amp;idzone=9999999]]&gt;&lt;/Tracking&gt;
+              &lt;Tracking event=&quot;progress&quot; offset=&quot;00:00:09.000&quot;&gt;&lt;![CDATA[https://example1.com/view?tracking_event=progress&amp;progress=00:00:09.000&amp;idzone=9999999]]&gt;&lt;/Tracking&gt;
+              &lt;Tracking event=&quot;start&quot;&gt;&lt;![CDATA[https://example1.com/view?tracking_event=start&amp;idzone=9999999]]&gt;&lt;/Tracking&gt;
+              &lt;Tracking event=&quot;firstQuartile&quot;&gt;&lt;![CDATA[https://example1.com/view?tracking_event=firstQuartile&amp;idzone=9999999]]&gt;&lt;/Tracking&gt;
+              &lt;Tracking event=&quot;midpoint&quot;&gt;&lt;![CDATA[https://example1.com/view?tracking_event=midpoint&amp;idzone=9999999]]&gt;&lt;/Tracking&gt;
+              &lt;Tracking event=&quot;midpoint&quot;&gt;&lt;![CDATA[https://example1.com/view2?tracking_event=midpoint&amp;idzone=9999999]]&gt;&lt;/Tracking&gt;
+              &lt;Tracking event=&quot;midpoint&quot;&gt;&lt;![CDATA[https://example1.com/view3?tracking_event=midpoint&amp;idzone=9999999]]&gt;&lt;/Tracking&gt;
+              &lt;Tracking event=&quot;thirdQuartile&quot;&gt;&lt;![CDATA[https://example1.com/view?tracking_event=thirdQuartile&amp;idzone=9999999]]&gt;&lt;/Tracking&gt;
+              &lt;Tracking event=&quot;complete&quot;&gt;&lt;![CDATA[https://example1.com/view?tracking_event=complete&amp;idzone=9999999]]&gt;&lt;/Tracking&gt;
+            &lt;/TrackingEvents&gt;
+            &lt;VideoClicks&gt;
+              &lt;ClickThrough&gt;&lt;![CDATA[https://example1.com/]]&gt;&lt;/ClickThrough&gt;
+              &lt;ClickTracking&gt;&lt;![CDATA[https://example1.com/view?tracking_event=click&amp;idzone=9999999]]&gt;&lt;/ClickTracking&gt;
+              &lt;ClickTracking&gt;&lt;![CDATA[https://example1.com/view2?tracking_event=click&amp;idzone=9999999]]&gt;&lt;/ClickTracking&gt;
+            &lt;/VideoClicks&gt;
+            &lt;MediaFiles&gt;
+              &lt;MediaFile delivery=&quot;progressive&quot; type=&quot;video/mp4&quot; mediaType=&quot;360&quot;&gt;&lt;![CDATA[https://player.omnivirt.com/2015/12/18/12/51/14/435bc71d-2a24-4b51-a696-edbb46804273/infiniti-720p-medium.mp4]]&gt;&lt;/MediaFile&gt;
+            &lt;/MediaFiles&gt;
+          &lt;/Linear&gt;
+        &lt;/Creative&gt;
+      &lt;/Creatives&gt;
+    &lt;/InLine&gt;
+  &lt;/Ad&gt;
+&lt;/VAST&gt;
+</code></pre>
 
 
 			<aside class="copyright" role="note" style="text-align: center;">

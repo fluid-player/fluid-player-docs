@@ -17,7 +17,7 @@
       <pubDate>Wed, 10 Aug 2016 15:00:00 +0000</pubDate>
       
       <guid>https://docs.fluidplayer.com/changelog/</guid>
-      <description>2.4.9  Pull #398 Add support for VPAID (2.0)  2.4.8  Pull #374 Skip ad button on VAST preroll opening a new blank tab  2.4.7  Pull #361 Adding subtitles, multiple ad-roll, fallback vast ad, fixing dash playback, double click to fullscreen Pull #354 VAST Multiple mediafile support, announce proper error codes and some bug fixes Pull #356 Seeked and ended html5 event listeners  2.4.6  Pull #358 fix bug with dash js api  2.</description>
+      <description>2.4.10  Pull #399 Adding VR Features to player (experimental)  2.4.9  Pull #398 Add support for VPAID (2.0)  2.4.8  Pull #374 Skip ad button on VAST preroll opening a new blank tab  2.4.7  Pull #361 Adding subtitles, multiple ad-roll, fallback vast ad, fixing dash playback, double click to fullscreen Pull #354 VAST Multiple mediafile support, announce proper error codes and some bug fixes Pull #356 Seeked and ended html5 event listeners  2.</description>
     </item>
     
   </channel>
