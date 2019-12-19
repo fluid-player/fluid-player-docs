@@ -154,7 +154,7 @@ Example
       <guid>https://docs.fluidplayer.com/vr/</guid>
       <description>Currently the player supports monoscopic (equirectangular) videos with 360-degree view, the original would look like this:
 With the possibility to render them as a 360 panorama or in &amp;ldquo;cardboard mode&amp;rdquo; if the cardboard icon is clicked. To enable the VR feature showCardBoardView has to be set to true.
-&amp;lt;video id=&#39;vr-video&#39;&amp;gt; &amp;lt;source src=&#39;monoscopicvideo.mp4&#39; title=&#39;1080p&#39; type=&amp;quot;video/mp4&amp;quot; /&amp;gt; &amp;lt;/video&amp;gt; &amp;lt;script&amp;gt; fluidPlayer( &#39;vr-video&#39;, { layoutControls: { showCardBoardView: true, showCardBoardJoystick: true } } ); &amp;lt;/script&amp;gt;</description>
+&amp;lt;video id=&#39;vr-video&#39; crossorigin=&amp;quot;anonymous&amp;quot;&amp;gt; &amp;lt;source src=&#39;monoscopicvideo.mp4&#39; title=&#39;1080p&#39; type=&amp;quot;video/mp4&amp;quot; /&amp;gt; &amp;lt;/video&amp;gt; &amp;lt;script&amp;gt; fluidPlayer( &#39;vr-video&#39;, { layoutControls: { showCardBoardView: true, showCardBoardJoystick: true } } ); &amp;lt;/script&amp;gt;</description>
     </item>
     
     <item>
