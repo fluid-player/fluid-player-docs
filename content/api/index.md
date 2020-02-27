@@ -85,6 +85,13 @@ Using **toggleFullScreen(boolean)** we can set the video to fullscreen. **true**
 myFluidPlayer.toggleFullScreen(true);
 ```
 
+## destroy
+Destroy this instance of Fluid Player. Use this method to remove Fluid Player instance from the page.
+
+```javascript
+myFluidPlayer.destroy();
+```
+
 ## on('play', function(){})
 The **on('play', function(){})** can be used to handle the play event for the Fluid Player.
 
