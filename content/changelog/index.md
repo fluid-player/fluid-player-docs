@@ -4,6 +4,9 @@ title: "Changelog"
 weight: 0
 ---
 
+### 2.4.11
+* [Pull #430](https://github.com/fluid-player/fluid-player/pull/430) Add destroy function
+
 ### 2.4.10
 * [Pull #399](https://github.com/fluid-player/fluid-player/pull/399) Adding VR Features to player (experimental)
 
