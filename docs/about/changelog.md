@@ -3,6 +3,9 @@ title: Changelog
 sidebar_label: Changelog
 ---
 
+### 3.0.0
+* [Pull #441](https://github.com/fluid-player/fluid-player/pull/441) Major release - see pull request for full changelist.
+
 ### 2.4.11
 * [Pull #430](https://github.com/fluid-player/fluid-player/pull/430) Add destroy function
 
