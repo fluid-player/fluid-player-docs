@@ -1,0 +1,59 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'segoe ui', roboto, oxygen-sans, ubuntu, cantarell, 'helvetica neue', 'arial', sans-serif, 'apple color emoji', 'segoe ui emoji', 'segoe ui symbol';
+}
+
+.headerTitleWithLogo {
+    display: none !important;
+}
+
+.fixedHeaderContainer {
+    background: #fff;
+    color: #1a5e87;
+}
+
+.fp_docs_player {
+    height: 100%;
+    width: 100%;
+}
+
+/* BUILDER */
+#builder {
+    padding: 10px;
+    width: auto;
+}
+
+#builder-wrap {
+    margin: auto;
+    max-width: 1360px;
+}
+/* END BUILDER */
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (min-width: 1024px) {
+    .fixedHeaderContainer {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    }
+
+    .fixedHeaderContainer .navigationSlider .slidingNav ul li a {
+        color: #3c4a50;
+        background: #fff;
+        font-weight: 500;
+        font-size: 0.85rem;
+    }
+
+    .fixedHeaderContainer .navigationSlider .slidingNav ul li a:hover {
+        color: #1a5e87;
+        background: #fff;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
