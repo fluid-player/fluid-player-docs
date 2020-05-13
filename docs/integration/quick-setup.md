@@ -45,7 +45,7 @@ An example how the import might look like for Webpack projects using `~` as `nod
 
 ## Integration using CDN
 
-The Fluid Player provides a CDN build available for direct linking from http://cdn.fluidplayer.com.
+The Fluid Player provides a CDN build available for direct linking from https://cdn.fluidplayer.com.
 
 **IMPORTANT:** As of v3.0.0, CDN version of Fluid Player ships with embedded CSS. Separate tag to
 include CSS is no longer required.
