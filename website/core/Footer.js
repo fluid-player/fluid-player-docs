@@ -36,9 +36,6 @@ class Footer extends React.Component {
             <a href={this.docUrl('integration/quick-setup')}>
               Quick setup
             </a>
-            <a href={this.docUrl('integration/builder')}>
-              Integration builder
-            </a>
           </div>
           <div>
             <h5>More</h5>

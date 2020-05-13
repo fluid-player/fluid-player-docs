@@ -7,7 +7,6 @@ You can use functions documented here to alter the behaviour of Fluid Player aft
 as well as to access different features and internals of Fluid Player itself.
 
 ## setHtmlOnPauseBlock
-The purpose of the htmlOnPauseBlock is [outlined here](https://docs.fluidplayer.com/layout_configuration/#htmlonpauseblock). 
 If we wanted to set or change the HTML that's set for this we can do it using the following.
 
 **html**: This is HTML we want to show when the player in paused
