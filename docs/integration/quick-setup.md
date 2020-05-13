@@ -3,6 +3,19 @@ title: Quick setup
 sidebar_label: Quick setup
 ---
 
+## Initializer syntax
+
+```javascript
+var player = fluidPlayer(target [, options]);
+```
+
+Fluid Player initializer accepts two arguments:
+
+- mandatory `target`. Can be a string HTML id of `HTMLVideoElement` or object reference to `HTMLVideoElement`.
+- options - optional, configuration object as documented in the configuration section of the documentation.
+
+**IMPORTANT:** when referencing `HTMLVideoElement` by object reference, Fluid Player will mutate the element and assign a unique `id` to `HTMLVideoElement` unless the `id` is already set before initializer is invoked.
+
 ## Integration using NPM
 
 You can add Fluid Player to your NPM project using following commands. Execute them in the root
@@ -73,14 +86,9 @@ Or specify the version:
 <!-- Place before </body> tag -->
 <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
 <script>
+    // fluidPlayer method is global when CDN distribution is used.
     var player = fluidPlayer('example-player');
 </script>
-```
-
-## Initializer syntax
-
-```javascript
-var player = fluidPlayer(idVideoPlayer[, options]);
 ```
 
 ## Quality Switching
