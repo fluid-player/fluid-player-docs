@@ -1,0 +1,32 @@
+{
+  "docs": {
+    "Overview": ["overview"],
+    "Integration": [
+      "integration/quick-setup",
+      "integration/vue",
+      "integration/react"
+    ],
+    "Configuration": [
+      "configuration/layout",
+      "configuration/ads",
+      "configuration/preview",
+      "configuration/subtitles",
+      "configuration/vr"
+    ],
+    "API": [
+      "api/controls",
+      "api/utility",
+      "api/events"
+    ],
+    "Streaming": [
+      "streaming/streaming",
+      "streaming/hls",
+      "streaming/dash"
+    ],
+    "About": [
+      "about/help",
+      "about/changelog",
+      "about/license"
+    ]
+  }
+}
