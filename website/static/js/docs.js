@@ -1,16 +1,7 @@
 'use strict';
-
 // Note: this code is not post-processed. Use ES5 only.
 
 (function () {
-  // TODO: remove for v3
-  var css = document.createElement('link');
-  css.rel = 'stylesheet';
-  css.href = 'https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css';
-  css.type = 'text/css';
-  document.getElementsByTagName('head')[0].appendChild(css);
-  // ENDTODO
-
   // Define available documentation players
   // Embed in markdown like <div class="docs-player" data-instance="overview"></div>
   var defaultSources = [
