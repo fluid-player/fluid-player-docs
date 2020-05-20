@@ -201,7 +201,7 @@ fluidPlayer(
 ```
 
 ## subtitlesEnabled
-Set this parameter to **true** to have subtitles, provided track information given. You can read more about subtitles [here](../subtitles).
+Set this parameter to **true** to have subtitles, provided track information given. You can read more about subtitles [here](/docs/configuration/subtitles/).
 
 ```javascript
 fluidPlayer(
@@ -327,7 +327,7 @@ fluidPlayer(
 ```
 
 ## timelinePreview
-Thumbnail preview is discussed more [here](../preview_configuration).
+Thumbnail preview is discussed more [here](/docs/configuration/preview/).
 
 Sets the timeline preview, visible when hovering over the progress bar. 
 The provided file contains the thumbnail images used for the preview. 
@@ -458,7 +458,7 @@ fluidPlayer(
 );
 ```
 
-As theatre mode often requires other elements on the page to move / hide we have added listener events for [theatreModeOn](../api#on-theatremodeon-function) and [theatreModeOff](../api#on-theatremodeoff-function).
+As theatre mode often requires other elements on the page to move / hide we have added listener events for [theatreModeOn](/docs/api/events/#theatremodeon) and [theatreModeOff](/docs/api/events/#theatremodeoff).
 This allows you to easily execute additional functionality when toggling theatre mode.
 
 ## theatreSettings
