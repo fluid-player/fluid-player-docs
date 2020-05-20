@@ -16,17 +16,31 @@ body {
     width: 100%;
 }
 
-/* BUILDER */
-#builder {
-    padding: 10px;
+#page-not-found {
+    padding: 45px 10px;
     width: auto;
 }
 
-#builder-wrap {
-    margin: auto;
-    max-width: 1360px;
+#page-not-found h1, #page-not-found h2 {
+    margin: 0;
+    padding: 0;
+    color: #3D9AD4;
 }
-/* END BUILDER */
+
+#page-not-found h1 {
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+#page-not-found h2 {
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+}
+
+#page-not-found-wrap {
+    margin: auto;
+    max-width: 600px;
+}
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
