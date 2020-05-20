@@ -45,7 +45,7 @@ const siteConfig = {
   // Add custom scripts here that would be placed in <script> tags.
   scripts: [
     'https://buttons.github.io/buttons.js',
-    'https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js', // TODO: v3
+    'https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js',
     '/js/docs.js'
   ],
 
