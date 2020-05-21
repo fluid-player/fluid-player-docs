@@ -46,7 +46,7 @@ const siteConfig = {
   scripts: [
     'https://buttons.github.io/buttons.js',
     'https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js',
-    '/js/docs.js'
+    '/js/docs.js?v=1'
   ],
 
   // On page navigation for the current documentation page.

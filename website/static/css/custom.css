@@ -42,6 +42,30 @@ body {
     max-width: 600px;
 }
 
+#announce-wrapper {
+    padding: 0.57143rem 1.14286rem;
+    margin-bottom: 1rem;
+    background: #dce5de;
+    border: 1px solid #97b19d;
+    border-radius: 2px;
+    z-index: 9999;
+}
+
+#announce-inner {
+    margin: auto;
+}
+
+#announce-inner-lead {
+    font-weight: 500;
+    color: #2e633a;
+    display: block;
+    font-size: 0.99rem;
+}
+
+#announce-inner-body {
+    font-size: 0.92rem;
+}
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 

@@ -234,8 +234,37 @@
     }
   };
 
+  var showVersionAnnouncer = function () {
+    var announceWrapper = document.createElement('div');
+    announceWrapper.id = 'announce-wrapper';
+
+    var announceInner = document.createElement('div');
+    announceInner.id = 'announce-inner';
+    announceWrapper.appendChild(announceInner);
+
+    var announceTitle = document.createElement('span');
+    announceTitle.id = 'announce-inner-lead'
+    announceTitle.innerHTML = 'Version 3 released';
+    announceInner.appendChild(announceTitle);
+
+    var announceBody = document.createElement('span');
+    announceBody.id = 'announce-inner-body'
+    announceBody.innerHTML = 'A new major version of Fluid Player has been released on May 20, 2020. ' +
+      'Existing version 2 users are recommended to upgrade.&nbsp;';
+    announceInner.appendChild(announceBody);
+
+    var announceLink = document.createElement('a');
+    announceLink.href = '/docs/integration/quick-setup';
+    announceLink.innerHTML = 'See quick setup guide.';
+    announceInner.appendChild(announceLink);
+
+    var navPusher = document.getElementsByClassName('postHeader')[0];
+    navPusher.appendChild(announceWrapper);
+  }
+
   var ready = function () {
     createPlayers();
+    showVersionAnnouncer();
   };
 
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
