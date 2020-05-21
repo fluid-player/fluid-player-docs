@@ -29,6 +29,7 @@
       return {
         options: {
           layoutControls: {
+            preload: 'none',
             posterImage: '/player/video-thumbnail.jpg',
             timelinePreview: {
               file: '/player/thumbnails.vtt',
@@ -48,6 +49,7 @@
       return {
         options: {
           layoutControls: {
+            preload: 'none',
             posterImage: '/player/video-thumbnail.jpg',
             timelinePreview: {
               file: '/player/thumbnails.vtt',
@@ -81,6 +83,7 @@
       return {
         options: {
           layoutControls: {
+            preload: 'none',
             posterImage: '/player/video-thumbnail.jpg',
             timelinePreview: {
               file: '/player/thumbnails.vtt',
@@ -96,6 +99,7 @@
       return {
         options: {
           layoutControls: {
+            preload: 'none',
             subtitlesEnabled: true
           }
         },
@@ -116,6 +120,7 @@
       return {
         options: {
           layoutControls: {
+            preload: 'none',
             showCardBoardView: true,
             showCardBoardJoystick: true
           }
