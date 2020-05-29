@@ -116,3 +116,34 @@ fluidPlayer(
     }
 );
 ```
+
+## static Format
+If the WebVTT format doesn't suit you, the thumbnails can be defined statically.
+
+### Example static configuration
+The `startTime` and `endTime` properties are defined in seconds:
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            timelinePreview: {
+                type: 'static',
+                frames: [
+                   {
+                        startTime: 0,
+                        endTime: 0.5,
+                        image: '/thumbnails/thumbnails.jpg',
+                        x: 0,
+                        y: 0,
+                        w: 200,
+                        h: 84
+                    },
+                    ...
+                ]
+            }
+        }
+    }
+);
+```
