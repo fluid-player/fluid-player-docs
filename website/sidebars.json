@@ -11,7 +11,8 @@
       "configuration/ads",
       "configuration/preview",
       "configuration/subtitles",
-      "configuration/vr"
+      "configuration/vr",
+      "configuration/advanced"
     ],
     "API": [
       "api/controls",

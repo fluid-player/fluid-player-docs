@@ -546,6 +546,54 @@ fluidPlayer(
 );
 ```
 
+## controlForwardBackward
+
+This configuration options allows you to choose if you want to show "skip buttons" allowing users
+to fast-forward / fast-replay the video content.
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            controlForwardBackward: {
+                show: true // Default: false
+            }
+        }
+    }
+);
+```
+
+## contextMenu
+
+Context menu configuration option allows you to control built in context menu of the player. There are two configuration
+options within this configuration block.
+ 
+- `controls` - a boolean option to enable or disable default playback controls
+in the context menu.
+- `links` - a list of objects containing `href` property to indicate target URL and a `label` property
+to indicate the display label of the link.
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            contextMenu: {
+                controls: true,
+                links: [
+                    {
+                        href: 'https://wikipedia.org',
+                        label: 'Wikipedia'
+                    } 
+                ]
+            }
+        }
+    }
+);
+```
+ 
+
 ## Custom icons style
 
 You can override the default icons using CSS.
