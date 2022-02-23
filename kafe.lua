@@ -25,13 +25,11 @@ k.task('deploy', function()
     local archive = k.archive_dir_tmp('build/fluid-player/')
 
     local deploy = function()
-        if not k.shell('mkdir -p {{deploy_to}}')
-            then error('Could not create deployment directory target') end
+        k.shell('mkdir -p {{deploy_to}}')
 
         k.within('{{deploy_to}}')
 
-        if not k.shell('mkdir -p releases/{{version}}/')
-            then error('Could not create release root directory') end
+        k.shell('mkdir -p releases/{{version}}/')
 
         k.upload_file(archive, 'releases/{{version}}/upload.tar.gz')
 
@@ -41,8 +39,7 @@ k.task('deploy', function()
         if not k.shell('rm releases/{{version}}/upload.tar.gz')
             then error('Failed to remove uploaded archive') end
 
-        if not k.shell('chmod g+rw releases && chmod g+rw -Rf releases/')
-            then error('Failed to fix chmod') end
+        k.shell('chmod g+rw releases && chmod g+rw -Rf releases/')
     end
 
     local symlink = function()
