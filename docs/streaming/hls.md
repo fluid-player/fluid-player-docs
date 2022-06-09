@@ -29,3 +29,19 @@ fluidPlayer(
 );
 </script>
 ```
+
+# HTTP Live Streaming with VAST
+
+Fluid Player supports HTTP Live Streaming with VAST tags.
+For `.m3u8` files to be played, the VAST `MediaFile` tag must have the following attributes:
+
+* `delivery` should be set as `streaming`
+* `type` should be set as `application/vnd.apple.mpegurl`
+
+For example:
+
+```xml
+<MediaFile id="1" delivery="streaming" type="application/vnd.apple.mpegurl" width="480" height="640">
+    <![CDATA[ https://example.com/stream_hls.m3u8 ]]>
+</MediaFile>
+```
