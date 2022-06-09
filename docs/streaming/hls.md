@@ -38,7 +38,7 @@ For `.m3u8` files to be played, the VAST `MediaFile` tag must have the following
 * `delivery` should be set as `streaming`
 * `type` should be set as `application/vnd.apple.mpegurl`
 
-As can be seen in the below example:
+For example:
 
 ```xml
 <MediaFile id="1" delivery="streaming" type="application/vnd.apple.mpegurl" width="480" height="640">
