@@ -249,8 +249,8 @@
 
     var announceBody = document.createElement('span');
     announceBody.id = 'announce-inner-body'
-    announceBody.innerHTML = 'A new major version of Fluid Player has been released on May 20, 2020. ' +
-      'Existing version 2 users are recommended to upgrade.&nbsp;';
+    announceBody.innerHTML = 'A new version 3.2.1 of Fluid Player has been released on May 17, 2022. ' +
+      'Existing users that are using version 2 are recommended to upgrade to the latest version. ';
     announceInner.appendChild(announceBody);
 
     var announceLink = document.createElement('a');
