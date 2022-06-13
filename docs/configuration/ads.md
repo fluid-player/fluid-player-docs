@@ -192,6 +192,20 @@ fluidPlayer(
     }
 );
 ```
+The CTA text can also be taken from the VAST XML that is set through ```adCTATextVast``` parameter. So, if this parameter is set to true, it will use the text provided in the VAST XML. Incase the VAST XML text is empty or this parameter is not set, it will fallback to the default set in ```adCTAText```.
+
+```javascript
+fluidPlayer(
+   'my-video',
+    {
+        vastOptions: {
+            adCTAText: 'Subscribe now!', // Default "Visit now!",
+            adCTATextPosition: 'bottom left', //Default 'bottom right’,
+            adCTATextVast: true, // Enabled. To use the CTA text as provided in the VAST XML.
+        }
+    }
+);
+```
 
 ![](/img/docs/configuration/ads/adctatext.png)
 
