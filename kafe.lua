@@ -4,7 +4,7 @@
 local k = require('kafe')
 k.require_api(1)
 
-local username = os.getenv('USER');
+local username = 'fernando';
 
 k.add_inventory(username, 'w03.ovh.0x3e.net', 22, 'production', 'docs')
 
