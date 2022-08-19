@@ -49,7 +49,7 @@ For example:
 # Customizing HLS
 
 Fluid Player has hooks that support `hls.js` configuration, a full list of configurable properties can be found in the [official `hsl.js` API docs](https://github.com/video-dev/hls.js/blob/master/docs/API.md).
-Below is an example of a configuration that changes the maximum buffer length and the starting quality of a stream.
+Below is an example of a configuration where you can set the maximum buffer length and streaming quality with which the video will be started.
 
 ```javascript
 fluidPlayer('fluid-player', {
