@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.3.0 (2022-08-24)
+* [Pull #76](https://github.com/fluid-player/fluid-player-docs/pull/76) Add "Buffer" setting to control how much from the streaming file is downloaded
+
 ## 1.2.0 (2022-07-20)
 * Fluid Player release date update
 
