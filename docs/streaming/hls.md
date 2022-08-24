@@ -45,3 +45,22 @@ For example:
     <![CDATA[ https://example.com/stream_hls.m3u8 ]]>
 </MediaFile>
 ```
+
+# Customizing HLS
+
+Fluid Player has hooks that support `hls.js` configuration, a full list of configurable properties can be found in the [official `hsl.js` API docs](https://github.com/video-dev/hls.js/blob/master/docs/API.md).
+Below is an example of a configuration where you can set the maximum buffer length and streaming quality with which the video will be started.
+
+```javascript
+fluidPlayer('fluid-player', {
+    modules: {
+        configureHls: (options) => ({
+            maxMaxBufferLength: 30, // Max length of buffered video in seconds
+            startLevel: 4, // Starting quality level - 4 is usually Full HD (1080p), but this can change by source
+            ...options,
+        })
+    }
+});
+```
+
+For more information on using hooks see the [Advanced configuration](/docs/configuration/advanced/) page.
