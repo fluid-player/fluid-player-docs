@@ -249,7 +249,7 @@
 
     var announceBody = document.createElement('span');
     announceBody.id = 'announce-inner-body'
-    announceBody.innerHTML = 'A new version 3.9.0 of Fluid Player has been released on October 18, 2022. ' +
+    announceBody.innerHTML = 'A new version 3.10.0 of Fluid Player has been released on December 15, 2022. ' +
       'Existing users that are using version 2 are recommended to upgrade to the latest version. ';
     announceInner.appendChild(announceBody);
 
