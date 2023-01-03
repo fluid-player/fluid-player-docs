@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.8.0 (2023-01-03)
+* Fluid Player release date update
+
 ## 1.7.0 (2022-12-15)
 * Fluid Player release date update
 
