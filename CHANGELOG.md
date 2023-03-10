@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.10.0 (2023-03-09)
+* Fluid Player release date update
+
 ## 1.9.0 (2023-01-03)
 * [Pull #77](https://github.com/fluid-player/fluid-player-docs/pull/77) FluidPlayer > Docs > Streaming file not loading
 * Fluid Player release date update
