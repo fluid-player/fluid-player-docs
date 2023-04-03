@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.11.0 (2023-04-03)
+* [Pull #80](https://github.com/fluid-player/fluid-player-docs/pull/80) Fluid Player is not compatible with React's latest version
+
 ## 1.10.0 (2023-03-09)
 * Fluid Player release date update
 
