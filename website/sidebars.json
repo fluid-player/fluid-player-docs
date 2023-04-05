@@ -4,7 +4,8 @@
     "Integration": [
       "integration/quick-setup",
       "integration/vue",
-      "integration/react"
+      "integration/react",
+      "integration/angular"
     ],
     "Configuration": [
       "configuration/layout",
