@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.12.0 (2023-04-13)
+* [Pull #81](https://github.com/fluid-player/fluid-player-docs/pull/81) Add integration with angular docs
+
 ## 1.11.0 (2023-04-03)
 * [Pull #80](https://github.com/fluid-player/fluid-player-docs/pull/80) Fluid Player is not compatible with React's latest version
 
