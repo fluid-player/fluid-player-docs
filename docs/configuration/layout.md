@@ -46,7 +46,12 @@ fluidPlayer(
                 height:             null,
                 width:              null
             },
-            playerInitCallback:     (function() {})
+            playerInitCallback:     (function() {}),
+            miniPlayer: {
+                enabled: true,
+                width: 400,
+                height: 225
+            }
         }
     }
 );
@@ -659,4 +664,30 @@ You can override the default icons using CSS.
     background: url(/images/example.svg) no-repeat !important;
     background-position: 0px 0px !important;
 } /* theatre mode */
+```
+
+## miniPlayer
+
+Fluid Player has a dedicated Mini Player mode that can be triggered by the pressing `i` on the keyboard, or by clicking 
+the Mini Player button on the control bar of the video.
+
+The Mini Player will be fixed on the page, accompanying the scroll, on the bottom right of the screen. This feature is
+only available when using Fluid Player in desktop mode.
+
+The `miniPlayer` configuration allows to enable or disable the Mini Player feature, and to change the width and 
+height of the Mini Player.
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            miniPlayer: {
+                enabled: true, // Default true
+                width: 400, // Default 400
+                height: 225 // Default 225
+            }
+        }
+    }
+);
 ```
