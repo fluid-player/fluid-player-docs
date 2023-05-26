@@ -675,7 +675,8 @@ The Mini Player will be fixed on the page, accompanying the scroll, on the botto
 only available when using Fluid Player in desktop mode.
 
 The `miniPlayer` configuration allows to enable or disable the Mini Player feature, and to change the width and 
-height of the Mini Player.
+height of the Mini Player. The text for the placeholder element can also be changed. Following is the configuration with
+the default values.
 
 ```javascript
 fluidPlayer(
@@ -683,9 +684,10 @@ fluidPlayer(
     {
         layoutControls: {
             miniPlayer: {
-                enabled: true, // Default true
-                width: 400, // Default 400
-                height: 225 // Default 225
+                enabled: true,
+                width: 400,
+                height: 225,
+                placeholderText: 'Playing in Miniplayer',
             }
         }
     }
