@@ -671,8 +671,7 @@ You can override the default icons using CSS.
 Fluid Player has a dedicated Mini Player mode that can be triggered by the pressing `i` on the keyboard, or by clicking 
 the Mini Player button on the control bar of the video.
 
-The Mini Player will be fixed on the page, accompanying the scroll, on the bottom right of the screen. This feature is
-only available when using Fluid Player in desktop mode.
+The Mini Player will be fixed on the page, accompanying the scroll, on the bottom right of the screen.
 
 The `miniPlayer` configuration allows to enable or disable the Mini Player feature, and to change the width and 
 height of the Mini Player. The text for the placeholder element can also be changed. Following is the configuration with
@@ -685,8 +684,9 @@ fluidPlayer(
         layoutControls: {
             miniPlayer: {
                 enabled: true,
-                width: 400,
-                height: 225,
+                width: 400, // px unit
+                height: 225, // px unit
+                widthMobile: 40, // vw unit
                 placeholderText: 'Playing in Miniplayer',
             }
         }
