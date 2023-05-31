@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.15.0 (2023-05-31)
+* [Pull #82](https://github.com/fluid-player/fluid-player-docs/pull/82) MiniPlayer MVP
+
 ## 1.14.0 (2023-05-09)
 * Fluid Player release date update
 
