@@ -81,3 +81,12 @@ This event receives 1 argument - current time position of the main video content
 ```javascript
 player.on('timeupdate', function(time){ console.log(time); });
 ```
+
+## miniPlayerToggle
+
+Triggers a `CustomEvent` when the Mini Player is toggled on or off. The `isToggledOn` property holds the new state of
+the Mini Player.
+
+```javascript
+player.on('isToggledOn', function (event) { console.log(event.detail.isToggledOn) });
+```
