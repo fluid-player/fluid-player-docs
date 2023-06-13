@@ -684,6 +684,8 @@ the `placeholderText` property.
 
 The `position` property changes the corner of the screen that the Mini Player will appear.
 
+The `autoToggle` property makes the Mini Player activate as soon as the main video player leaves the screen.
+
 Following is an example configuration with the **default values** for `miniPlayer`.
 
 ```javascript
@@ -698,6 +700,7 @@ fluidPlayer(
                 widthMobile: 40, // vw unit
                 placeholderText: 'Playing in Miniplayer',
                 position: 'bottom right', // 'top left', 'top right', 'bottom left', 'bottom right'
+                autoToggle: false,
             }
         }
     }
