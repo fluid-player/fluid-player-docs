@@ -61,3 +61,9 @@ Using **toggleFullScreen(boolean)** we can set the video to fullscreen. **true**
 player.toggleFullScreen(true);
 ```
 
+## toggleMiniPlayer
+Using **toggleMiniPlayer(boolean)** we can toggle the player to Mini Player mode. **true** will set the player to Mini Player, and **false** will set the player back to normal.
+
+```javascript
+player.toggleMiniPlayer(true);
+```
