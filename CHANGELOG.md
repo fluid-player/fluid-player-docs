@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.16.0 (2023-06-16)
+* [Pull #83](https://github.com/fluid-player/fluid-player-docs/pull/83) MiniPlayer Mobile support
+* [Pull #84](https://github.com/fluid-player/fluid-player-docs/pull/84) MiniPlayer position configuration
+* [Pull #85](https://github.com/fluid-player/fluid-player-docs/pull/85) MiniPlayer Activate miniplayer when scrolling goes out of viewport
+* [Pull #86](https://github.com/fluid-player/fluid-player-docs/pull/86) MiniPlayer Allowing trigger MiniPlayer by code
+
 ## 1.15.0 (2023-05-31)
 * [Pull #82](https://github.com/fluid-player/fluid-player-docs/pull/82) MiniPlayer MVP
 
