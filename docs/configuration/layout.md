@@ -671,11 +671,22 @@ You can override the default icons using CSS.
 Fluid Player has a dedicated Mini Player mode that can be triggered by the pressing `i` on the keyboard, or by clicking 
 the Mini Player button on the control bar of the video.
 
-The Mini Player will be fixed on the page, accompanying the scroll, on the bottom right of the screen.
+When activated the Mini Player appears in the corner of the screen, and follows the page as the user scrolls. 
 
-The `miniPlayer` configuration allows to enable or disable the Mini Player feature, and to change the width and 
-height of the Mini Player. The text for the placeholder element can also be changed. Following is the configuration with
-the default values.
+The `miniPlayer` object can be used to change the behaviour of the Mini Player. You can enable or disable the Mini
+Player by toggling the `enabled` property.
+
+The `width` and `height` properties can be used to change the size of the Mini Player. For mobile devices the Mini
+Player uses the `widthMobile` property.
+
+The text of the placeholder element that appears where the player was when the Mini Player is toggled can be changed by
+the `placeholderText` property.
+
+The `position` property changes the corner of the screen that the Mini Player will appear.
+
+The `autoToggle` property makes the Mini Player activate as soon as the main video player leaves the screen.
+
+Following is an example configuration with the **default values** for `miniPlayer`.
 
 ```javascript
 fluidPlayer(
@@ -688,6 +699,8 @@ fluidPlayer(
                 height: 225, // px unit
                 widthMobile: 40, // vw unit
                 placeholderText: 'Playing in Miniplayer',
+                position: 'bottom right', // 'top left', 'top right', 'bottom left', 'bottom right'
+                autoToggle: false,
             }
         }
     }
