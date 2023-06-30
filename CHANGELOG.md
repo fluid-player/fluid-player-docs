@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.17.0 (2023-06-30)
+* Fluid Player release date update
+
 ## 1.16.0 (2023-06-16)
 * [Pull #83](https://github.com/fluid-player/fluid-player-docs/pull/83) MiniPlayer Mobile support
 * [Pull #84](https://github.com/fluid-player/fluid-player-docs/pull/84) MiniPlayer position configuration
