@@ -88,5 +88,5 @@ Triggers a `CustomEvent` when the Mini Player is toggled on or off. The `isToggl
 the Mini Player.
 
 ```javascript
-player.on('isToggledOn', function (event) { console.log(event.detail.isToggledOn) });
+player.on('miniPlayerToggle', function (event) { console.log(event.detail.isToggledOn) });
 ```
