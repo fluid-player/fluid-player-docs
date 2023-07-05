@@ -334,3 +334,17 @@ fluidPlayer(
     }
 );
 ```
+
+## VAST tracking
+
+The following events are supported by Fluid Player.
+
+* start
+* firstQuartile
+* midpoint
+* thirdQuartile
+* complete
+* progress
+* impression
+* clickTracking
+* iconClickTrough
