@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.18.0 (2023-04-12)
+* [Pull #87](https://github.com/fluid-player/fluid-player-docs/pull/87) Could not find a declaration file for module 'fluid-player'
+* [Pull #88](https://github.com/fluid-player/fluid-player-docs/pull/88) Vue documentation is not up to date
+* [Pull #89](https://github.com/fluid-player/fluid-player-docs/pull/89) Document Custom tracking URLs for VAST
+
 ## 1.17.0 (2023-06-30)
 * Fluid Player release date update
 
