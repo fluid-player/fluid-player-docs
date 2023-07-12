@@ -537,19 +537,19 @@ This option enables you to customise the control buttons default caption.
 fluidPlayer(
     'my-video',
     {
-        layoutControls: {
-            captions: {
-                play: 'Play',
-                pause: 'Pause',
-                mute: 'Mute',
-                unmute: 'Unmute',
-                fullscreen: 'Fullscreen',
-                exitFullscreen: 'Exit Fullscreen'
-            }
+        captions: {
+            play: 'Play',
+            pause: 'Pause',
+            mute: 'Mute',
+            unmute: 'Unmute',
+            fullscreen: 'Fullscreen',
+            exitFullscreen: 'Exit Fullscreen'
         }
     }
 );
 ```
+
+**Note**: The captions object is in the root of the Fluid Player configurations options, **not** in `layoutControls`.
 
 ## controlForwardBackward
 
