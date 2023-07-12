@@ -28,31 +28,31 @@ to recreate the Fluid Player instance to change sources or other player configur
 </template>
 
 <script>
-  import fluidPlayer from 'fluid-player';
+    import fluidPlayer from 'fluid-player';
 
-  export default {
-    name: 'FluidPlayer',
-    props: {},
-    data() {
-      return {
-        player: null
-      }
-    },
-    mounted() {
-      this.player = fluidPlayer(this.$refs.myVideoPlayer);
-    },
-    destroyed() {
-      if (!this.player) {
-        return;
-      }
+    export default {
+        name: 'FluidPlayer',
+        props: {},
+        data() {
+            return {
+                player: null
+            }
+        },
+        mounted() {
+            this.player = fluidPlayer(this.$refs.myVideoPlayer);
+        },
+        destroyed() {
+            if (!this.player) {
+                return;
+            }
 
-      this.player.destroy();
+            this.player.destroy();
+        }
     }
-  }
 </script>
 
-<style scoped>
-    @import "~fluid-player/src/css/fluidplayer.css";
+<style>
+    @import "fluid-player/src/css/fluidplayer.css";
 
     div.fluid-component, div.fluid-component > video {
         width: 100%;
