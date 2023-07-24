@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.19.0 (2023-07-24)
+* Fluid Player release date update
+
 ## 1.18.0 (2023-04-12)
 * [Pull #87](https://github.com/fluid-player/fluid-player-docs/pull/87) Could not find a declaration file for module 'fluid-player'
 * [Pull #88](https://github.com/fluid-player/fluid-player-docs/pull/88) Vue documentation is not up to date
