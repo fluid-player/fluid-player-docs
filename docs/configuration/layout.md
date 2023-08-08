@@ -556,13 +556,17 @@ fluidPlayer(
 This configuration options allows you to choose if you want to show "skip buttons" allowing users
 to fast-forward / fast-replay the video content.
 
+You can also toggle double tapping to move the video backward / forward by 10 seconds in touch devices by setting the
+`doubleTapMobile` property.
+
 ```javascript
 fluidPlayer(
     'my-video',
     {
         layoutControls: {
             controlForwardBackward: {
-                show: true // Default: false
+                show: true, // Default: false,
+                doubleTapMobile: false // Default: true
             }
         }
     }
