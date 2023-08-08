@@ -1,9 +1,14 @@
 # CHANGELOG
 
+## 1.20.0 (2023-08-08)
+* [Pull #78](https://github.com/fluid-player/fluid-player-docs/pull/78) Add playback rates property
+* [Pull #90](https://github.com/fluid-player/fluid-player-docs/pull/90) CurrentTime reset after switch HLS source on IOS
+* [Pull #91](https://github.com/fluid-player/fluid-player-docs/pull/91) Add "controlForwardBackward" setting inside the player instead of the control bar
+
 ## 1.19.0 (2023-07-24)
 * Fluid Player release date update
 
-## 1.18.0 (2023-04-12)
+## 1.18.0 (2023-07-12)
 * [Pull #87](https://github.com/fluid-player/fluid-player-docs/pull/87) Could not find a declaration file for module 'fluid-player'
 * [Pull #88](https://github.com/fluid-player/fluid-player-docs/pull/88) Vue documentation is not up to date
 * [Pull #89](https://github.com/fluid-player/fluid-player-docs/pull/89) Document Custom tracking URLs for VAST
