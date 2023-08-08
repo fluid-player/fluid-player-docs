@@ -38,7 +38,8 @@ fluidPlayer(
             controlBar: {
                 autoHide:           true,
                 autoHideTimeout:    3,
-                animated:           true
+                animated:           true,
+                playbackRates:      ['x2', 'x1.5', 'x1', 'x0.5']
             },
             timelinePreview:        {},
             htmlOnPauseBlock: {
@@ -315,6 +316,7 @@ There are three options for this parameter:
 * **autoHide:** Configure whether or not to hide the controls. (**Default:** false)
 * **autoHideTimeout:** How long, in seconds, before the controls will hide. (**Default:** 3)
 * **animated:** If set to false the controls disappear instantly. True be default, will mean the controls fade out. (**Default:** true)
+* **playbackRates:** Allow customization of the playback rates. If `playbackRateEnabled` set to `true` the available options can be set with this property. (**Default:** `['x2', 'x1.5', 'x1', 'x0.5']`)
 
 ```javascript
 fluidPlayer(
@@ -324,7 +326,8 @@ fluidPlayer(
             controlBar: {
                 autoHide: true, // Default false
                 autoHideTimeout: 5, // Default 3
-                animated: false // Default true
+                animated: false, // Default true
+                playbackRates: ['x2', 'x1']
             }
         }
     }
@@ -423,6 +426,7 @@ fluidPlayer(
     }
 );
 ```
+Please note, the customization of playback rates is allowed with `layoutControls.controlBar.playbackRates` property. [See details here.](#controlBar)
 
 ## allowTheatre
 Theatre mode alters the size of the player, showing a full screen width and 60% screen height player instead. 
