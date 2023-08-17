@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.21.0 (2023-08-17)
+* Fluid Player release date update
+
 ## 1.20.0 (2023-08-08)
 * [Pull #78](https://github.com/fluid-player/fluid-player-docs/pull/78) Add playback rates property
 * [Pull #90](https://github.com/fluid-player/fluid-player-docs/pull/90) CurrentTime reset after switch HLS source on IOS
