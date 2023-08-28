@@ -165,14 +165,16 @@ fluidPlayer(
 
 ## preload
 
-Sets the preload parameter on video tag. By default this parameter is set to **false**.
+Sets the preload parameter on video tag. By default this parameter is set to **`'auto'`**.
+
+Note: To change the preload configuration for `hls.js` and `dash.js`, you need to change the configuration for each module.  
 
 ```javascript
 fluidPlayer(
     'my-video',
     {
         layoutControls: {
-            preload: auto // Default false
+            preload: 'auto' // Default 'auto'
         }
     }
 );
