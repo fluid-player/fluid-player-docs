@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.22.0 (2023-08-28)
+* * [Pull #757](https://github.com/fluid-player/fluid-player/pull/757) Preload doesn't work for .m3u8 files when the player is serving in-stream ads
+
 ## 1.21.0 (2023-08-17)
 * Fluid Player release date update
 
