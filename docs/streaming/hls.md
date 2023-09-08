@@ -55,11 +55,19 @@ Below is an example of a configuration where you can set the maximum buffer leng
 ```javascript
 fluidPlayer('fluid-player', {
     modules: {
-        configureHls: (options) => ({
-            maxMaxBufferLength: 30, // Max length of buffered video in seconds
-            startLevel: 4, // Starting quality level - 4 is usually Full HD (1080p), but this can change by source
-            ...options,
-        })
+        configureHls: (options) => {
+            return {
+                maxMaxBufferLength: 30, // Max length of buffered video in seconds
+                startLevel: 4, // Starting quality level - 4 is usually Full HD (1080p), but this can change by source
+                ...options,
+            }
+        },
+        onBeforeInitHls: (hls) => {
+            hls.startLevel = 4; // Programatically set start quality level
+        },
+        onAfterInitHls: (hls) => {
+            hls.nextLevel = 4 // Programatically set quality level for next segment
+        },
     }
 });
 ```

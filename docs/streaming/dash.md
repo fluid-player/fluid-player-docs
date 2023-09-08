@@ -29,3 +29,29 @@ fluidPlayer(
 );
 </script>
 ```
+# Customizing MPEG-DASH
+
+Fluid Player has hooks that support `dashjs` configuration, a full list of configurable properties can be found in the [official `dashjs` API docs](http://cdn.dashjs.org/latest/jsdoc/index.html).
+Below is an example of a configuration where you can set the maximum buffer length and streaming quality with which the video will be started.
+
+```javascript
+fluidPlayer('fluid-player', {
+    modules: {
+        configureDash: (options) => {
+            return {
+                stableBufferTime: 30, // Max length of buffered video in seconds
+                initialBufferLevel: 4, // Starting quality level
+                ...options,
+            }
+        },
+        onBeforeInitDash: (dash) => {
+            dash.setQualityFor('video', 4); // Programatically set quality level for next segment
+        },
+        onAfterInitDash: (dash) => {
+            dash.setQualityFor('video', 4); // Programatically set quality level for next segment
+        },
+    }
+});
+```
+
+For more information on using hooks see the [Advanced configuration](/docs/configuration/advanced/) page.
