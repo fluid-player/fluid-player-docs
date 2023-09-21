@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.24.0 (2023-09-21)
+* Fluid Player release date update
+
 ## 1.23.0 (2023-09-08)
 * [Pull #94](https://github.com/fluid-player/fluid-player-docs/pull/94) Document hls.js and dash.js modules callbacks
 
