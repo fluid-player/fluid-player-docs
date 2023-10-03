@@ -5,7 +5,8 @@
       "integration/quick-setup",
       "integration/vue",
       "integration/react",
-      "integration/angular"
+      "integration/angular",
+      "integration/wordpress"
     ],
     "Configuration": [
       "configuration/layout",
