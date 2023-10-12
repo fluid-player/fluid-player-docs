@@ -98,6 +98,21 @@ fluidPlayer(
 );
 ```
 
+## posterImageSize
+To change the size of the poster image you can use the `posterImageSize` property, with the values `cover`, `contain` our `auto`.
+To read more about each value check the [background-size MDN page](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size#values).
+
+```javascript
+fluidPlayer(
+   'my-video',
+    {
+        layoutControls: {
+            posterImageSize: 'cover' // Default `contain`
+        }
+    }
+);
+```
+
 ## playButtonShowing
 By default the play button will show in the middle of the player. To hide the button this option can be set to **false**.
 When this option is set to **false** the video controls will show by default.
