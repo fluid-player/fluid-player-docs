@@ -20,56 +20,73 @@ player.on('pause', function() {
 });
 ```
 
-## play
-The **on('play', function(){})** can be used to handle the play event for the Fluid Player.
+### Additional Information
+
+For **every** event fired by Fluid Player, an additional argument is added as the last argument of the callback function.
+This argument contains information about the player's state at the moment the event occurred.
+
+**Example with all possible values:**
 
 ```javascript
-player.on('play', function(){ console.log('Video is playing'); });
+player.on('play', function(additionalInfo) {
+  const {
+    mediaSourceType,  // Possible values: 'source' for your main video source, and 'ad' for Linear ad playback.
+  } = additionalInfo;
+});
 ```
 
-## playing
-The **on('playing', function(){})** can be used to handle the playing event for the Fluid Player.
+## Events
+
+### play
+The **on('play', function(additionalInfo){})** can be used to handle the play event for the Fluid Player.
 
 ```javascript
-player.on('playing', function(){ console.log('Video is now playing'); });
+player.on('play', function(additionalInfo){ console.log('Video is playing'); });
 ```
 
-## pause
-The **on('pause', function(){})** can be used to handle the pause event for the Fluid Player.
+### playing
+The **on('playing', function(event, additionalInfo){})** can be used to handle the playing event for the Fluid Player.
 
 ```javascript
-player.on('pause', function(){ console.log('Video is now paused'); });
+player.on('playing', function(event, additionalInfo){ console.log('Video is now playing'); });
 ```
 
-## ended
-The **on('ended', function(){})** can be used to handle the pause ended for the Fluid Player.
+### pause
+The **on('pause', function(additionalInfo){})** can be used to handle the pause event for the Fluid Player.
 
 ```javascript
-player.on('ended', function(){ console.log('Video is now ended'); });
+player.on('pause', function(additionalInfo){ console.log('Video is now paused'); });
 ```
 
-## seeked
-The **on('seeked', function(){})** can be used to handle the pause seeked for the Fluid Player.
+### ended
+The **on('ended', function(additionalInfo){})** can be used to handle the ended for the Fluid Player.
 
 ```javascript
-player.on('seeked', function(){ console.log('Video is now seeked'); });
+player.on('ended', function(additionalInfo){ console.log('Video is now ended'); });
 ```
 
-## theatreModeOn
-The **on('theatreModeOn', function(){})** can be used to execute specific functionality when theatre mode is enabled.
+### seeked
+The **on('seeked', function(additionalInfo){})** can be used to handle the seeked for the Fluid Player.
 
 ```javascript
-player.on('theatreModeOn', function(){ console.log('Theatre mode is enabled'); });
+player.on('seeked', function(additionalInfo){ console.log('Video is now seeked'); });
 ```
 
-## theatreModeOff
-The **on('theatreModeOff', function(){})** can be used to execute specific functionality when theatre mode is disabled.
+### theatreModeOn
+The **on('theatreModeOn', function(event, additionalInfo){})** can be used to execute specific functionality when theatre mode is enabled.
 
 ```javascript
-player.on('theatreModeOff', function(){ console.log('Theatre mode is disabled'); });
+player.on('theatreModeOn', function(event, additionalInfo){ console.log('Theatre mode is enabled'); });
 ```
 
-## timeupdate
+### theatreModeOff
+The **on('theatreModeOff', function(event, additionalInfo){})** can be used to execute specific functionality when theatre mode is disabled.
+
+```javascript
+player.on('theatreModeOff', function(event, additionalInfo){ console.log('Theatre mode is disabled'); });
+```
+
+### timeupdate
 Fluid Player emits timeupdate event when the time indicated by the currentTime 
 attribute of the HTML5 player has been updated.
                                             
@@ -79,14 +96,14 @@ event handlers don't take longer than 250ms to run).
 This event receives 1 argument - current time position of the main video content.
 
 ```javascript
-player.on('timeupdate', function(time){ console.log(time); });
+player.on('timeupdate', function(time, additionalInfo){ console.log(time); });
 ```
 
-## miniPlayerToggle
+### miniPlayerToggle
 
 Triggers a `CustomEvent` when the Mini Player is toggled on or off. The `isToggledOn` property holds the new state of
 the Mini Player.
 
 ```javascript
-player.on('miniPlayerToggle', function (event) { console.log(event.detail.isToggledOn) });
+player.on('miniPlayerToggle', function (event, additionalInfo) { console.log(event.detail.isToggledOn) });
 ```
