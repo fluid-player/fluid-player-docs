@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.25.0 (2023-10-12)
+* [Pull #96](https://github.com/fluid-player/fluid-player-docs/pull/96) Stretch posterImage to playerwindow
+* [Pull #97](https://github.com/fluid-player/fluid-player-docs/pull/97) Events don't differ from Ad and Main video
+
 ## 1.24.0 (2023-09-21)
 * Fluid Player release date update
 
