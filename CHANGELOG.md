@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.26.0 (2023-10-19)
+* [Pull #95](https://github.com/fluid-player/fluid-player-docs/pull/95) Unable to add "middle", "post" and "onclick" rolls in Fluidplayer Wordpress
+
 ## 1.25.0 (2023-10-12)
 * [Pull #96](https://github.com/fluid-player/fluid-player-docs/pull/96) Stretch posterImage to playerwindow
 * [Pull #97](https://github.com/fluid-player/fluid-player-docs/pull/97) Events don't differ from Ad and Main video
