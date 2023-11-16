@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.27.0 (2023-11-16)
+* Fluid Player release date update
+
 ## 1.26.0 (2023-10-19)
 * [Pull #95](https://github.com/fluid-player/fluid-player-docs/pull/95) Unable to add "middle", "post" and "onclick" rolls in Fluidplayer Wordpress
 
