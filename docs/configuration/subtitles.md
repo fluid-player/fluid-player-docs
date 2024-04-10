@@ -57,3 +57,16 @@ fluidPlayer(
 );
 </script>
 ```
+
+## subtitlesOnByDefault
+Set this parameter to **true** to have subtitles on by default. This parameter is by default already set to **true**.
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            subtitlesOnByDefault: false, // Default true
+        }
+    }
+);
+```
