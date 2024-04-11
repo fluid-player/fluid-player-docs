@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.32.0 (2024-04-11)
+* [Pull #98](https://github.com/fluid-player/fluid-player-docs/pull/98) Add 'subtitlesOnByDefault' to Fluid Player documentation
+* [Pull #99](https://github.com/fluid-player/fluid-player-docs/pull/99) Remove showProgressbarMarkers from FP Docs
+
 ## 1.31.0 (2024-03-21)
 * Fluid Player release date update
 
