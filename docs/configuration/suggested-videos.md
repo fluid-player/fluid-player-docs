@@ -75,6 +75,6 @@ In the configUrl, a new URL that returns a JSON file with 12 new suggested video
 
 ## Thumbnail Recommendations
 
-Fluid Player expects thumbnails to have a 16x9 aspect ratio. Thumbnails in other formats can be used, but a background color will be added to fill the space. For the best appearance, it is recommended to use the 16x9 aspect ratio.
+Fluid Player expects thumbnails to have a **16x9** aspect ratio. Thumbnails in other formats can be used, but a background color will be added to fill the space. For the best appearance, it is recommended to use the **16x9** aspect ratio.
 
 ![](/img/docs/configuration/suggested-videos/aspect-ratio.png)

@@ -14,8 +14,8 @@
       "configuration/preview",
       "configuration/subtitles",
       "configuration/vr",
-      "configuration/advanced",
-      "configuration/suggested-videos"
+      "configuration/suggested-videos",
+      "configuration/advanced"
     ],
     "API": [
       "api/controls",
