@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.34.0 (2024-07-11)
+* Fluid Player release date update
+
 ## 1.33.0 (2024-07-02)
 * [Pull #100](https://github.com/fluid-player/fluid-player-docs/pull/100) Suggested Videos Feature in Fluid Player
 
