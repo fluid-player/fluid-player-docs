@@ -31,6 +31,20 @@ fluidPlayer(
 </script>
 ```
 
+If your browser natively supports HLS, Fluid Player will not utilize `hls.js`. However, if you prefer to use hls.js despite native support, you can override it by enabling the following flag.
+
+```html
+fluidPlayer(
+    'hls-video',
+    {
+        hls: {
+            overrideNative: true
+        }
+    }
+);
+```
+
+
 # HTTP Live Streaming with VAST
 
 Fluid Player supports HTTP Live Streaming with VAST tags.
