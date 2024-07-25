@@ -31,7 +31,7 @@ fluidPlayer(
 </script>
 ```
 
-If your browser natively supports HLS, Fluid Player will not utilize `hls.js`. However, if you prefer to use hls.js despite native support, you can override it by enabling the following flag.
+If your browser natively supports HLS, Fluid Player will not utilize [hls.js](https://github.com/video-dev/hls.js). However, if you prefer to use hls.js despite native support, you can override it by enabling the following flag.
 
 ```html
 fluidPlayer(
