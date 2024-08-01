@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.35.0 (2024-08-01)
+* [Pull #101](https://github.com/fluid-player/fluid-player-docs/pull/101) Add override hls to documentation
+
 ## 1.34.0 (2024-07-11)
 * Fluid Player release date update
 
