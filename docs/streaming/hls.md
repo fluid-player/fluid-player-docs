@@ -34,6 +34,11 @@ fluidPlayer(
 If your browser natively supports HLS, Fluid Player will not utilize [hls.js](https://github.com/video-dev/hls.js). However, if you prefer to use hls.js despite native support, you can override it by enabling the following flag.
 
 ```html
+<video id='hls-video'>
+    <source src='stream_hls.m3u8' type='application/x-mpegURL'/>
+</video>
+
+<script>
 fluidPlayer(
     'hls-video',
     {
@@ -42,6 +47,7 @@ fluidPlayer(
         }
     }
 );
+</script>
 ```
 
 
