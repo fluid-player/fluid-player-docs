@@ -31,6 +31,7 @@ fluidPlayer(
 </script>
 ```
 
+<span id="override-native"></span>
 If your browser natively supports HLS, Fluid Player will not utilize [hls.js](https://github.com/video-dev/hls.js). However, if you prefer to use hls.js despite native support, you can override it by enabling the following flag.
 
 ```html
@@ -93,3 +94,8 @@ fluidPlayer('fluid-player', {
 ```
 
 For more information on using hooks see the [Advanced configuration](/docs/configuration/advanced/) page.
+
+# Built in video quality switcher with auto option
+Fluid Player automatically populates the video quality switcher with the available levels from the file and adds an 'auto' option.
+
+**Important note**: To ensure the video quality switcher is consistently enabled, you must override the use of native HLS. To find out how to do this, you can click [here](#override-native)

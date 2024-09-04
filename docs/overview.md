@@ -30,6 +30,7 @@ Fluid Player is a free HTML5 video player. It is lightweight, easy to integrate 
 * Scripts and resources available via CDN
 * Mini Player
 * Suggested Videos
+* Supports HLS quality switching, including an "Auto" mode which is the default selection.
 
 ## What is VAST
 The IAB Digital Video Ad Serving Template (VAST) specification is a universal XML schema for serving ads to digital video players, and describes expected video player behavior when executing VAST-formatted ad responses.
