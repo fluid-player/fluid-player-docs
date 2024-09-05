@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.36.0 (2024-09-05)
+* [Pull #102](https://github.com/fluid-player/fluid-player-docs/pull/102) Show quality change icon in player when working with hls (m3u8)
+
 ## 1.35.0 (2024-08-01)
 * [Pull #101](https://github.com/fluid-player/fluid-player-docs/pull/101) Add override hls to documentation
 
