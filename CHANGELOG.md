@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.37.0 (2024-09-17)
+* Fluid Player release date update
+
 ## 1.36.0 (2024-09-05)
 * [Pull #102](https://github.com/fluid-player/fluid-player-docs/pull/102) Show quality change icon in player when working with hls (m3u8)
 
