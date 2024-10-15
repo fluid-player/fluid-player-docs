@@ -30,11 +30,13 @@ This argument contains information about the player's state at the moment the ev
 ```javascript
 player.on('play', function(additionalInfo) {
   const {
-    mediaSourceType,  // Possible values: 'source' for your main video source, and 'ad' for Linear ad playback.
+    mediaSourceType,  // Possible values: 'source' for your main video source, and 'preRoll', 'midRoll', 'postRoll' for Linear ad playback.
   } = additionalInfo;
 });
 ```
 
+By listening to mediaSourceType, you can bind specific behavior to events on the main video or linear ads, such as pre-rolls, mid-rolls, or post-rolls.
+Each event will also return all information from the JavaScript event in the additional info.
 ## Events
 
 ### play
