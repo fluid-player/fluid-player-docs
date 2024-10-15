@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.39.0 (2024-10-15)
+* [Pull #103](https://github.com/fluid-player/fluid-player/pull/103) Ads events
+
 ## 1.38.0 (2024-10-02)
 * Fluid Player release date update
 
