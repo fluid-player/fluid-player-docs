@@ -27,4 +27,6 @@ The recommended approach to use the plugin shortcode is as follows:
 [/fluid-player-extended]
 ```
 
+**Note**: Safari does not support playback of .mkv files. To view this file type, consider using a different browser that supports the .mkv format.
+
 You can find more information at the [wordpress.org plugin page](https://wordpress.org/plugins/fluid-player/#installation).
