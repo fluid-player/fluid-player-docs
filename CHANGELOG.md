@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.40.0 (2024-11-05)
+* [Pull #104](https://github.com/fluid-player/fluid-player-docs/pull/104) Rounded corners on player
+* [Pull #105](https://github.com/fluid-player/fluid-player-docs/pull/105) Add disclaimer about Video not loading after ad on safari
+
 ## 1.39.0 (2024-10-15)
 * [Pull #103](https://github.com/fluid-player/fluid-player/pull/103) Ads events
 
