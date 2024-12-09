@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.42.0 (2024-12-09)
+* Fluid Player release date update
+
 ## 1.41.0 (2024-11-14)
 * Fluid Player release date update
 
