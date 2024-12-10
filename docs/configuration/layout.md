@@ -52,7 +52,8 @@ fluidPlayer(
                 enabled: true,
                 width: 400,
                 height: 225
-            }
+            },
+            autoRotateFullScreen: false,
         }
     }
 );
@@ -727,6 +728,21 @@ fluidPlayer(
                 position: 'bottom right', // 'top left', 'top right', 'bottom left', 'bottom right'
                 autoToggle: false,
             }
+        }
+    }
+);
+```
+
+## Automated Landcape for Mobile
+
+Set an automated full-screen mode on the player for landscape view on mobile devices. This is applicable only when the player is in view.
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            autoRotateFullScreen: true,
         }
     }
 );
