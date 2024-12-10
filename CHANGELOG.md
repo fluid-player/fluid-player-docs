@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.43.0 (2024-12-10)
+* [Pull #106](https://github.com/fluid-player/fluid-player-docs/pull/106) Live Indicator
+
 ## 1.42.0 (2024-12-09)
 * Fluid Player release date update
 
