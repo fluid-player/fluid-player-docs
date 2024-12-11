@@ -733,7 +733,7 @@ fluidPlayer(
 );
 ```
 
-## Automated Landcape for Mobile
+## Automated Landscape for Mobile (iOS only)
 
 Set an automated full-screen mode on the player for landscape view on mobile devices. This is applicable only when the player is in view.
 
