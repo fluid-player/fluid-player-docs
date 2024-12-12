@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.44.0 (2024-12-12)
+* [Pull #107](https://github.com/fluid-player/fluid-player-docs/pull/107) Add support for automatic landscape screen orientation when going Fullscreen
+
 ## 1.43.0 (2024-12-10)
 * [Pull #106](https://github.com/fluid-player/fluid-player-docs/pull/106) Live Indicator
 
