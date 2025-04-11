@@ -8,6 +8,8 @@ This definition taken from the [HLS wikipedia page](https://en.wikipedia.org/wik
 
 It works similarly to DASH by breaking the content into chunks and serving it one segment at a time, potentially with no final chunk.
 
+Live Streaming will be signaled by a Live Indicator displayed along with the Control bar.
+
 <div class="docs-player" data-instance="hls"></div>
 
 Fluid Player makes use of [hls.js](https://github.com/video-dev/hls.js) to play .m3u8 files.

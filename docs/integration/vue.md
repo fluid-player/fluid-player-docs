@@ -60,3 +60,5 @@ to recreate the Fluid Player instance to change sources or other player configur
     }
 </style>
 ```
+
+**Note**: Safari does not support playback of .mkv files. To view this file type, consider using a different browser that supports the .mkv format.

@@ -29,6 +29,7 @@ fluidPlayer(
             allowTheatre:           true,
             title:                  false,
             loop:                   false,
+            roundedCorners:         0,
             logo: {
                 imageUrl:           null,
                 position:           'top left',
@@ -52,7 +53,8 @@ fluidPlayer(
                 enabled: true,
                 width: 400,
                 height: 225
-            }
+            },
+            autoRotateFullScreen: false,
         }
     }
 );
@@ -162,7 +164,26 @@ fluidPlayer(
     }
 );
 ```
- 
+
+## roundedCorners
+This parameter defines the rounded corners for the video player. You can pass either a number or a string:
+
+- **Number**: Automatically converts to pixels (`px`). For example, `10` becomes `10px`.
+- **String**: Can include any valid CSS unit for `border-radius` (e.g., `%`, `em`, `rem`, `px`, etc.). If the string can be parsed as a number (e.g., `"10"`), it defaults to `px`.
+
+This allows full flexibility to use any value supported by the CSS `border-radius` property.
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            roundedCorners: 0 // Default 0
+        }
+    }
+);
+```
+
 ## autoPlay
 By default this parameter is set to **false**. When set to **true** the video will play automatically when the page loads.
 Please note that this feature may not work on certain browser versions and depends on their AutoPlay Policies.
@@ -727,6 +748,21 @@ fluidPlayer(
                 position: 'bottom right', // 'top left', 'top right', 'bottom left', 'bottom right'
                 autoToggle: false,
             }
+        }
+    }
+);
+```
+
+## Automated Landscape for Mobile (iOS only)
+
+Set an automated full-screen mode on the player for landscape view on mobile devices. This is applicable only when the player is in view.
+
+```javascript
+fluidPlayer(
+    'my-video',
+    {
+        layoutControls: {
+            autoRotateFullScreen: true,
         }
     }
 );

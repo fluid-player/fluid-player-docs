@@ -8,6 +8,8 @@ A media presentation description (MPD) file contains segmented information. The 
 Segments contain information regarding the times, URL, resolution, bit rates etc, which informs the player what to serve to the client depending on the bandwidth availability.
 Full details on the MPEG-DASH protocol can be found on the [wikipedia](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP).
 
+Live Streaming will be signaled by a Live Indicator displayed along with the Control bar.
+
 <div class="docs-player" data-instance="dash"></div>
 
 Fluid Player makes use of [Dash.js](https://github.com/Dash-Industry-Forum/dash.js) to play MPD files. 

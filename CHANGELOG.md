@@ -1,5 +1,39 @@
 # CHANGELOG
 
+## 1.49.0 (2025-04-02)
+* Fluid Player release date update
+
+## 1.48.0 (2025-02-20)
+* Fluid Player release date update
+
+## 1.47.0 (2025-01-23)
+* Fluid Player release date update
+
+## 1.46.0 (2025-01-16)
+* Fluid Player release date update
+
+## 1.45.0 (2024-12-18)
+* Fluid Player release date update
+
+## 1.44.0 (2024-12-12)
+* [Pull #107](https://github.com/fluid-player/fluid-player-docs/pull/107) Add support for automatic landscape screen orientation when going Fullscreen
+
+## 1.43.0 (2024-12-10)
+* [Pull #106](https://github.com/fluid-player/fluid-player-docs/pull/106) Live Indicator
+
+## 1.42.0 (2024-12-09)
+* Fluid Player release date update
+
+## 1.41.0 (2024-11-14)
+* Fluid Player release date update
+
+## 1.40.0 (2024-11-05)
+* [Pull #104](https://github.com/fluid-player/fluid-player-docs/pull/104) Rounded corners on player
+* [Pull #105](https://github.com/fluid-player/fluid-player-docs/pull/105) Add disclaimer about Video not loading after ad on safari
+
+## 1.39.0 (2024-10-15)
+* [Pull #103](https://github.com/fluid-player/fluid-player/pull/103) Ads events
+
 ## 1.38.0 (2024-10-02)
 * Fluid Player release date update
 
