@@ -70,3 +70,22 @@ fluidPlayer(
     }
 );
 ```
+
+## Font Size Options
+
+Fluid Player supports subtitle font size controls, enhancing accessibility and viewer experience by allowing text size adjustments. Users can customize subtitle size in two convenient ways:
+
+### Method 1: Keyboard Shortcuts
+
+While viewing content, users can quickly adjust subtitle size using simple keyboard shortcuts:
+- Press the `+` key to increase subtitle font size
+- Press the `-` key to decrease subtitle font size
+
+### Method 2: Font Size Menu
+
+A dedicated Font Size submenu is available in the subtitles/captions control panel. This menu provides precise control with predefined percentage options:
+- 50%
+- 75%
+- 100% (Default)
+- 150%
+- 200%
