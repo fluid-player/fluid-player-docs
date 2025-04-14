@@ -81,7 +81,7 @@ While viewing content, users can quickly adjust subtitle size using simple keybo
 - Press the `+` key to increase subtitle font size
 - Press the `-` key to decrease subtitle font size
 
-### Method 2: Font Size Menu
+### Method 2: Font Size Submenu
 
 A dedicated Font Size submenu is available in the subtitles/captions control panel. This menu provides precise control with predefined percentage options:
 - 50%
