@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.51.0 (2025-05-13)
+* Fluid Player release date update
+
 ## 1.50.0 (2025-04-17)
 * [Pull #108](https://github.com/fluid-player/fluid-player-docs/pull/108) Subtitles size for Fluid Player
 
